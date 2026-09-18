@@ -1,0 +1,83 @@
+- iframe [active] [ref=f3e2132]:
+  - generic [ref=f8e7]:
+    - generic [ref=f8e8]:
+      - generic [ref=f8e9]:
+        - heading "Copilot" [level=2] [ref=f8e12]
+        - generic [ref=f8e13]:
+          - button "Chat options" [ref=f8e14]
+          - button "Close" [ref=f8e18]
+      - generic [ref=f8e25]:
+        - feed [ref=f8e29]:
+          - generic [ref=f8e31]:
+            - generic [ref=f8e33]:
+              - heading "Hello Vaibhav Verma (DESIGN)!" [level=2] [ref=f8e35]
+              - generic [ref=f8e36]: "Ask a question or get started with one of these prompts:"
+            - menu [ref=f8e39]:
+              - generic [ref=f8e40]:
+                - menuitem [ref=f8e41] [cursor=pointer]:
+                  - generic [ref=f8e42]: How can you help me?
+                - menuitem [ref=f8e44] [cursor=pointer]:
+                  - generic [ref=f8e45]: Summarize this page
+                - menuitem [ref=f8e47] [cursor=pointer]:
+                  - generic [ref=f8e48]: Find information about a topic
+          - list "Chat Messages" [ref=f8e88]:
+            - listitem [ref=f8e89]:
+              - article [ref=f8e91]:
+                - heading "You said:" [level=5] [ref=f8e92]
+                - paragraph [ref=f8e96]:
+                  - text: "Build a case studies showcase page for Contoso's Customer Success Stories. Add a Text web part for the introduction: 'See How Leading Organizations Transform with Contoso' - Our customers across healthcare, finance, manufacturing, and retail are achieving remarkable results with our platform. Include a Quick Links web part titled 'Featured Case Studies' with tile layout containing links to: 'Acme Healthcare: 50% Faster Patient Onboarding' ->"
+                  - link "https://contoso.com/cases/acme-healthcare" [ref=f8e132] [cursor=pointer]:
+                    - /url: https://contoso.com/cases/acme-healthcare?web=1
+                  - text: ", 'Global Bank: $10M Saved in Compliance Costs' ->"
+                  - link "https://contoso.com/cases/global-bank" [ref=f8e133] [cursor=pointer]:
+                    - /url: https://contoso.com/cases/global-bank?web=1
+                  - text: ", 'MegaManufacturing: 99.9% Production Uptime' ->"
+                  - link "https://contoso.com/cases/mega-manufacturing" [ref=f8e134] [cursor=pointer]:
+                    - /url: https://contoso.com/cases/mega-manufacturing?web=1
+                  - text: ", 'RetailCo: 30% Increase in Customer Satisfaction' ->"
+                  - link "https://contoso.com/cases/retailco" [ref=f8e135] [cursor=pointer]:
+                    - /url: https://contoso.com/cases/retailco?web=1
+                  - text: ", 'TechStart: Scaled from 10 to 10,000 Users' ->"
+                  - link "https://contoso.com/cases/techstart" [ref=f8e136] [cursor=pointer]:
+                    - /url: https://contoso.com/cases/techstart?web=1
+                  - text: ", and 'EduFirst: Transformed Remote Learning' ->"
+                  - link "https://contoso.com/cases/edufirst" [ref=f8e137] [cursor=pointer]:
+                    - /url: https://contoso.com/cases/edufirst?web=1
+                  - text: . Add a Text web part inviting visitors to submit their own success story.
+            - listitem [ref=f8e138]:
+              - article [ref=f8e140]:
+                - generic [ref=f8e141]:
+                  - heading "Copilot said:" [level=6] [ref=f8e142]
+                  - generic [aria-hidden] [ref=f8e146]: Copilot
+                - paragraph [ref=f8e150]:
+                  - text: Created the
+                  - link "Contoso Customer Success Stories" [ref=f8e151] [cursor=pointer]:
+                    - /url: https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/SitePages/Contoso-Customer-Success-Stories.aspx?web=1
+                  - text: showcase page with the introduction, six featured tile links, and a success-story submission invitation.
+                - button "1 SharePoint" [ref=f8e156]:
+                  - generic [ref=f8e157]: "1"
+                  - link "SharePoint" [ref=f8e163] [cursor=pointer]:
+                    - /url: https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/SitePages/Contoso-Customer-Success-Stories.aspx
+                - toolbar [ref=f8e165]:
+                  - generic [ref=f8e167]:
+                    - button "Copy" [ref=f8e170]
+                    - generic [ref=f8e174]:
+                      - button "Like" [ref=f8e175]
+                      - button "Dislike" [ref=f8e179]
+        - group "Suggested Prompts" [ref=f8e186]:
+          - button "Draft a short announcement for this page" [ref=f8e187]
+          - button "Suggest improvements to the page layout and wording" [ref=f8e188]
+          - button "Create a matching FAQ section" [ref=f8e189]
+        - generic [ref=f8e51]:
+          - generic [ref=f8e58]:
+            - button "Open input menu" [ref=f8e62]
+            - generic [ref=f8e66]:
+              - textbox "Prompt" [active] [ref=f8e67]:
+                - paragraph [ref=f8e125]
+              - generic: Ask a question about this site
+            - alert "Microphone Disabled" [ref=f8e72]:
+              - switch "Microphone Disabled" [ref=f8e74]:
+                - img "Mic-Regular" [ref=f8e76]
+          - status [ref=f8e78]
+      - generic [ref=f8e81]: AI-generated content may be incorrect
+    - status

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fujitsu 20K V4 | UX evaluation pilot</title>
+  <style>
+    :root { --ink: #202724; --muted: #59635f; --line: #dce3df; --paper: #fff; --canvas: #f4f7f5; --green: #176343; --green-soft: #e8f4ec; --red: #a02941; --red-soft: #fbecef; --amber: #795400; --amber-soft: #fff5d9; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body { margin: 0; color: var(--ink); background: var(--canvas); font: 15px/1.6 "Segoe UI", "Helvetica Neue", sans-serif; letter-spacing: 0; }
+    a { color: var(--green); text-underline-offset: 3px; overflow-wrap: anywhere; }
+    button, input { font: inherit; }
+    :focus-visible { outline: 3px solid #227dbe; outline-offset: 4px; }
+    .skip { position: absolute; top: -80px; left: 16px; background: white; padding: 10px; z-index: 5; }
+    .skip:focus { top: 8px; }
+    .masthead { border-bottom: 1px solid var(--line); background: var(--paper); }
+    .masthead-inner, main, footer { width: min(1160px, calc(100% - 64px)); margin: auto; }
+    .masthead-inner { min-height: 64px; display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 12px 0; }
+    .brand { font-weight: 700; font-size: 14px; }
+    .brand::before { content: ""; display: inline-block; width: 10px; height: 10px; background: var(--green); margin-right: 10px; }
+    .meta { font-size: 12px; color: var(--muted); }
+    main { padding: 40px 0 56px; }
+    .eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--green); margin: 0 0 8px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font: 40px/1.15 Georgia, serif; margin-bottom: 12px; }
+    h2 { font-size: 22px; line-height: 1.3; margin-bottom: 18px; }
+    h3 { font-size: 17px; line-height: 1.4; margin-bottom: 10px; }
+    .intro { color: var(--muted); max-width: 760px; margin-bottom: 16px; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 13px; }
+    .summary { margin: 30px 0 12px; display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--line); background: var(--paper); }
+    .metric { padding: 20px 24px; border-right: 1px solid var(--line); }
+    .metric:last-child { border: 0; }
+    .metric strong { display: block; font: 36px/1.2 Georgia, serif; margin-bottom: 6px; }
+    .metric span { font-size: 13px; color: var(--muted); }
+    .pass-text { color: var(--green); } .fail-text { color: var(--red); } .unable-text { color: var(--amber); }
+    .distribution { display: flex; height: 6px; overflow: hidden; background: var(--line); margin: 14px 0 8px; }
+    .distribution span:nth-child(1) { background: var(--green); } .distribution span:nth-child(2) { background: var(--red); } .distribution span:nth-child(3) { background: #bd8e24; }
+    .caption { color: var(--muted); font-size: 12px; }
+    .section { margin-top: 40px; }
+    .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .findings { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+    .finding { padding: 20px 28px 16px 0; border-bottom: 1px solid var(--line); }
+    .finding:nth-child(even) { padding-left: 28px; padding-right: 0; border-left: 1px solid var(--line); }
+    .finding .category { display: block; color: var(--red); font-size: 12px; font-weight: 700; margin-bottom: 8px; }
+    .finding p { font-size: 14px; color: var(--muted); margin-bottom: 10px; }
+    .finding a { font-size: 13px; }
+    .controls { display: flex; gap: 16px; justify-content: space-between; align-items: center; flex-wrap: wrap; border-block: 1px solid var(--line); padding: 14px 0; margin-bottom: 20px; }
+    fieldset { padding: 0; margin: 0; border: 0; min-width: 0; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .filters { display: flex; flex-wrap: wrap; gap: 4px; }
+    .filters label { position: relative; }
+    .filters span { display: block; padding: 7px 12px; min-height: 40px; border-radius: 4px; border: 1px solid transparent; cursor: pointer; font-size: 13px; }
+    .filters input:checked + span { background: var(--ink); color: white; }
+    .filters input:focus-visible + span { outline: 3px solid #227dbe; outline-offset: 2px; }
+    .report-layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); align-items: start; }
+    .sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; background: var(--paper); border-right: 1px solid var(--line); padding: 28px 16px; }
+    .sidebar-title { padding: 0 12px; margin-bottom: 4px; font-weight: 700; }
+    .sidebar .meta { display: block; padding: 0 12px; margin-bottom: 24px; }
+    .nav-label { padding: 0 12px; margin: 24px 0 8px; font-size: 11px; color: var(--muted); text-transform: uppercase; font-weight: 700; }
+    .sidebar a { display: flex; gap: 12px; padding: 13px 12px; margin: 4px 0; border-radius: 4px; color: var(--ink); text-decoration: none; font-size: 14px; line-height: 1.5; border-left: 3px solid transparent; }
+    .sidebar a:hover { background: var(--canvas); }
+    .sidebar a[aria-current="page"] { background: var(--green-soft); border-left-color: var(--green); color: var(--green); font-weight: 600; }
+    .nav-number { color: var(--muted); font-size: 12px; padding-top: 2px; flex: 0 0 20px; }
+    .sidebar small { display: block; color: var(--muted); font-size: 11px; font-weight: 400; margin-top: 5px; }
+    .report-layout main { width: 100%; min-width: 0; max-width: 1240px; padding: 36px; }
+    #prompt-view { margin-top: 0; }
+    .case { padding: 8px 0 26px; }
+    .case-body { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 28px; align-items: start; }
+    .case-content { min-width: 0; }
+    .case-shot { margin: 0; min-width: 0; }
+    .case-shot img { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: white; }
+    .case-shot .links { margin-top: 16px; }
+    .case-shot .caption { margin-top: 16px; }
+    .capture-gallery { margin: 24px 0 32px; }
+    .capture-gallery figure { margin: 20px 0 28px; }
+    .capture-gallery img { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: white; }
+    .capture-gallery figcaption { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .capture-warning { border-left: 3px solid #bd8e24; padding: 12px 16px; background: var(--amber-soft); font-size: 14px; }
+    .case.has-captures .case-body { grid-template-columns: minmax(0, 1fr); }
+    .case-title { display: flex; gap: 16px; align-items: flex-start; }
+    .case-number { font: 24px/1.3 Georgia, serif; color: var(--muted); min-width: 32px; }
+    .case-title h2 { font-size: 26px; margin: 0 0 12px; overflow-wrap: anywhere; }
+    .case-summary { color: var(--muted); max-width: 880px; font-size: 14px; margin-bottom: 16px; }
+    .badges { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+    .badge { display: inline-block; border-radius: 4px; padding: 3px 8px; font-size: 11px; font-weight: 700; white-space: nowrap; }
+    .pass { background: var(--green-soft); color: var(--green); } .fail { background: var(--red-soft); color: var(--red); } .unable { background: var(--amber-soft); color: var(--amber); }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; background: var(--paper); table-layout: fixed; }
+    th { color: var(--muted); font-size: 11px; text-transform: uppercase; text-align: left; padding: 12px 16px; background: #edf2ef; }
+    td { padding: 14px 16px; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 13px; overflow-wrap: anywhere; }
+    th:nth-child(1) { width: 24%; } th:nth-child(2) { width: 110px; }
+    td strong { display: block; font-size: 13px; } .tag { color: var(--muted); font-size: 11px; }
+    .empty { padding: 18px 0; color: var(--muted); }
+    [hidden] { display: none !important; }
+    figcaption { font-size: 12px; margin-top: 8px; color: var(--muted); }
+    .quote { font: 19px/1.5 Georgia, serif; margin: 10px 0 24px; padding-left: 20px; border-left: 3px solid var(--green); }
+    .scope-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+    dl { margin: 0; } dt { font-size: 12px; color: var(--muted); } dd { margin: 0 0 16px; font-size: 14px; }
+    .scope-grid ul { padding-left: 18px; margin: 0; font-size: 14px; color: var(--muted); } .scope-grid li { margin-bottom: 12px; }
+    footer { padding: 20px 0 32px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+    @media (max-width: 1180px) {
+      .report-layout { grid-template-columns: 240px minmax(0, 1fr); }
+      .report-layout main { padding: 28px; }
+      .case-body { grid-template-columns: minmax(0, 1fr); }
+      .case-shot { max-width: 340px; }
+      .summary { grid-template-columns: 1fr 1fr; }
+      .metric:nth-child(2) { border-right: 0; }
+      .metric:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+    }
+    @media (max-width: 640px) {
+      .masthead-inner, main, footer { width: calc(100% - 32px); } main { padding-top: 28px; } h1 { font-size: 32px; }
+      .report-layout { grid-template-columns: minmax(0, 1fr); }
+      .sidebar { position: static; height: auto; border-right: 0; border-bottom: 1px solid var(--line); padding: 16px; }
+      .sidebar-title, .sidebar .meta { display: none; }
+      .nav-label { margin: 12px 0 4px; }
+      .sidebar a { padding: 10px 12px; }
+      .sidebar small { display: none; }
+      .report-layout main { padding: 24px 16px; }
+      .summary { grid-template-columns: 1fr 1fr; } .metric { padding: 16px; } .metric:nth-child(2) { border-right: 0; } .metric:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .findings, .scope-grid { grid-template-columns: 1fr; } .finding:nth-child(even) { border-left: 0; padding-left: 0; } .finding { padding-right: 0; }
+      .case-title h2 { font-size: 22px; }
+      table, tbody, tr, td { display: block; width: 100%; } thead { position: absolute; clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; }
+      tr { padding: 12px; border-bottom: 1px solid var(--line); } td { padding: 4px 0; border: 0; } td strong { display: inline; margin-right: 8px; }
+    }
+    @media print { body { background: white; } .controls, .sidebar, .skip { display: none; } .report-layout { display: block; } .report-layout main { width: 100%; padding: 20px 0; } .case-body { display: block; } .case-shot { max-width: 300px; } a { color: inherit; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to report</a>
+  <header class="masthead"><div class="masthead-inner"><span class="brand">ODSP / Evaluation notebook</span><span class="meta">PILOT 001 &nbsp; / &nbsp; SEPTEMBER 18, 2026</span></div></header>
+  <div class="report-layout">
+  <aside class="sidebar">
+    <p class="sidebar-title">Fujitsu 20K V4</p><span class="meta">UX Assertions V2.2 / 3 prompts</span>
+    <nav aria-label="Report navigation">
+      <a href="#overview" aria-current="page">Overview</a>
+      <p class="nav-label">Prompts</p>
+      <div id="prompt-nav"></div>
+    </nav>
+  </aside>
+  <main id="main" tabindex="-1">
+    <div id="overview">
+    <p class="eyebrow">SharePoint Lists / UX evaluation</p>
+    <h1 tabindex="-1">Fujitsu 20K V4</h1>
+    <p class="intro">Three prompts. Three fresh conversations. An evidence-based review of the list's Copilot responses against UX Assertions V2.2.</p>
+    <div class="links"><a href="pilot-report.md">Source report</a><a href="../../sources/fujitsu%20test.xlsx">Prompt workbook</a><a href="../../sources/Assertion%20V2.2%20copy.xlsx">Assertion definitions</a><a href="https://microsoft.sharepoint-df.com/teams/ListsEval/Lists/Fujitsu%2020K%20V4/AllItems.aspx" target="_blank" rel="noopener noreferrer">Open target list</a></div>
+    <div class="summary" aria-label="Pilot counts">
+      <div class="metric"><strong>3 / 3</strong><span>Prompts completed</span></div>
+      <div class="metric"><strong class="pass-text" id="pass-count">22</strong><span>Checks passed</span></div>
+      <div class="metric"><strong class="fail-text" id="fail-count">4</strong><span>Checks failed</span></div>
+      <div class="metric"><strong class="unable-text" id="unable-count">3</strong><span>Unable to evaluate</span></div>
+    </div>
+    <div class="distribution" aria-hidden="true" id="distribution"></div>
+    <p class="caption">29 selected checks across 3 of 16 prompts. Completion is not a pass. These counts are not an aggregate quality score.</p>
+
+    <section class="section" aria-labelledby="findings-title">
+      <div class="section-head"><h2 id="findings-title">What needs attention</h2><span class="meta">4 finding groups</span></div>
+      <div class="findings">
+        <article class="finding"><span class="category">CONSISTENCY OBSERVATION</span><h3>A week boundary and a total disagree</h3><p>The September 14-20 answer includes a September 13 event. Daily counts total 101, while the headline says 102. Root cause is unverified.</p><a href="#case-01">Case 01: this week's events</a></article>
+        <article class="finding"><span class="category">U3 / FAILED IN 2 CASES</span><h3>Times without a time zone</h3><p>Completed and online event responses display times without identifying their local time zone.</p><a href="#case-02">Case 02</a> &nbsp; <a href="#case-03">Case 03</a></article>
+        <article class="finding"><span class="category">T2 / FAILED IN 2 CASES</span><h3>Incomplete item-level citations</h3><p>The weekly response cites only the list. The online response does not provide individual citations for all five sample records.</p><a href="#case-01">Case 01</a> &nbsp; <a href="#case-03">Case 03</a></article>
+        <article class="finding"><span class="category" style="color:var(--muted)">LAYOUT OBSERVATION</span><h3>Columns outside the visible panel</h3><p>The online response's Start and Type columns exist in the page structure but are not visible in the captured narrow panel. Scrolling and wider layouts were not tested.</p><a href="#case-03">Case 03: online events</a></article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="scope-title">
+      <h2 id="scope-title">Scope &amp; confidence</h2>
+      <div class="scope-grid">
+        <div><dl><dt>Execution</dt><dd>VS Code agent with Playwright browser tools. Existing work SSO session. No credentials collected or exported.</dd><dt>Isolation</dt><dd>Each prompt submitted once in a confirmed empty chat. No follow-ups, list edits, or history deletion requested.</dd><dt>Completion signal</dt><dd>Stop generating absent and Copy present inside the Copilot chat iframe.</dd><dt>Time zone</dt><dd>Browser: Asia/Calcutta, equivalent to Asia/Kolkata. The user's intended zone was not independently confirmed.</dd><dt>Judge</dt><dd>Agent-assessed verdicts, not calibrated or independently reviewed. Workbook tag selections preserved.</dd></dl></div>
+        <div><ul>
+          <li>PASS means an observed UX requirement was met, not that the underlying facts are correct. FAIL indicates an unmet requirement. UNABLE indicates missing evidence. No selected checks were marked N/A.</li>
+          <li>Counts, source records, missing matches, citation destinations, and date conversions were not independently verified against a list export.</li>
+          <li>S1 accepts an outcome-led opening without requiring a heading element. R4 passes reflect manageable, labelled samples; their relevance ranking is unverified.</li>
+          <li>U5 (offer to save a view) exists in V2.2 but was not selected in these workbook rows. It was not added to the scores.</li>
+          <li>One chat-reset selector error was corrected before case 03; no prompt was resent. Console errors were observed but not diagnosed.</li>
+          <li>This is an exploratory pilot, not a full run or a standalone automation pipeline. Agree on ranking and visual thresholds before automated judging.</li>
+        </ul></div>
+      </div>
+    </section>
+    </div>
+    <section id="prompt-view" aria-label="Selected prompt details" hidden>
+      <div class="section-head"><p class="eyebrow">Prompt evaluation</p><span class="meta">One-shot / no answer retries</span></div>
+      <div class="controls">
+        <fieldset><legend class="sr-only">Filter assertion verdicts</legend><div class="filters">
+          <label><input class="sr-only" type="radio" name="verdict" value="ALL" checked><span>All checks</span></label>
+          <label><input class="sr-only" type="radio" name="verdict" value="FAIL"><span>Failed</span></label>
+          <label><input class="sr-only" type="radio" name="verdict" value="UNABLE"><span>Unable</span></label>
+          <label><input class="sr-only" type="radio" name="verdict" value="PASS"><span>Passed</span></label>
+        </div></fieldset>
+        <span class="caption" id="filter-status" role="status" aria-live="polite"></span>
+      </div>
+      <div id="cases"></div>
+    </section>
+    <noscript><p>JavaScript is required for the prompt views. <a href="pilot-report.md">Read the full source report</a>.</p></noscript>
+  </main>
+  </div>
+  <footer>Internal evaluation evidence. Review access and retention before sharing or committing. &nbsp; <a href="pilot-report.md">Full methodology and limitations</a></footer>
+
+  <script type="application/json" id="report-data">
+  [
+    {"id":"01","prompt":"What events are happening this week?","captured":"2026-09-18T05:11:20.306Z","summary":"Reports 102 published, non-cancelled/non-postponed events for September 14-20, 2026, names Asia/Kolkata, and shows five sample rows with daily totals.","quote":"There are 102 published, non-cancelled/non-postponed events this week, September 14–20, 2026 (Asia/Kolkata).","checks":[
+      ["S1","PASS","Opens with the event count and interpreted week."],
+      ["C1","PASS","Makes the date range and published/non-cancelled/non-postponed interpretation explicit. This does not resolve the date inconsistency noted above."],
+      ["R2","PASS","Five comparable records are arranged in a table."],
+      ["R3","PASS","Table contains Start, Event, and Format, a compact field set relevant to finding events. Visibility across viewports was not validated."],
+      ["T1","PASS","A Fujitsu 20K V4 list link is present in the citation area. Link destination was observed, not opened."],
+      ["T2","FAIL","Five specific records are shown without item-level citations; the snapshot contains only a list-level source."],
+      ["U3","UNABLE","Asia/Kolkata is named and matches the browser zone, but source timestamps were not checked; the out-of-range sample prevents confidence in the time handling."],
+      ["U4","PASS","Offers refinement by online/in-person format or topic."],
+      ["L1","PASS","Uses understandable event terminology without unnecessary implementation jargon."]
+    ]},
+    {"id":"02","prompt":"Which events are already completed?","captured":"2026-09-18T05:12:10.770Z","summary":"Defines completed as End date before September 18, 2026. Reports 16,520 of 20,000 events, excludes 2,167 without an End date, and shows five individually cited samples.","quote":"16,520 of 20,000 events have an End date before September 18, 2026. I excluded 2,167 events with no End date.","checks":[
+      ["S1","PASS","Opens with an outcome count and completion criterion."],
+      ["C1","PASS","Explicitly defines completed using End date and explains exclusion of missing End dates."],
+      ["R2","PASS","Presents five records in a scannable table."],
+      ["R3","PASS","Event and End date directly support identifying completed events."],
+      ["R4","PASS","Labels the output Sample (5 of 16,520), keeping the displayed set manageable. Source-based relevance ranking is unverified."],
+      ["T1","UNABLE","Summary cites source 6, but that source's destination is behind the collapsed +4 citation area and was not inspected."],
+      ["T2","PASS","Each of the five sample rows has its own citation marker (1-5); the first two source chips name matching records. All destinations and their factual support remain unverified."],
+      ["U3","FAIL","End dates include times but no local time-zone label."],
+      ["U4","PASS","Offers a breakdown by published status or year."],
+      ["L1","PASS","Uses familiar list fields and clear language."]
+    ]},
+    {"id":"03","prompt":"Which events are online?","captured":"2026-09-18T05:12:51.645Z","summary":"Interprets online as Online Only, reports 8,034 of 20,000 events, and shows five samples with Event, Start, and Type fields. Offers to narrow to upcoming events.","quote":"8,034 of 20,000 events are marked Online Only.","checks":[
+      ["S1","PASS","Opens with the number of Online Only events."],
+      ["C1","PASS","States the Online Only interpretation and offers upcoming-only refinement rather than silently adding a date constraint."],
+      ["R2","PASS","Comparable records are structured in a table; clipping in the captured narrow panel is recorded separately."],
+      ["R3","PASS","Event, Start, and Type are a compact, relevant field set in the snapshot. Start and Type are not visible in the captured panel width."],
+      ["R4","PASS","Labels the output Sample (5 of 8,034). Source-based relevance ranking is unverified."],
+      ["T1","UNABLE","Summary cites source 3, but its destination is behind the collapsed +1 citation area and was not inspected."],
+      ["T2","FAIL","Five records have no inline row citations. Only two item source chips are visible, and one additional collapsed source cannot provide distinct item-level references for all remaining rows."],
+      ["U3","FAIL","Start values include times without a time-zone label."],
+      ["U4","PASS","Offers upcoming-only filtering and suggested refinements."],
+      ["L1","PASS","Uses understandable event terminology."]
+    ]}
+  ]
+  </script>
+  <script>
+    const cases = JSON.parse(document.getElementById('report-data').textContent);
+    const windowCaptures = {
+      '03': { capturedAt: '2026-09-18T05:25:31.409Z', width: 1720, height: 826,
+        frames: [
+          { number: '01', top: 0, left: 0, tableLeft: 0 },
+          { number: '03', top: 0, left: 0, tableLeft: 218 },
+          { number: '04', top: 0, left: 153, tableLeft: 0 },
+          { number: '06', top: 0, left: 153, tableLeft: 218 },
+          { number: '07', top: 290, left: 0, tableLeft: 0 },
+          { number: '09', top: 290, left: 0, tableLeft: 218 },
+          { number: '10', top: 290, left: 153, tableLeft: 0 },
+          { number: '12', top: 290, left: 153, tableLeft: 218 },
+          { number: '13', top: 444, left: 0, tableLeft: 0 },
+          { number: '15', top: 444, left: 0, tableLeft: 218 },
+          { number: '16', top: 444, left: 153, tableLeft: 0 },
+          { number: '18', top: 444, left: 153, tableLeft: 218 }
+        ] }
+    };
+    const names = { S1: 'Headline', C1: 'Result clarification', R2: 'Multi-item representation', R3: 'Columns', R4: 'Rows', T1: 'List citation', T2: 'Item citations', U3: 'Time-zone handling', U4: 'Next steps', L1: 'Clear language' };
+    const labels = { PASS: 'Passed', FAIL: 'Failed', UNABLE: 'Unable' };
+    const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
+    const allChecks = cases.flatMap(testCase => testCase.checks);
+    const counts = Object.fromEntries(Object.keys(labels).map(verdict => [verdict, allChecks.filter(check => check[1] === verdict).length]));
+    for (const [verdict, count] of Object.entries(counts)) document.getElementById(`${verdict.toLowerCase()}-count`).textContent = count;
+    document.getElementById('distribution').innerHTML = Object.values(counts).map(count => `<span style="width:${count / allChecks.length * 100}%"></span>`).join('');
+    document.getElementById('prompt-nav').innerHTML = cases.map(testCase => `<a href="#case-${testCase.id}"><span class="nav-number">${testCase.id}</span><span>${escapeHtml(testCase.prompt)}<small>${testCase.checks.length} checks / ${testCase.checks.filter(check => check[1] === 'FAIL').length} failed</small></span></a>`).join('');
+    document.getElementById('cases').innerHTML = cases.map(testCase => {
+      const badges = Object.entries(labels).map(([verdict, label]) => `<span class="badge ${verdict.toLowerCase()}">${testCase.checks.filter(check => check[1] === verdict).length} ${label.toLowerCase()}</span>`).join('');
+      const rows = testCase.checks.map(([tag, verdict, reason]) => `<tr data-verdict="${verdict}"><td><strong>${escapeHtml(names[tag])}</strong><span class="tag">${tag}</span></td><td><span class="badge ${verdict.toLowerCase()}">${labels[verdict]}</span></td><td>${escapeHtml(reason)}</td></tr>`).join('');
+      const capture = windowCaptures[testCase.id];
+      const gallery = capture ? `<section class="capture-gallery" aria-label="Full-window screenshot sequence">
+        <h3>List and chat / full-window captures</h3>
+        <p class="caption">Separate ${capture.width} x ${capture.height} browser viewport images, not stitched. Recaptured from the existing conversation at ${capture.capturedAt}; no prompt resubmitted. The list shows its state at recapture time, not necessarily its original pilot state. Offsets are measured in CSS pixels.</p>
+        ${capture.frames.map((frame, index) => {
+          const filename = `../../images/lists-pilot/pilot-${testCase.id}-window-${frame.number}.png`;
+          return `<figure><a href="${filename}" target="_blank" rel="noopener"><img src="${filename}" alt="Case ${testCase.id}, capture ${index + 1}: SharePoint list and Copilot chat, vertical offset ${frame.top}, horizontal offset ${frame.left}, table offset ${frame.tableLeft}" loading="lazy" width="${capture.width}" height="${capture.height}"></a><figcaption><span>Capture ${index + 1} of ${capture.frames.length} / Vertical ${frame.top} / Chat horizontal ${frame.left} / Table horizontal ${frame.tableLeft}</span><a href="${filename}" target="_blank" rel="noopener">Open full-size image</a></figcaption></figure>`;
+        }).join('')}
+      </section>` : `<p class="capture-warning">Full-window recapture unavailable: this original pilot conversation could not be located in chat history. The original cropped screenshot and saved response snapshot are retained below. No replacement answer was generated.</p>`;
+      return `<article class="case${capture ? ' has-captures' : ''}" id="case-${testCase.id}" aria-labelledby="title-${testCase.id}" hidden>
+        <div class="case-title"><span class="case-number">${testCase.id}</span><h2 id="title-${testCase.id}" tabindex="-1">${escapeHtml(testCase.prompt)}</h2></div>
+        <p class="case-summary">${escapeHtml(testCase.summary)}</p><div class="badges" aria-label="All case verdict counts">${badges}</div>
+        ${gallery}
+        <div class="case-body"><div class="case-content">
+        <p class="eyebrow">Response opening excerpt</p><blockquote class="quote">${escapeHtml(testCase.quote)}</blockquote>
+        <h3>Assertion results</h3>
+        <div class="table-wrap"><table aria-label="Case ${testCase.id} assertion results"><thead><tr><th scope="col">Assertion</th><th scope="col">Verdict</th><th scope="col">Evidence &amp; rationale</th></tr></thead><tbody>${rows}</tbody></table></div>
+        <p class="empty" hidden>No checks match this filter.</p>
+        </div><figure class="case-shot"${capture ? ' hidden' : ''}><h3>Original cropped screenshot</h3>
+          <a href="../../images/lists-pilot/pilot-${testCase.id}-chat.png" target="_blank" rel="noopener"><img src="../../images/lists-pilot/pilot-${testCase.id}-chat.png" alt="Original Copilot response screenshot for case ${testCase.id}: ${escapeHtml(testCase.prompt)}" loading="lazy" width="320" height="684"></a>
+          <figcaption>Case ${testCase.id} / Captured <time datetime="${testCase.captured}">${testCase.captured}</time></figcaption>
+          <div class="links"><a href="../../snapshots/lists-pilot/pilot-${testCase.id}-chat.yaml">Full response snapshot</a><a href="../../images/lists-pilot/pilot-${testCase.id}-chat.png" target="_blank" rel="noopener">Original screenshot</a></div>
+          <p class="caption">The screenshot shows the visible panel only. The snapshot retains accessible content outside that view. Source facts and citation destinations have not been independently verified.</p>
+        </figure></div>
+        ${capture ? `<div class="links"><a href="../../snapshots/lists-pilot/pilot-${testCase.id}-chat.yaml">Original full response snapshot</a><a href="../../images/lists-pilot/pilot-${testCase.id}-chat.png" target="_blank" rel="noopener">Original pilot screenshot</a></div>` : ''}
+      </article>`;
+    }).join('');
+    function filterChecks() {
+      const selectedCase = document.querySelector('.case:not([hidden])');
+      if (!selectedCase) return;
+      const verdict = document.querySelector('input[name="verdict"]:checked').value;
+      const rows = selectedCase.querySelectorAll('tr[data-verdict]');
+      let visible = 0;
+      rows.forEach(row => {
+        row.hidden = verdict !== 'ALL' && row.dataset.verdict !== verdict;
+        if (!row.hidden) visible++;
+      });
+      selectedCase.querySelector('.empty').hidden = visible !== 0;
+      selectedCase.querySelector('.table-wrap').hidden = visible === 0;
+      document.getElementById('filter-status').textContent = `Showing ${visible} of ${rows.length} checks`;
+    }
+    function showView(focusHeading = false) {
+      const requested = location.hash.slice(1);
+      const selectedCase = cases.find(testCase => `case-${testCase.id}` === requested);
+      const view = selectedCase ? requested : 'overview';
+      document.getElementById('overview').hidden = Boolean(selectedCase);
+      document.getElementById('prompt-view').hidden = !selectedCase;
+      document.querySelectorAll('.case').forEach(section => { section.hidden = section.id !== view; });
+      document.querySelectorAll('.sidebar a').forEach(link => {
+        if (link.getAttribute('href') === `#${view}`) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
+      document.querySelector('input[name="verdict"][value="ALL"]').checked = true;
+      filterChecks();
+      document.title = `${selectedCase ? selectedCase.prompt : 'Overview'} | Fujitsu UX pilot`;
+      if (focusHeading) {
+        const heading = selectedCase ? document.getElementById(`title-${selectedCase.id}`) : document.querySelector('#overview h1');
+        heading.focus({ preventScroll: true });
+        document.getElementById('main').scrollIntoView({ behavior: 'instant', block: 'start' });
+      }
+    }
+    document.querySelectorAll('input[name="verdict"]').forEach(input => input.addEventListener('change', filterChecks));
+    window.addEventListener('hashchange', () => showView(true));
+    showView();
+  </script>
+</body>
+</html>

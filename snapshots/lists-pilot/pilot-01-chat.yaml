@@ -1,0 +1,111 @@
+- iframe [active] [ref=f1e2024]:
+  - generic [ref=f6e7]:
+    - generic [ref=f6e8]:
+      - generic [ref=f6e9]:
+        - heading "Copilot" [level=2] [ref=f6e11]
+        - generic [ref=f6e12]:
+          - button "Chat options" [ref=f6e13]
+          - button "Close" [ref=f6e17]
+      - generic [ref=f6e24]:
+        - feed [ref=f6e28]:
+          - generic [ref=f6e30]:
+            - generic [ref=f6e32]:
+              - heading "Hello Vaibhav Verma (DESIGN)!" [level=2] [ref=f6e34]
+              - generic [ref=f6e35]: What can I help with in Fujitsu 20K V4?
+            - menu [ref=f6e38]:
+              - generic [ref=f6e39]:
+                - menuitem [ref=f6e40] [cursor=pointer]:
+                  - generic [ref=f6e41]: Find recent items
+                - menuitem [ref=f6e43] [cursor=pointer]:
+                  - generic [ref=f6e44]: Add items from file
+                - menuitem [ref=f6e46] [cursor=pointer]:
+                  - generic [ref=f6e47]: Set due date reminders
+                - menuitem [ref=f6e49] [cursor=pointer]:
+                  - generic [ref=f6e50]: Format the list for readability
+          - list "Chat Messages" [ref=f6e92]:
+            - listitem [ref=f6e93]:
+              - article [ref=f6e95]:
+                - heading "You said:" [level=5] [ref=f6e96]
+                - paragraph [ref=f6e100]: What events are happening this week?
+            - listitem [ref=f6e130]:
+              - article [ref=f6e162]:
+                - generic [ref=f6e133]:
+                  - heading "Copilot said:" [level=6] [ref=f6e134]
+                  - generic [aria-hidden] [ref=f6e138]: Copilot
+                - button "Reasoning completed in 2 steps" [ref=f6e163]
+                - toolbar
+            - listitem [ref=f6e164]:
+              - article [ref=f6e166]:
+                - heading "Copilot said:" [level=6] [ref=f6e167]
+                - generic [ref=f6e170]:
+                  - paragraph [ref=f6e171]:
+                    - text: There are
+                    - strong [ref=f6e172]: 102 published, non-cancelled/non-postponed events
+                    - text: this week,
+                    - strong [ref=f6e173]: September 14–20, 2026
+                    - text: (Asia/Kolkata). The busiest day is
+                    - strong [ref=f6e174]: Wednesday, September 16
+                    - text: with
+                    - strong [ref=f6e175]: 26 events
+                    - text: .
+                    - button "1" [ref=f6e176] [cursor=pointer]
+                  - heading "Sample (5 of 102)" [level=3] [ref=f6e177]
+                  - table [ref=f6e179]:
+                    - rowgroup [ref=f6e180]:
+                      - row [ref=f6e181]:
+                        - columnheader "Start" [ref=f6e182]
+                        - columnheader "Event" [ref=f6e183]
+                        - columnheader "Format" [ref=f6e184]
+                    - rowgroup [ref=f6e185]:
+                      - row [ref=f6e186]:
+                        - cell "Sep 13, 9:30 PM" [ref=f6e187]
+                        - cell "Bing Search for Decision Makers – Season 22, Episode 10" [ref=f6e188]
+                        - cell "Online webinar" [ref=f6e189]
+                      - row [ref=f6e190]:
+                        - cell "Sep 14, 2:30 PM" [ref=f6e191]
+                        - cell "Microsoft 365 for UX Designers – Season 40, Episode 3" [ref=f6e192]
+                        - cell "Online webinar" [ref=f6e193]
+                      - row [ref=f6e194]:
+                        - cell "Sep 14, 3:00 PM" [ref=f6e195]
+                        - cell "365 for Mac office hours for Business Process Champions" [ref=f6e196]
+                        - cell "Hybrid training" [ref=f6e197]
+                      - row [ref=f6e198]:
+                        - cell "Sep 14, 3:00 PM" [ref=f6e199]
+                        - cell "Dynamics 365 for Business Champions – Season 43, Episode 2" [ref=f6e200]
+                        - cell "In-person webinar" [ref=f6e201]
+                      - row [ref=f6e202]:
+                        - cell "Sep 14, 3:30 PM" [ref=f6e203]
+                        - cell "Power Platform for Case Workers – Season 3, Episode 1" [ref=f6e204]
+                        - cell "Hybrid webinar" [ref=f6e205]
+                  - paragraph [ref=f6e206]:
+                    - text: "Daily totals: Sep 14: 17; Sep 15: 18; Sep 16: 26; Sep 17: 19; Sep 18: 13; Sep 19: 6; Sep 20: 2."
+                    - button "1" [ref=f6e207] [cursor=pointer]
+                  - paragraph [ref=f6e208]: Would you like me to narrow this to online, in-person, or a specific topic?
+                - button "1 SharePoint Fujitsu 20K V4" [ref=f6e213]:
+                  - generic [ref=f6e214]: "1"
+                  - generic [ref=f6e216]:
+                    - img "SharePoint" [ref=f6e218]
+                    - link "Fujitsu 20K V4" [ref=f6e219] [cursor=pointer]:
+                      - /url: https://microsoft.sharepoint-df.com/teams/ListsEval/Lists/Fujitsu 20K V4
+                - toolbar [ref=f6e221]:
+                  - generic [ref=f6e223]:
+                    - button "Copy" [ref=f6e226]
+                    - generic [ref=f6e230]:
+                      - button "Like" [ref=f6e231]
+                      - button "Dislike" [ref=f6e235]
+        - group "Suggested Prompts" [ref=f6e242]:
+          - button "List events by day and time" [ref=f6e243]
+          - button "Find events about a specific topic" [ref=f6e244]
+        - generic [ref=f6e53]:
+          - generic [ref=f6e60]:
+            - button "Open input menu" [ref=f6e64]
+            - generic [ref=f6e68]:
+              - textbox "Prompt" [active] [ref=f6e69]:
+                - paragraph [ref=f6e123]
+              - generic: Ask a question about Fujitsu 20K V4
+            - alert "Microphone Disabled" [ref=f6e74]:
+              - switch "Microphone Disabled" [ref=f6e76]:
+                - img "Mic-Regular" [ref=f6e78]
+          - status [ref=f6e80]
+      - generic [ref=f6e83]: AI-generated content may be incorrect
+    - status

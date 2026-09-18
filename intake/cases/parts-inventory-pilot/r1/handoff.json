@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "artifactType": "odsp-intake-handoff",
+  "intakeId": "parts-inventory-pilot",
+  "revision": 1,
+  "inputDigest": "a4cdf03337894571cdf8e1fd5610a876b1b428bf9a535585a03291d4a9dcb919",
+  "contextReadiness": "partial",
+  "readinessScope": "Declared context questions only; source metadata and semantic support are caller-assessed, not independently verified.",
+  "executionReadiness": "not_assessed",
+  "inputPolicy": "preserve_supplied",
+  "input": {
+    "schemaVersion": 1,
+    "intakeId": "parts-inventory-pilot",
+    "revision": 1,
+    "request": "lets do another pilot....this time, I will only provide a list....this is your test for good assertion generation....the task id to create a HTML report using this List https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/Lists/Parts%20Inventory%20Apr%202026%20ER/AllItems.aspx ....you have to click on copilot icon on bottom right, ask it to create a report to get the status stocks of various parts in this List, which financials",
+    "product": {
+      "name": "Parts Inventory Apr 2026 ER",
+      "url": "https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/Lists/Parts%20Inventory%20Apr%202026%20ER/AllItems.aspx",
+      "context": "SharePoint List with part identifiers, categories, dollar-denominated unit cost, stock quantity, reorder level, last-restocked date and stock status. A folder is present.",
+      "users": "Requester evaluating stock-report generation; operational audience not independently confirmed.",
+      "tasks": "Use bottom-right Copilot to generate an HTML stock-status report with financials; evaluate using newly generated assertions.",
+      "scope": "One fresh-chat report-generation pilot. Read list data and generated output; save local evaluation evidence/report. No source edits, publication or sharing."
+    },
+    "materials": {},
+    "sources": [
+      {
+        "id": "user",
+        "ref": "Current user request",
+        "kind": "user_statement",
+        "state": "available",
+        "observedAt": "2026-09-18",
+        "scope": "Task and target authorization",
+        "supportedQuestionIds": [
+          "task"
+        ]
+      },
+      {
+        "id": "list-ui",
+        "ref": "https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/Lists/Parts%20Inventory%20Apr%202026%20ER/AllItems.aspx",
+        "kind": "observation",
+        "state": "available",
+        "observedAt": "2026-09-18T13:38:06Z",
+        "scope": "Visible columns and root rows, not complete folder inventory",
+        "supportedQuestionIds": [
+          "fields"
+        ]
+      },
+      {
+        "id": "api",
+        "ref": "Target list metadata/fields read-only API",
+        "kind": "authoritative_data",
+        "state": "unavailable",
+        "scope": "Complete structured source data",
+        "limitation": "HTTP 401; stop API attempts. UI collection may establish record values but completeness is pending.",
+        "supportedQuestionIds": [
+          "completeness"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "id": "task",
+        "question": "What is the authorized task?",
+        "answer": "Generate and evaluate one HTML stock/financial report through the specified list's bottom-right Copilot.",
+        "acceptedKinds": [
+          "user_statement"
+        ],
+        "sourceIds": [
+          "user"
+        ],
+        "nextAction": "Execute only after criteria freeze."
+      },
+      {
+        "id": "fields",
+        "question": "Which fields support stock and financial assertions?",
+        "answer": "Part Name, Part ID, Category, Unit Cost ($), Stock Qty, Reorder Level, Last Restocked and Status are visible. Interpret financials as inventory valuation, not revenue or profit.",
+        "acceptedKinds": [
+          "observation",
+          "authoritative_data"
+        ],
+        "sourceIds": [
+          "list-ui"
+        ],
+        "nextAction": "Generate criteria grounded in these fields and distinguish optional estimates."
+      },
+      {
+        "id": "completeness",
+        "question": "Is the complete source inventory independently captured?",
+        "answer": null,
+        "acceptedKinds": [
+          "observation",
+          "authoritative_data"
+        ],
+        "sourceIds": [
+          "api"
+        ],
+        "nextAction": "Inspect folder and any virtualized rows through normal UI; retain UNABLE on completeness-dependent judgments if unresolved."
+      },
+      {
+        "id": "currency",
+        "question": "Is a national dollar currency specified?",
+        "answer": null,
+        "acceptedKinds": [
+          "observation",
+          "authoritative_data",
+          "document"
+        ],
+        "sourceIds": [],
+        "nextAction": "Preserve the source dollar symbol; do not assume USD without additional support."
+      }
+    ]
+  },
+  "assessments": [
+    {
+      "id": "task",
+      "state": "supported",
+      "sourceIds": [
+        "user"
+      ],
+      "reasons": []
+    },
+    {
+      "id": "fields",
+      "state": "supported",
+      "sourceIds": [
+        "list-ui"
+      ],
+      "reasons": []
+    },
+    {
+      "id": "completeness",
+      "state": "gap",
+      "sourceIds": [
+        "api"
+      ],
+      "reasons": [
+        "Question is unanswered",
+        "api: unavailable"
+      ]
+    },
+    {
+      "id": "currency",
+      "state": "gap",
+      "sourceIds": [],
+      "reasons": [
+        "Question is unanswered",
+        "No supporting sources"
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "id": "completeness",
+      "reason": "Question is unanswered; api: unavailable",
+      "nextAction": "Inspect folder and any virtualized rows through normal UI; retain UNABLE on completeness-dependent judgments if unresolved."
+    },
+    {
+      "id": "currency",
+      "reason": "Question is unanswered; No supporting sources",
+      "nextAction": "Preserve the source dollar symbol; do not assume USD without additional support."
+    }
+  ],
+  "nextStep": "Resolve the named context gaps; do not infer missing facts."
+}

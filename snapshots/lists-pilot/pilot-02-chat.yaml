@@ -1,0 +1,113 @@
+- iframe [active] [ref=f1e2024]:
+  - generic [ref=f6e7]:
+    - generic [ref=f6e8]:
+      - generic [ref=f6e9]:
+        - heading "Copilot" [level=2] [ref=f6e11]
+        - generic [ref=f6e12]:
+          - button "Chat options" [ref=f6e13]
+          - button "Close" [ref=f6e17]
+      - generic [ref=f6e24]:
+        - feed [ref=f6e28]:
+          - generic [ref=f6e30]:
+            - generic [ref=f6e32]:
+              - heading "Hello Vaibhav Verma (DESIGN)!" [level=2] [ref=f6e34]
+              - generic [ref=f6e35]: What can I help with in Fujitsu 20K V4?
+            - menu [ref=f6e38]:
+              - generic [ref=f6e39]:
+                - menuitem [ref=f6e40] [cursor=pointer]:
+                  - generic [ref=f6e41]: Find recent items
+                - menuitem [ref=f6e43] [cursor=pointer]:
+                  - generic [ref=f6e44]: Add items from file
+                - menuitem [ref=f6e46] [cursor=pointer]:
+                  - generic [ref=f6e47]: Set due date reminders
+                - menuitem [ref=f6e49] [cursor=pointer]:
+                  - generic [ref=f6e50]: Format the list for readability
+          - list "Chat Messages" [ref=f6e1425]:
+            - listitem [ref=f6e1426]:
+              - article [ref=f6e1428]:
+                - heading "You said:" [level=5] [ref=f6e1429]
+                - paragraph [ref=f6e1433]: Which events are already completed?
+            - listitem [ref=f6e1463]:
+              - article [ref=f6e1465]:
+                - generic [ref=f6e1466]:
+                  - heading "Copilot said:" [level=6] [ref=f6e1467]
+                  - generic [aria-hidden] [ref=f6e1471]: Copilot
+                - button "Reasoning completed in 2 steps" [ref=f6e1475]
+                - toolbar
+            - listitem [ref=f6e1483]:
+              - article [ref=f6e1485]:
+                - heading "Copilot said:" [level=6] [ref=f6e1486]
+                - generic [ref=f6e1489]:
+                  - paragraph [ref=f6e1490]:
+                    - strong [ref=f6e1491]: 16,520 of 20,000 events
+                    - text: have an
+                    - strong [ref=f6e1492]: End date before September 18, 2026
+                    - text: . I excluded
+                    - strong [ref=f6e1493]: 2,167
+                    - text: events with no End date.
+                    - button "6" [ref=f6e1494] [cursor=pointer]
+                  - heading "Sample (5 of 16,520)" [level=3] [ref=f6e1495]
+                  - table [ref=f6e1497]:
+                    - rowgroup [ref=f6e1498]:
+                      - row [ref=f6e1499]:
+                        - columnheader "Event" [ref=f6e1500]
+                        - columnheader "End date" [ref=f6e1501]
+                    - rowgroup [ref=f6e1502]:
+                      - row [ref=f6e1503]:
+                        - cell "365 for Mac adoption roundtable / Business Decision Makers" [ref=f6e1504]
+                        - cell [ref=f6e1505]:
+                          - text: Sep 5, 2025, 12:30 AM
+                          - button "1" [ref=f6e1506] [cursor=pointer]
+                      - row [ref=f6e1507]:
+                        - cell "365 for Mac migration checkpoint for Case Workers" [ref=f6e1508]
+                        - cell [ref=f6e1509]:
+                          - text: Oct 21, 2025, 12:00 AM
+                          - button "2" [ref=f6e1510] [cursor=pointer]
+                      - row [ref=f6e1511]:
+                        - cell "Microsoft 365 for Case Workers – Season 1, Episode 5" [ref=f6e1512]
+                        - cell [ref=f6e1513]:
+                          - text: Nov 19, 2025, 4:00 PM
+                          - button "3" [ref=f6e1514] [cursor=pointer]
+                      - row [ref=f6e1515]:
+                        - cell "Bing Search for Decision Makers – Season 1, Episode 1" [ref=f6e1516]
+                        - cell [ref=f6e1517]:
+                          - text: May 27, 2024, 3:00 PM
+                          - button "4" [ref=f6e1518] [cursor=pointer]
+                      - row [ref=f6e1519]:
+                        - cell "Microsoft 365 for UX Designers – Season 1, Episode 5" [ref=f6e1520]
+                        - cell [ref=f6e1521]:
+                          - text: Sep 12, 2024, 3:15 PM
+                          - button "5" [ref=f6e1522] [cursor=pointer]
+                  - paragraph [ref=f6e1523]: Would you like me to break completed events down by published status or year?
+                - generic [ref=f6e1525]:
+                  - generic [ref=f6e1526]:
+                    - button "1 SharePoint 365 for Mac adoption roundtable / Business Decision Makers" [ref=f6e1528]:
+                      - generic [ref=f6e1529]: "1"
+                      - generic [ref=f6e1531]:
+                        - img "SharePoint" [ref=f6e1533]
+                        - generic "365 for Mac adoption roundtable / Business Decision Makers" [ref=f6e1534] [cursor=pointer]
+                    - button "2 SharePoint 365 for Mac migration checkpoint for Case Workers" [ref=f6e1535]:
+                      - generic [ref=f6e1536]: "2"
+                      - generic [ref=f6e1538]:
+                        - img "SharePoint" [ref=f6e1540]
+                        - generic "365 for Mac migration checkpoint for Case Workers" [ref=f6e1541] [cursor=pointer]
+                  - button "+4" [ref=f6e1544] [cursor=pointer]
+                - toolbar [ref=f6e1545]:
+                  - generic [ref=f6e1547]:
+                    - button "Copy" [ref=f6e1550]
+                    - generic [ref=f6e1554]:
+                      - button "Like" [ref=f6e1555]
+                      - button "Dislike" [ref=f6e1559]
+        - generic [ref=f6e53]:
+          - generic [ref=f6e60]:
+            - button "Open input menu" [ref=f6e64]
+            - generic [ref=f6e68]:
+              - textbox "Prompt" [active] [ref=f6e69]:
+                - paragraph [ref=f6e1456]
+              - generic: Ask a question about Fujitsu 20K V4
+            - alert "Microphone Disabled" [ref=f6e74]:
+              - switch "Microphone Disabled" [ref=f6e76]:
+                - img "Mic-Regular" [ref=f6e78]
+          - status [ref=f6e80]
+      - generic [ref=f6e83]: AI-generated content may be incorrect
+    - status

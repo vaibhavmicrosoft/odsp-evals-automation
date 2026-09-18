@@ -1,0 +1,38 @@
+{
+  "runId": "pages-case-studies-2026-09-18",
+  "targetUrl": "https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/SitePages/CollabHome.aspx",
+  "source": {
+    "file": "../../sources/Edited-vibe-assertions.csv",
+    "recordIncludingHeader": 57,
+    "scenario": "generatePage",
+    "category": "type3",
+    "testName": "Build case studies showcase with tiles"
+  },
+  "prompt": "Build a case studies showcase page for Contoso's Customer Success Stories. Add a Text web part for the introduction: 'See How Leading Organizations Transform with Contoso' - Our customers across healthcare, finance, manufacturing, and retail are achieving remarkable results with our platform. Include a Quick Links web part titled 'Featured Case Studies' with tile layout containing links to: 'Acme Healthcare: 50% Faster Patient Onboarding' -> https://contoso.com/cases/acme-healthcare, 'Global Bank: $10M Saved in Compliance Costs' -> https://contoso.com/cases/global-bank, 'MegaManufacturing: 99.9% Production Uptime' -> https://contoso.com/cases/mega-manufacturing, 'RetailCo: 30% Increase in Customer Satisfaction' -> https://contoso.com/cases/retailco, 'TechStart: Scaled from 10 to 10,000 Users' -> https://contoso.com/cases/techstart, and 'EduFirst: Transformed Remote Learning' -> https://contoso.com/cases/edufirst. Add a Text web part inviting visitors to submit their own success story.",
+  "checks": [
+    {
+      "id": "CSV-R57-Assert1",
+      "text": "Page should contain exactly 1 Quick Links web part"
+    },
+    {
+      "id": "CSV-R57-Assert2",
+      "text": "Page should contain exactly 1 Quick Links web part"
+    },
+    {
+      "id": "CSV-R57-Assert3",
+      "text": "Quick Links web part should have Tiles layout"
+    },
+    {
+      "id": "CSV-R57-Assert4",
+      "text": "Page should contain exactly 2 Text web part(s)"
+    }
+  ],
+  "policy": {
+    "scope": "One new draft page through the requested bottom-right Copilot control. Do not edit CollabHome, publish, send messages or follow external test links.",
+    "inputs": "Preserve exact prompt and all four supplied checks. IDs are source coordinates assigned for traceability, not original assertion IDs.",
+    "evidence": "Capture original chat response and generated page using natural user scrolling; use visible editor properties or read-only page structure to verify web-part counts and layout. Unavailable structure is UNABLE, not a visual guess.",
+    "scoring": "PASS/(PASS+FAIL); coverage=(PASS+FAIL)/(PASS+FAIL+UNABLE). Preserve the duplicated check in the supplied denominator and disclose it. No applicable checks means not scored.",
+    "observations": "Content accuracy against the prompt, link labels/targets and visual quality are separate unscored observations, not silently added assertions. Synthetic Contoso claims are not verified real-world facts.",
+    "limitations": "One structural case does not establish overall page-creation quality. No new source-generation or assertion-generation benchmark is implied."
+  }
+}

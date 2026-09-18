@@ -1,0 +1,369 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#"
+  - generic [ref=e6]:
+    - banner [ref=e9]:
+      - button "App launcher" [ref=e12] [cursor=pointer]: 
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - link "Microsoft" [ref=e22] [cursor=pointer]:
+            - /url: https://microsoft.sharepoint.com/
+            - img "Microsoft" [ref=e23]
+          - link "Go to SharePoint" [ref=e27] [cursor=pointer]:
+            - /url: https://microsoft.sharepoint-df.com/_layouts/15/sharepoint.aspx?&login_hint=vaibhavverma@microsoft.com
+            - generic [ref=e28]: SharePoint
+        - search "Search this list" [ref=e197]:
+          - generic [ref=e198]:
+            - button "Search" [ref=e199] [cursor=pointer]
+            - combobox "Search this list" [ref=e204]
+        - generic [ref=e37]:
+          - button "Next steps to improve your site" [ref=e40] [cursor=pointer]:
+            - generic [aria-hidden] [ref=e41]: 
+          - button "Provide feedback to Microsoft" [ref=e44] [cursor=pointer]:
+            - generic [aria-hidden] [ref=e45]: 
+          - button "Feature Flags" [ref=e48] [cursor=pointer]:
+            - generic [aria-hidden] [ref=e49]: 
+          - button "Settings" [ref=e52] [cursor=pointer]:
+            - generic [aria-hidden] [ref=e53]: 
+          - button "Help" [ref=e56] [cursor=pointer]:
+            - generic [aria-hidden] [ref=e57]: 
+      - generic [ref=e58]:
+        - button "Account manager for Vaibhav Verma (DESIGN)" [ref=e60] [cursor=pointer]:
+          - generic [ref=e67]:
+            - generic [aria-hidden] [ref=e68]: VV
+            - img "VV" [ref=e205]
+        - generic: 
+    - generic [ref=e70]:
+      - generic [ref=e72]:
+        - navigation [ref=e75]:
+          - generic [ref=e77]:
+            - button "Microsoft, 1 of 5" [ref=e78] [cursor=pointer]:
+              - generic [ref=e84]: Microsoft
+            - button "Discover, 2 of 5" [ref=e86] [cursor=pointer]:
+              - generic [ref=e92]: Discover
+            - button "Publish, 3 of 5" [ref=e94] [cursor=pointer]:
+              - generic [ref=e100]: Publish
+            - button "Build, 4 of 5" [ref=e102] [cursor=pointer]:
+              - generic [ref=e108]: Build
+            - button "OneDrive, 5 of 5" [ref=e110] [cursor=pointer]:
+              - generic [ref=e116]: OneDrive
+        - generic [ref=e120]:
+          - region "SharePoint Site Header" [ref=e128]:
+            - generic [ref=e129]:
+              - link "DFsitevaibhav2 home" [ref=e131] [cursor=pointer]:
+                - /url: https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2
+              - heading "DFsitevaibhav2" [level=2] [ref=e135]
+              - button "Go to the Microsoft Teams channel" [ref=e137] [cursor=pointer]:
+                - generic [aria-hidden] [ref=e139]: 
+              - navigation "Site navigation. Use arrow keys to move between items." [ref=e140]:
+                - generic [ref=e144]:
+                  - list [ref=e145]:
+                    - listitem [ref=e146]:
+                      - link "Home" [ref=e147] [cursor=pointer]:
+                        - /url: /teams/DFsitevaibhav2
+                    - listitem [ref=e149]:
+                      - link "Invoices Doclib" [ref=e150] [cursor=pointer]:
+                        - /url: /teams/DFsitevaibhav2/Test library 2/Forms/Shortlisted PDFs.aspx
+                    - listitem [ref=e152]:
+                      - link "Pages" [ref=e153] [cursor=pointer]:
+                        - /url: /teams/DFsitevaibhav2/SitePages/Forms/ByAuthor.aspx
+                    - listitem [ref=e155]:
+                      - link "Site contents" [ref=e156] [cursor=pointer]:
+                        - /url: /teams/DFsitevaibhav2/_layouts/15/viewlsts.aspx
+                    - listitem [ref=e158]:
+                      - link "Announcement list 2" [ref=e159] [cursor=pointer]:
+                        - /url: /teams/DFsitevaibhav2/Lists/Announcement list 2/
+                    - listitem [ref=e161]:
+                      - link "Fruits List" [ref=e162] [cursor=pointer]:
+                        - /url: /teams/DFsitevaibhav2/Lists/Fruits List/AllItems.aspx
+                    - listitem [ref=e164]:
+                      - link "FAQ List_Simple" [ref=e165] [cursor=pointer]:
+                        - /url: /teams/DFsitevaibhav2/Lists/FAQ List/AllItems.aspx
+                  - button "More options" [ref=e168] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=e169]: 
+                  - button "Edit site navigation" [ref=e171] [cursor=pointer]: Edit navigation
+              - generic [ref=e172]:
+                - generic [ref=e173]:
+                  - generic "Private group" [ref=e174]
+                  - text: "|"
+                  - button "Confidential \\ Internal-Only" [ref=e176] [cursor=pointer]
+                - button "11 members. Open Group Membership pane" [ref=e179] [cursor=pointer]:
+                  - generic [ref=e180]:
+                    - generic [aria-hidden] [ref=e181]: 
+                    - generic [ref=e182]: 11 members
+                - button "More" [ref=e185] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=e187]: 
+          - main [ref=e192]:
+            - main [ref=e208]:
+              - generic [ref=e210]:
+                - list [ref=e213]:
+                  - listitem [ref=e214]:
+                    - button "Parts Inventory Apr 2026 ER" [ref=e1225] [cursor=pointer]
+                    - generic [aria-hidden] [ref=e1227]: 
+                  - listitem [ref=e1228]:
+                    - heading [level=2] [ref=e1229]:
+                      - button "Folder" [ref=e1230] [cursor=pointer]:
+                        - generic [aria-hidden] [ref=e1232]: 
+                - generic [ref=e223]:
+                  - menubar [ref=e224]:
+                    - generic [ref=e225]:
+                      - menuitem "People present in list" [ref=e226] [cursor=pointer]:
+                        - menu [ref=e228]:
+                          - menuitem "Vaibhav Verma (DESIGN)" [ref=e229]:
+                            - generic [ref=e232]:
+                              - img "Vaibhav Verma (DESIGN)"
+                      - menuitem "Share" [ref=e233] [cursor=pointer]:
+                        - generic [ref=e234]:
+                          - generic [aria-hidden] [ref=e235]: 
+                          - generic [ref=e236]: Share
+                          - generic [aria-hidden] [ref=e237]: 
+                      - menuitem "Copilot" [ref=e238] [cursor=pointer]:
+                        - generic [ref=e242]:
+                          - generic [ref=e243]: Copilot
+                          - generic [aria-hidden] [ref=e244]: 
+                      - menuitem "Forms" [ref=e245] [cursor=pointer]
+                      - menuitem "Workflows" [ref=e251] [cursor=pointer]
+                      - menuitem "Integrate" [ref=e257] [cursor=pointer]:
+                        - generic [ref=e258]:
+                          - generic [aria-hidden] [ref=e259]: 
+                          - generic [ref=e260]: Integrate
+                          - generic [aria-hidden] [ref=e261]: 
+                      - menuitem "Export" [ref=e262] [cursor=pointer]:
+                        - generic [ref=e263]:
+                          - generic [aria-hidden] [ref=e264]: 
+                          - generic [ref=e265]: Export
+                          - generic [aria-hidden] [ref=e266]: 
+                      - menuitem "More" [ref=e267] [cursor=pointer]:
+                        - generic [aria-hidden] [ref=e269]: 
+                  - button "New" [ref=e274] [cursor=pointer]:
+                    - generic [ref=e275]:
+                      - generic [aria-hidden] [ref=e276]: 
+                      - generic [ref=e277]: New
+              - generic [ref=e279]:
+                - tablist "Views" [ref=e282]:
+                  - tab "All Items" [selected] [ref=e283] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=e284]: 
+                    - text: 
+                - button "More filters" [ref=e290] [cursor=pointer]:
+                  - generic [ref=e294]: "15"
+                - generic [ref=e296]:
+                  - button "Grid mode" [ref=e297] [cursor=pointer]
+                  - button "Options" [ref=e302] [cursor=pointer]
+                  - button "Details pane" [ref=e306] [cursor=pointer]
+              - tabpanel [ref=e310]:
+                - generic [ref=e313]:
+                  - grid "Parts Inventory Apr 2026 ER" [ref=e314]:
+                    - row [ref=e1233]:
+                      - gridcell [ref=e1234]:
+                        - checkbox "Select all rows" [ref=e1235] [cursor=pointer]
+                        - generic [ref=e1236] [cursor=pointer]
+                      - columnheader [ref=e1237]:
+                        - button "Part Image" [ref=e1238]:  
+                      - columnheader "Type" [ref=e1240]:
+                        - button "Type" [ref=e1241]:
+                          - img [aria-hidden] [ref=e1242]: 
+                      - columnheader [ref=e1243]:
+                        - button "Part Name" [ref=e1244]:  
+                      - columnheader [ref=e1246]:
+                        - button "Part ID" [ref=e1247]:  
+                      - columnheader [ref=e1249]:
+                        - button "Category" [ref=e1250]:  
+                      - columnheader [ref=e1252]:
+                        - button "Unit Cost ($)" [ref=e1253]:  
+                      - columnheader [ref=e1255]:
+                        - button "Stock Qty" [ref=e1256]:  
+                      - columnheader [ref=e1258]:
+                        - button "Reorder Level" [ref=e1259]:  
+                      - columnheader [ref=e1261]:
+                        - button "Last Restocked" [ref=e1262]:  
+                      - columnheader [ref=e1264]:
+                        - button "Status" [ref=e1265]:  
+                      - columnheader [ref=e1267]:
+                        - button "Tag" [ref=e1268]:  
+                      - text: 
+                      - columnheader [ref=e1270]:
+                        - button " Add column" [ref=e1271]:
+                          - text: 
+                          - generic [ref=e1272]: Add column
+                    - row [ref=e1273]:
+                      - gridcell "Select row" [ref=e1274]:
+                        - checkbox "Select row" [ref=e1276] [cursor=pointer]
+                        - generic [ref=e1277] [cursor=pointer]
+                      - cell [ref=e1278]
+                      - cell [ref=e1280]
+                      - cell [ref=e1282]
+                      - cell [ref=e1284]
+                      - cell [ref=e1286]
+                      - cell [ref=e1288]
+                      - cell [ref=e1290]
+                      - cell [ref=e1292]
+                      - cell [ref=e1294]
+                      - cell [ref=e1296]
+                      - cell [ref=e1298]
+                      - cell [ref=e1300]
+                    - row [ref=e1302]:
+                      - gridcell "Select row" [ref=e1303]:
+                        - checkbox "Select row" [ref=e1305] [cursor=pointer]
+                        - generic [ref=e1306] [cursor=pointer]
+                      - cell [ref=e1307]
+                      - cell [ref=e1309]
+                      - cell [ref=e1311]
+                      - cell [ref=e1313]
+                      - cell [ref=e1315]
+                      - cell [ref=e1317]
+                      - cell [ref=e1319]
+                      - cell [ref=e1321]
+                      - cell [ref=e1323]
+                      - cell [ref=e1325]
+                      - cell [ref=e1327]
+                      - cell [ref=e1329]
+                    - row [ref=e1331]:
+                      - gridcell "Select row" [ref=e1332]:
+                        - checkbox "Select row" [ref=e1334] [cursor=pointer]
+                        - generic [ref=e1335] [cursor=pointer]
+                      - cell [ref=e1336]
+                      - cell [ref=e1338]
+                      - cell [ref=e1340]
+                      - cell [ref=e1342]
+                      - cell [ref=e1344]
+                      - cell [ref=e1346]
+                      - cell [ref=e1348]
+                      - cell [ref=e1350]
+                      - cell [ref=e1352]
+                      - cell [ref=e1354]
+                      - cell [ref=e1356]
+                      - cell [ref=e1358]
+                    - row [ref=e1360]:
+                      - gridcell "Select row" [ref=e1361]:
+                        - checkbox "Select row" [ref=e1363] [cursor=pointer]
+                        - generic [ref=e1364] [cursor=pointer]
+                      - cell [ref=e1365]
+                      - cell [ref=e1367]
+                      - cell [ref=e1369]
+                      - cell [ref=e1371]
+                      - cell [ref=e1373]
+                      - cell [ref=e1375]
+                      - cell [ref=e1377]
+                      - cell [ref=e1379]
+                      - cell [ref=e1381]
+                      - cell [ref=e1383]
+                      - cell [ref=e1385]
+                      - cell [ref=e1387]
+                    - row [ref=e1389]:
+                      - gridcell "Select row" [ref=e1390]:
+                        - checkbox "Select row" [ref=e1392] [cursor=pointer]
+                        - generic [ref=e1393] [cursor=pointer]
+                      - cell [ref=e1394]
+                      - cell [ref=e1396]
+                      - cell [ref=e1398]
+                      - cell [ref=e1400]
+                      - cell [ref=e1402]
+                      - cell [ref=e1404]
+                      - cell [ref=e1406]
+                      - cell [ref=e1408]
+                      - cell [ref=e1410]
+                      - cell [ref=e1412]
+                      - cell [ref=e1414]
+                      - cell [ref=e1416]
+                    - row [ref=e1418]:
+                      - gridcell "Select row" [ref=e1419]:
+                        - checkbox "Select row" [ref=e1421] [cursor=pointer]
+                        - generic [ref=e1422] [cursor=pointer]
+                      - cell [ref=e1423]
+                      - cell [ref=e1425]
+                      - cell [ref=e1427]
+                      - cell [ref=e1429]
+                      - cell [ref=e1431]
+                      - cell [ref=e1433]
+                      - cell [ref=e1435]
+                      - cell [ref=e1437]
+                      - cell [ref=e1439]
+                      - cell [ref=e1441]
+                      - cell [ref=e1443]
+                      - cell [ref=e1445]
+                    - row [ref=e1447]:
+                      - gridcell "Select row" [ref=e1448]:
+                        - checkbox "Select row" [ref=e1450] [cursor=pointer]
+                        - generic [ref=e1451] [cursor=pointer]
+                      - cell [ref=e1452]
+                      - cell [ref=e1454]
+                      - cell [ref=e1456]
+                      - cell [ref=e1458]
+                      - cell [ref=e1460]
+                      - cell [ref=e1462]
+                      - cell [ref=e1464]
+                      - cell [ref=e1466]
+                      - cell [ref=e1468]
+                      - cell [ref=e1470]
+                      - cell [ref=e1472]
+                      - cell [ref=e1474]
+                    - row [ref=e1476]:
+                      - gridcell "Select row" [ref=e1477]:
+                        - checkbox "Select row" [ref=e1479] [cursor=pointer]
+                        - generic [ref=e1480] [cursor=pointer]
+                      - cell [ref=e1481]
+                      - cell [ref=e1483]
+                      - cell [ref=e1485]
+                      - cell [ref=e1487]
+                      - cell [ref=e1489]
+                      - cell [ref=e1491]
+                      - cell [ref=e1493]
+                      - cell [ref=e1495]
+                      - cell [ref=e1497]
+                      - cell [ref=e1499]
+                      - cell [ref=e1501]
+                      - cell [ref=e1503]
+                    - row [ref=e1505]:
+                      - gridcell "Select row" [ref=e1506]:
+                        - checkbox "Select row" [ref=e1508] [cursor=pointer]
+                        - generic [ref=e1509] [cursor=pointer]
+                      - cell [ref=e1510]
+                      - cell [ref=e1512]
+                      - cell [ref=e1514]
+                      - cell [ref=e1516]
+                      - cell [ref=e1518]
+                      - cell [ref=e1520]
+                      - cell [ref=e1522]
+                      - cell [ref=e1524]
+                      - cell [ref=e1526]
+                      - cell [ref=e1528]
+                      - cell [ref=e1530]
+                      - cell [ref=e1532]
+                    - row [ref=e1534]:
+                      - gridcell "Select row" [ref=e1535]:
+                        - checkbox "Select row" [ref=e1537] [cursor=pointer]
+                        - generic [ref=e1538] [cursor=pointer]
+                      - cell [ref=e1539]
+                      - cell [ref=e1541]
+                      - cell [ref=e1543]
+                      - cell [ref=e1545]
+                      - cell [ref=e1547]
+                      - cell [ref=e1549]
+                      - cell [ref=e1551]
+                      - cell [ref=e1553]
+                      - cell [ref=e1555]
+                      - cell [ref=e1557]
+                      - cell [ref=e1559]
+                      - cell [ref=e1561]
+                  - grid [ref=e1199]
+                  - status [ref=e1200]
+      - generic [ref=e1201]:
+        - button "3️⃣ ✓" [ref=e1563] [cursor=pointer]:
+          - text: 3️⃣
+          - generic [ref=e1564]: ✓
+        - button "⚛️ ✗" [ref=e1565] [cursor=pointer]:
+          - text: ⚛️
+          - generic [ref=e1566]: ✗
+        - button [ref=e1567] [cursor=pointer]:
+          - img "ODSP Labs" [ref=e1568]
+        - button "🚀" [ref=e1569] [cursor=pointer]
+        - button "🔍" [ref=e1570] [cursor=pointer]
+        - button "🐞" [ref=e1571] [cursor=pointer]
+        - button "DF - CAN" [ref=e1572] [cursor=pointer]
+        - 'button "🙁 FCI: 4062" [ref=e1573] [cursor=pointer]':
+          - generic [ref=e1574]: 🙁
+          - generic [ref=e1575]: "FCI: 4062"
+        - button "🔄" [ref=e1215] [cursor=pointer]
+        - button "⚛️" [ref=e1576] [cursor=pointer]
+  - group "Copilot" [ref=e1577]:
+    - button "Copilot" [ref=e1583]

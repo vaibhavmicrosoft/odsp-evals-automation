@@ -1,0 +1,1122 @@
+- generic [ref=f5e1]:
+  - link "Skip to main content" [ref=f5e3] [cursor=pointer]:
+    - /url: "#"
+  - generic [ref=f5e6]:
+    - banner [ref=f5e9]:
+      - button "App launcher" [ref=f5e12] [cursor=pointer]: 
+      - generic [ref=f5e18]:
+        - generic [ref=f5e19]:
+          - link "Microsoft" [ref=f5e22] [cursor=pointer]:
+            - /url: https://microsoft.sharepoint.com/
+            - img "Microsoft" [ref=f5e23]
+          - link "Go to SharePoint" [ref=f5e27] [cursor=pointer]:
+            - /url: https://microsoft.sharepoint-df.com/_layouts/15/sharepoint.aspx?&login_hint=vaibhavverma@microsoft.com
+            - generic [ref=f5e28]: SharePoint
+        - search "Search this list" [ref=f5e34]:
+          - generic [ref=f5e35]:
+            - button "Search" [ref=f5e36] [cursor=pointer]
+            - combobox "Search this list" [ref=f5e41]
+        - generic [ref=f5e42]:
+          - button "Next steps to improve your site" [ref=f5e45] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f5e46]: 
+          - button "Provide feedback to Microsoft" [ref=f5e49] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f5e50]: 
+          - button "Open Agents. Press tab to enter expanded region." [expanded] [ref=f5e1230] [cursor=pointer]
+          - button "Feature Flags" [ref=f5e59] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f5e60]: 
+          - button "Settings" [ref=f5e63] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f5e64]: 
+          - button "Help" [ref=f5e67] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f5e68]: 
+      - generic [ref=f5e69]:
+        - button "Account manager for Vaibhav Verma (DESIGN)" [ref=f5e71] [cursor=pointer]:
+          - generic [ref=f5e78]:
+            - generic [aria-hidden] [ref=f5e79]: VV
+            - img "VV" [ref=f5e81]
+        - generic: 
+    - generic [ref=f5e82]:
+      - generic [ref=f5e84]:
+        - navigation [ref=f5e87]:
+          - generic [ref=f5e89]:
+            - button "Microsoft, 1 of 5" [ref=f5e90] [cursor=pointer]:
+              - generic [ref=f5e96]: Microsoft
+            - button "Discover, 2 of 5" [ref=f5e98] [cursor=pointer]:
+              - generic [ref=f5e104]: Discover
+            - button "Publish, 3 of 5" [ref=f5e106] [cursor=pointer]:
+              - generic [ref=f5e112]: Publish
+            - button "Build, 4 of 5" [ref=f5e114] [cursor=pointer]:
+              - generic [ref=f5e120]: Build
+            - button "OneDrive, 5 of 5" [ref=f5e122] [cursor=pointer]:
+              - generic [ref=f5e128]: OneDrive
+        - generic [ref=f5e132]:
+          - region "SharePoint Site Header" [ref=f5e140]:
+            - generic [ref=f5e141]:
+              - link "DFsitevaibhav2 home" [ref=f5e143] [cursor=pointer]:
+                - /url: https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2
+              - heading "DFsitevaibhav2" [level=2] [ref=f5e147]
+              - button "Go to the Microsoft Teams channel" [ref=f5e149] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f5e151]: 
+              - navigation "Site navigation. Use arrow keys to move between items." [ref=f5e152]:
+                - generic [ref=f5e156]:
+                  - list [ref=f5e157]:
+                    - listitem [ref=f5e158]:
+                      - link "Home" [ref=f5e159] [cursor=pointer]:
+                        - /url: /teams/DFsitevaibhav2
+                    - listitem [ref=f5e161]:
+                      - link "Invoices Doclib" [ref=f5e162] [cursor=pointer]:
+                        - /url: /teams/DFsitevaibhav2/Test library 2/Forms/Shortlisted PDFs.aspx
+                    - listitem [ref=f5e164]:
+                      - link "Pages" [ref=f5e165] [cursor=pointer]:
+                        - /url: /teams/DFsitevaibhav2/SitePages/Forms/ByAuthor.aspx
+                    - listitem [ref=f5e167]:
+                      - link "Site contents" [ref=f5e168] [cursor=pointer]:
+                        - /url: /teams/DFsitevaibhav2/_layouts/15/viewlsts.aspx
+                    - listitem [ref=f5e170]:
+                      - link "Announcement list 2" [ref=f5e171] [cursor=pointer]:
+                        - /url: /teams/DFsitevaibhav2/Lists/Announcement list 2/
+                    - listitem [ref=f5e173]:
+                      - link "Fruits List" [ref=f5e174] [cursor=pointer]:
+                        - /url: /teams/DFsitevaibhav2/Lists/Fruits List/AllItems.aspx
+                    - listitem [ref=f5e176]:
+                      - link "FAQ List_Simple" [ref=f5e177] [cursor=pointer]:
+                        - /url: /teams/DFsitevaibhav2/Lists/FAQ List/AllItems.aspx
+                  - button "More options" [ref=f5e180] [cursor=pointer]:
+                    - generic [aria-hidden] [ref=f5e181]: 
+                  - button "Edit site navigation" [ref=f5e183] [cursor=pointer]: Edit navigation
+              - generic [ref=f5e184]:
+                - generic [ref=f5e185]:
+                  - generic "Private group" [ref=f5e186]
+                  - text: "|"
+                  - button "Confidential \\ Internal-Only" [ref=f5e188] [cursor=pointer]
+                - button "11 members. Open Group Membership pane" [ref=f5e191] [cursor=pointer]:
+                  - generic [ref=f5e192]:
+                    - generic [aria-hidden] [ref=f5e193]: 
+                    - generic [ref=f5e194]: 11 members
+                - button "More" [ref=f5e197] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=f5e199]: 
+          - generic [ref=f5e202]:
+            - main [ref=f5e204]:
+              - main [ref=f5e207]:
+                - generic [ref=f5e209]:
+                  - generic [ref=f5e211]:
+                    - list [ref=f5e212]:
+                      - listitem [ref=f5e213]:
+                        - heading [level=2] [ref=f5e214]:
+                          - button "Parts Inventory Apr 2026 ER" [ref=f5e215] [cursor=pointer]:
+                            - generic [aria-hidden] [ref=f5e217]: 
+                    - button [ref=f5e219] [cursor=pointer]:
+                      - img "Remove from favorites" [ref=f5e220]: 
+                  - generic [ref=f5e222]:
+                    - menubar [ref=f5e223]:
+                      - generic [ref=f5e224]:
+                        - menuitem "People present in list" [ref=f5e1218] [cursor=pointer]:
+                          - menu [ref=f5e1220]:
+                            - menuitem "Vaibhav Verma (DESIGN)" [ref=f5e1221]:
+                              - generic [ref=f5e1224]:
+                                - img "Vaibhav Verma (DESIGN)"
+                        - menuitem "Share" [ref=f5e225] [cursor=pointer]:
+                          - generic [ref=f5e226]:
+                            - generic [aria-hidden] [ref=f5e227]: 
+                            - generic [ref=f5e228]: Share
+                            - generic [aria-hidden] [ref=f5e229]: 
+                        - menuitem "Copilot" [ref=f5e230] [cursor=pointer]:
+                          - generic [ref=f5e234]:
+                            - generic [ref=f5e235]: Copilot
+                            - generic [aria-hidden] [ref=f5e236]: 
+                        - menuitem "Forms" [ref=f5e237] [cursor=pointer]
+                        - menuitem "Workflows" [ref=f5e243] [cursor=pointer]
+                        - menuitem "Integrate" [ref=f5e249] [cursor=pointer]:
+                          - generic [ref=f5e250]:
+                            - generic [aria-hidden] [ref=f5e251]: 
+                            - generic [ref=f5e252]: Integrate
+                            - generic [aria-hidden] [ref=f5e253]: 
+                        - menuitem "More" [ref=f5e259] [cursor=pointer]:
+                          - generic [aria-hidden] [ref=f5e261]: 
+                    - button "New" [ref=f5e266] [cursor=pointer]:
+                      - generic [ref=f5e267]:
+                        - generic [aria-hidden] [ref=f5e268]: 
+                        - generic [ref=f5e269]: New
+                - generic [ref=f5e271]:
+                  - tablist "Views" [ref=f5e274]:
+                    - tab "All Items" [selected] [ref=f5e275] [cursor=pointer]:
+                      - generic [aria-hidden] [ref=f5e276]: 
+                      - text: 
+                  - button "More filters" [ref=f5e282] [cursor=pointer]:
+                    - generic [ref=f5e286]: "15"
+                  - generic [ref=f5e288]:
+                    - button "Grid mode" [ref=f5e289] [cursor=pointer]
+                    - button "Options" [ref=f5e294] [cursor=pointer]
+                    - button "Details pane" [ref=f5e298] [cursor=pointer]
+                - tabpanel [ref=f5e302]:
+                  - generic [ref=f5e305]:
+                    - grid "Parts Inventory Apr 2026 ER" [ref=f5e306]:
+                      - row [ref=f5e307]:
+                        - gridcell [ref=f5e308]:
+                          - checkbox "Select all rows" [ref=f5e309] [cursor=pointer]
+                          - generic [ref=f5e310] [cursor=pointer]
+                        - text: 
+                        - columnheader [ref=f5e311]:
+                          - button "Part Image" [ref=f5e312]:  
+                        - text: 
+                        - columnheader "Type" [ref=f5e314]:
+                          - button "Type" [ref=f5e315]:
+                            - img [aria-hidden] [ref=f5e316]: 
+                        - text: 
+                        - columnheader [ref=f5e317]:
+                          - button "Part Name " [ref=f5e318]:
+                            - text: 
+                            - generic [ref=f5e319]: Part Name
+                            - text:  
+                        - text: 
+                        - columnheader [ref=f5e320]:
+                          - button "Part ID" [ref=f5e321]:  
+                        - text: 
+                        - columnheader [ref=f5e323]:
+                          - button "Category" [ref=f5e324]:  
+                        - text: 
+                        - columnheader [ref=f5e326]:
+                          - button "Unit Cost ($)" [ref=f5e327]:  
+                        - text: 
+                        - columnheader [ref=f5e329]:
+                          - button "Stock Qty" [ref=f5e330]:  
+                        - text: 
+                        - columnheader [ref=f5e332]:
+                          - button "Reorder Level" [ref=f5e333]:  
+                        - text: 
+                        - columnheader [ref=f5e335]:
+                          - button "Last Restocked" [ref=f5e336]:  
+                        - text: 
+                        - columnheader [ref=f5e338]:
+                          - button "Status" [ref=f5e339]:  
+                        - text: 
+                        - columnheader [ref=f5e341]:
+                          - button "Tag" [ref=f5e342]:  
+                        - text: 
+                        - columnheader [ref=f5e344]:
+                          - button " Add column" [ref=f5e345]:
+                            - text: 
+                            - generic [ref=f5e346]: Add column
+                      - row [ref=f5e1263]:
+                        - gridcell "Select row" [ref=f5e1264]:
+                          - checkbox "Select row" [ref=f5e1266] [cursor=pointer]
+                          - generic [ref=f5e1267] [cursor=pointer]
+                        - gridcell [ref=f5e1268]
+                        - gridcell [ref=f5e1269]:
+                          - img "Yellow folder" [ref=f5e1271]
+                        - gridcell [ref=f5e1276]:
+                          - button "Folder" [ref=f5e1277] [cursor=pointer]
+                          - generic:  
+                        - gridcell [ref=f5e1278]
+                        - gridcell [ref=f5e1279]
+                        - gridcell [ref=f5e1282]
+                        - gridcell [ref=f5e1283]
+                        - gridcell [ref=f5e1284]
+                        - gridcell [ref=f5e1285]
+                        - gridcell [ref=f5e1286]
+                        - gridcell [ref=f5e1289]
+                      - row [ref=f5e1292]:
+                        - gridcell "Select row" [ref=f5e1293]:
+                          - checkbox "Select row" [ref=f5e1295] [cursor=pointer]
+                          - generic [ref=f5e1296] [cursor=pointer]
+                        - gridcell [ref=f5e1297]:
+                          - button [ref=f5e1298]:
+                            - img "part_4.jpg" [ref=f5e1299]
+                        - gridcell [ref=f5e1300]
+                        - gridcell [ref=f5e1302]:
+                          - button "Ball Bearing 608ZZ" [ref=f5e1303] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-004" [ref=f5e1304]
+                        - gridcell "Bearings" [ref=f5e1305]
+                        - gridcell "$1.85" [ref=f5e1309]
+                        - gridcell "96" [ref=f5e1310]
+                        - gridcell "50" [ref=f5e1311]
+                        - gridcell "2026-04-06" [ref=f5e1312]
+                        - gridcell "In Stock" [ref=f5e1313]
+                        - gridcell [ref=f5e1317]
+                      - row [ref=f5e1320]:
+                        - gridcell "Select row" [ref=f5e1321]:
+                          - checkbox "Select row" [ref=f5e1323] [cursor=pointer]
+                          - generic [ref=f5e1324] [cursor=pointer]
+                        - gridcell [ref=f5e1325]:
+                          - button [ref=f5e1326]:
+                            - img "part_26.jpg" [ref=f5e1327]
+                        - gridcell [ref=f5e1328]
+                        - gridcell [ref=f5e1330]:
+                          - button "Cable Tie 200mm" [ref=f5e1331] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-026" [ref=f5e1332]
+                        - gridcell "Consumables" [ref=f5e1333]
+                        - gridcell "$0.03" [ref=f5e1337]
+                        - gridcell "2,500" [ref=f5e1338]
+                        - gridcell "500" [ref=f5e1339]
+                        - gridcell "2026-04-18" [ref=f5e1340]
+                        - gridcell "In Stock" [ref=f5e1341]
+                        - gridcell [ref=f5e1345]
+                      - row [ref=f5e1348]:
+                        - gridcell "Select row" [ref=f5e1349]:
+                          - checkbox "Select row" [ref=f5e1351] [cursor=pointer]
+                          - generic [ref=f5e1352] [cursor=pointer]
+                        - gridcell [ref=f5e1353]:
+                          - button [ref=f5e1354]:
+                            - img "part_20.jpg" [ref=f5e1355]
+                        - gridcell [ref=f5e1356]
+                        - gridcell [ref=f5e1358]:
+                          - button "DC Gear Motor 12V" [ref=f5e1359] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-020" [ref=f5e1360]
+                        - gridcell "Motors" [ref=f5e1361]
+                        - gridcell "$29.40" [ref=f5e1365]
+                        - gridcell "5" [ref=f5e1366]
+                        - gridcell "5" [ref=f5e1367]
+                        - gridcell "2026-04-15" [ref=f5e1368]
+                        - gridcell "In Stock" [ref=f5e1369]
+                        - gridcell [ref=f5e1373]
+                      - row [ref=f5e1376]:
+                        - gridcell "Select row" [ref=f5e1377]:
+                          - checkbox "Select row" [ref=f5e1379] [cursor=pointer]
+                          - generic [ref=f5e1380] [cursor=pointer]
+                        - gridcell [ref=f5e1381]:
+                          - button [ref=f5e1382]:
+                            - img "part_15.jpg" [ref=f5e1383]
+                        - gridcell [ref=f5e1384]
+                        - gridcell [ref=f5e1386]:
+                          - button "DIN Rail Terminal Block" [ref=f5e1387] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-015" [ref=f5e1388]
+                        - gridcell "Electrical" [ref=f5e1389]
+                        - gridcell "$1.10" [ref=f5e1393]
+                        - gridcell "205" [ref=f5e1394]
+                        - gridcell "80" [ref=f5e1395]
+                        - gridcell "2026-04-12" [ref=f5e1396]
+                        - gridcell "In Stock" [ref=f5e1397]
+                        - gridcell [ref=f5e1401]
+                      - row [ref=f5e1404]:
+                        - gridcell "Select row" [ref=f5e1405]:
+                          - checkbox "Select row" [ref=f5e1407] [cursor=pointer]
+                          - generic [ref=f5e1408] [cursor=pointer]
+                        - gridcell [ref=f5e1409]:
+                          - button [ref=f5e1410]:
+                            - img "part_23.jpg" [ref=f5e1411]
+                        - gridcell [ref=f5e1412]
+                        - gridcell [ref=f5e1414]:
+                          - button "Emergency Stop Button" [ref=f5e1415] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-023" [ref=f5e1416]
+                        - gridcell "Controls" [ref=f5e1417]
+                        - gridcell "$11.75" [ref=f5e1421]
+                        - gridcell "16" [ref=f5e1422]
+                        - gridcell "8" [ref=f5e1423]
+                        - gridcell "2026-04-16" [ref=f5e1424]
+                        - gridcell "In Stock" [ref=f5e1425]
+                        - gridcell [ref=f5e1429]
+                      - row [ref=f5e1432]:
+                        - gridcell "Select row" [ref=f5e1433]:
+                          - checkbox "Select row" [ref=f5e1435] [cursor=pointer]
+                          - generic [ref=f5e1436] [cursor=pointer]
+                        - gridcell [ref=f5e1437]:
+                          - button [ref=f5e1438]:
+                            - img "part_2.jpg" [ref=f5e1439]
+                        - gridcell [ref=f5e1440]
+                        - gridcell [ref=f5e1442]:
+                          - button "Flat Washer M6" [ref=f5e1443] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-002" [ref=f5e1444]
+                        - gridcell " Fasteners" [ref=f5e1445]:
+                          - generic [ref=f5e1447]:
+                            - generic [ref=f5e1448]: 
+                            - generic [ref=f5e1449]: Fasteners
+                        - gridcell "$0.05" [ref=f5e1450]
+                        - gridcell "1,200" [ref=f5e1451]
+                        - gridcell "300" [ref=f5e1452]
+                        - gridcell "2026-04-03" [ref=f5e1453]
+                        - gridcell "In Stock" [ref=f5e1454]
+                        - gridcell "Choice 2" [ref=f5e1458]
+                      - row [ref=f5e1462]:
+                        - gridcell "Select row" [ref=f5e1463]:
+                          - checkbox "Select row" [ref=f5e1465] [cursor=pointer]
+                          - generic [ref=f5e1466] [cursor=pointer]
+                        - gridcell [ref=f5e1467]:
+                          - button [ref=f5e1468]:
+                            - img "part_14.jpg" [ref=f5e1469]
+                        - gridcell [ref=f5e1470]
+                        - gridcell [ref=f5e1472]:
+                          - button "Fuse 5A Ceramic" [ref=f5e1473] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-014" [ref=f5e1474]
+                        - gridcell "Electrical" [ref=f5e1475]
+                        - gridcell "$0.75" [ref=f5e1479]
+                        - gridcell "88" [ref=f5e1480]
+                        - gridcell "50" [ref=f5e1481]
+                        - gridcell "2026-04-12" [ref=f5e1482]
+                        - gridcell "In Stock" [ref=f5e1483]
+                        - gridcell [ref=f5e1487]
+                      - row [ref=f5e1490]:
+                        - gridcell "Select row" [ref=f5e1491]:
+                          - checkbox "Select row" [ref=f5e1493] [cursor=pointer]
+                          - generic [ref=f5e1494] [cursor=pointer]
+                        - gridcell [ref=f5e1495]:
+                          - button [ref=f5e1496]:
+                            - img "part_28.jpg" [ref=f5e1497]
+                        - gridcell [ref=f5e1498]
+                        - gridcell [ref=f5e1500]:
+                          - button "Grease Cartridge EP2" [ref=f5e1501] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-028" [ref=f5e1502]
+                        - gridcell "Lubricants" [ref=f5e1503]
+                        - gridcell "$5.95" [ref=f5e1507]
+                        - gridcell "8" [ref=f5e1508]
+                        - gridcell "10" [ref=f5e1509]
+                        - gridcell "2026-04-19" [ref=f5e1510]
+                        - gridcell "Low Stock" [ref=f5e1511]
+                        - gridcell [ref=f5e1515]
+                      - row [ref=f5e1518]:
+                        - gridcell "Select row" [ref=f5e1519]:
+                          - checkbox "Select row" [ref=f5e1521] [cursor=pointer]
+                          - generic [ref=f5e1522] [cursor=pointer]
+                        - gridcell [ref=f5e1523]:
+                          - button [ref=f5e1524]:
+                            - img "part_25.jpg" [ref=f5e1525]
+                        - gridcell [ref=f5e1526]
+                        - gridcell [ref=f5e1528]:
+                          - button "Heat Sink 50x50mm" [ref=f5e1529] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-025" [ref=f5e1530]
+                        - gridcell "Cooling" [ref=f5e1531]
+                        - gridcell "$4.40" [ref=f5e1535]
+                        - gridcell "37" [ref=f5e1536]
+                        - gridcell "20" [ref=f5e1537]
+                        - gridcell "2026-04-17" [ref=f5e1538]
+                        - gridcell "In Stock" [ref=f5e1539]
+                        - gridcell [ref=f5e1543]
+                      - row [ref=f5e1546]:
+                        - gridcell "Select row" [ref=f5e1547]:
+                          - checkbox "Select row" [ref=f5e1549] [cursor=pointer]
+                          - generic [ref=f5e1550] [cursor=pointer]
+                        - gridcell [ref=f5e1551]:
+                          - button [ref=f5e1552]:
+                            - img "part_10.jpg" [ref=f5e1553]
+                        - gridcell [ref=f5e1554]
+                        - gridcell [ref=f5e1556]:
+                          - button "Hydraulic Hose 1/2in" [ref=f5e1557] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-010" [ref=f5e1558]
+                        - gridcell "Hydraulics" [ref=f5e1559]
+                        - gridcell "$18.90" [ref=f5e1563]
+                        - gridcell "14" [ref=f5e1564]
+                        - gridcell "8" [ref=f5e1565]
+                        - gridcell "2026-04-10" [ref=f5e1566]
+                        - gridcell "In Stock" [ref=f5e1567]
+                        - gridcell [ref=f5e1571]
+                      - row [ref=f5e1574]:
+                        - gridcell "Select row" [ref=f5e1575]:
+                          - checkbox "Select row" [ref=f5e1577] [cursor=pointer]
+                          - generic [ref=f5e1578] [cursor=pointer]
+                        - gridcell [ref=f5e1579]:
+                          - button [ref=f5e1580]:
+                            - img "part_13.jpg" [ref=f5e1581]
+                        - gridcell [ref=f5e1582]
+                        - gridcell [ref=f5e1584]:
+                          - button "Limit Switch Roller Lever" [ref=f5e1585] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-013" [ref=f5e1586]
+                        - gridcell "Electrical" [ref=f5e1587]
+                        - gridcell "$14.80" [ref=f5e1591]
+                        - gridcell "21" [ref=f5e1592]
+                        - gridcell "10" [ref=f5e1593]
+                        - gridcell "2026-04-11" [ref=f5e1594]
+                        - gridcell "In Stock" [ref=f5e1595]
+                        - gridcell [ref=f5e1599]
+                      - row [ref=f5e1602]:
+                        - gridcell "Select row" [ref=f5e1603]:
+                          - checkbox "Select row" [ref=f5e1605] [cursor=pointer]
+                          - generic [ref=f5e1606] [cursor=pointer]
+                        - gridcell [ref=f5e1607]:
+                          - button [ref=f5e1608]:
+                            - img "part_3.jpg" [ref=f5e1609]
+                        - gridcell [ref=f5e1610]
+                        - gridcell [ref=f5e1612]:
+                          - button "Lock Nut M8" [ref=f5e1613] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-003" [ref=f5e1614]
+                        - gridcell " Fasteners" [ref=f5e1615]:
+                          - generic [ref=f5e1617]:
+                            - generic [ref=f5e1618]: 
+                            - generic [ref=f5e1619]: Fasteners
+                        - gridcell "$0.22" [ref=f5e1620]
+                        - gridcell "410" [ref=f5e1621]
+                        - gridcell "120" [ref=f5e1622]
+                        - gridcell "2026-04-05" [ref=f5e1623]
+                        - gridcell "In Stock" [ref=f5e1624]
+                        - gridcell [ref=f5e1628]
+                      - row [ref=f5e1631]:
+                        - gridcell "Select row" [ref=f5e1632]:
+                          - checkbox "Select row" [ref=f5e1634] [cursor=pointer]
+                          - generic [ref=f5e1635] [cursor=pointer]
+                        - gridcell [ref=f5e1636]:
+                          - button [ref=f5e1637]:
+                            - img "part_29.jpg" [ref=f5e1638]
+                        - gridcell [ref=f5e1639]
+                        - gridcell [ref=f5e1641]:
+                          - button "Machine Oil ISO 68" [ref=f5e1642] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-029" [ref=f5e1643]
+                        - gridcell "Lubricants" [ref=f5e1644]
+                        - gridcell "$22.00" [ref=f5e1648]
+                        - gridcell "6" [ref=f5e1649]
+                        - gridcell "4" [ref=f5e1650]
+                        - gridcell "2026-04-19" [ref=f5e1651]
+                        - gridcell "In Stock" [ref=f5e1652]
+                        - gridcell [ref=f5e1656]
+                      - row [ref=f5e1659]:
+                        - gridcell "Select row" [ref=f5e1660]:
+                          - checkbox "Select row" [ref=f5e1662] [cursor=pointer]
+                          - generic [ref=f5e1663] [cursor=pointer]
+                        - gridcell [ref=f5e1664]:
+                          - button [ref=f5e1665]:
+                            - img "part_5.jpg" [ref=f5e1666]
+                        - gridcell [ref=f5e1667]
+                        - gridcell [ref=f5e1669]:
+                          - button "Needle Bearing NK12" [ref=f5e1670] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-005" [ref=f5e1671]
+                        - gridcell "Bearings" [ref=f5e1672]
+                        - gridcell "$3.95" [ref=f5e1676]
+                        - gridcell "28" [ref=f5e1677]
+                        - gridcell "30" [ref=f5e1678]
+                        - gridcell "2026-04-06" [ref=f5e1679]
+                        - gridcell "Low Stock" [ref=f5e1680]
+                        - gridcell [ref=f5e1684]
+                      - row [ref=f5e1687]:
+                        - gridcell "Select row" [ref=f5e1688]:
+                          - checkbox "Select row" [ref=f5e1690] [cursor=pointer]
+                          - generic [ref=f5e1691] [cursor=pointer]
+                        - gridcell [ref=f5e1692]:
+                          - button [ref=f5e1693]:
+                            - img "part_9.jpg" [ref=f5e1694]
+                        - gridcell [ref=f5e1695]
+                        - gridcell [ref=f5e1697]:
+                          - button "Oil Seal 25x40x7" [ref=f5e1698] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-009" [ref=f5e1699]
+                        - gridcell "Seals" [ref=f5e1700]
+                        - gridcell "$2.65" [ref=f5e1704]
+                        - gridcell "44" [ref=f5e1705]
+                        - gridcell "25" [ref=f5e1706]
+                        - gridcell "2026-04-09" [ref=f5e1707]
+                        - gridcell "In Stock" [ref=f5e1708]
+                        - gridcell [ref=f5e1712]
+                      - row [ref=f5e1715]:
+                        - gridcell "Select row" [ref=f5e1716]:
+                          - checkbox "Select row" [ref=f5e1718] [cursor=pointer]
+                          - generic [ref=f5e1719] [cursor=pointer]
+                        - gridcell [ref=f5e1720]:
+                          - button [ref=f5e1721]:
+                            - img "part_8.jpg" [ref=f5e1722]
+                        - gridcell [ref=f5e1723]
+                        - gridcell [ref=f5e1725]:
+                          - button "O-Ring NBR 20mm" [ref=f5e1726] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-008" [ref=f5e1727]
+                        - gridcell "Seals" [ref=f5e1728]
+                        - gridcell "$0.35" [ref=f5e1732]
+                        - gridcell "650" [ref=f5e1733]
+                        - gridcell "200" [ref=f5e1734]
+                        - gridcell "2026-04-09" [ref=f5e1735]
+                        - gridcell "In Stock" [ref=f5e1736]
+                        - gridcell [ref=f5e1740]
+                      - row [ref=f5e1743]:
+                        - gridcell "Select row" [ref=f5e1744]:
+                          - checkbox "Select row" [ref=f5e1746] [cursor=pointer]
+                          - generic [ref=f5e1747] [cursor=pointer]
+                        - gridcell [ref=f5e1748]:
+                          - button [ref=f5e1749]:
+                            - img "part_24.jpg" [ref=f5e1750]
+                        - gridcell [ref=f5e1751]
+                        - gridcell [ref=f5e1753]:
+                          - button "Panel Cooling Fan 120mm" [ref=f5e1754] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-024" [ref=f5e1755]
+                        - gridcell "Cooling" [ref=f5e1756]
+                        - gridcell "$17.30" [ref=f5e1760]
+                        - gridcell "12" [ref=f5e1761]
+                        - gridcell "6" [ref=f5e1762]
+                        - gridcell "2026-04-17" [ref=f5e1763]
+                        - gridcell "In Stock" [ref=f5e1764]
+                        - gridcell [ref=f5e1768]
+                      - row [ref=f5e1771]:
+                        - gridcell "Select row" [ref=f5e1772]:
+                          - checkbox "Select row" [ref=f5e1774] [cursor=pointer]
+                          - generic [ref=f5e1775] [cursor=pointer]
+                        - gridcell [ref=f5e1776]:
+                          - button [ref=f5e1777]:
+                            - img "part_17.jpg" [ref=f5e1778]
+                        - gridcell [ref=f5e1779]
+                        - gridcell [ref=f5e1781]:
+                          - button "Photoelectric Sensor" [ref=f5e1782] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-017" [ref=f5e1783]
+                        - gridcell "Sensors" [ref=f5e1784]
+                        - gridcell "$38.25" [ref=f5e1788]
+                        - gridcell "4" [ref=f5e1789]
+                        - gridcell "5" [ref=f5e1790]
+                        - gridcell "2026-04-13" [ref=f5e1791]
+                        - gridcell "Low Stock" [ref=f5e1792]
+                        - gridcell [ref=f5e1796]
+                      - row [ref=f5e1799]:
+                        - gridcell "Select row" [ref=f5e1800]:
+                          - checkbox "Select row" [ref=f5e1802] [cursor=pointer]
+                          - generic [ref=f5e1803] [cursor=pointer]
+                        - gridcell [ref=f5e1804]:
+                          - button [ref=f5e1805]:
+                            - img "part_22.jpg" [ref=f5e1806]
+                        - gridcell [ref=f5e1807]
+                        - gridcell [ref=f5e1809]:
+                          - button "PLC Input Module" [ref=f5e1810] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-022" [ref=f5e1811]
+                        - gridcell "Controls" [ref=f5e1812]
+                        - gridcell "$84.00" [ref=f5e1816]
+                        - gridcell "3" [ref=f5e1817]
+                        - gridcell "4" [ref=f5e1818]
+                        - gridcell "2026-04-16" [ref=f5e1819]
+                        - gridcell "Low Stock" [ref=f5e1820]
+                        - gridcell [ref=f5e1824]
+                      - row [ref=f5e1827]:
+                        - gridcell "Select row" [ref=f5e1828]:
+                          - checkbox "Select row" [ref=f5e1830] [cursor=pointer]
+                          - generic [ref=f5e1831] [cursor=pointer]
+                        - gridcell [ref=f5e1832]:
+                          - button [ref=f5e1833]:
+                            - img "part_11.jpg" [ref=f5e1834]
+                        - gridcell [ref=f5e1835]
+                        - gridcell [ref=f5e1837]:
+                          - button "Pneumatic Fitting 8mm" [ref=f5e1838] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-011" [ref=f5e1839]
+                        - gridcell "Pneumatics" [ref=f5e1840]
+                        - gridcell "$1.20" [ref=f5e1844]
+                        - gridcell "115" [ref=f5e1845]
+                        - gridcell "40" [ref=f5e1846]
+                        - gridcell "2026-04-10" [ref=f5e1847]
+                        - gridcell "In Stock" [ref=f5e1848]
+                        - gridcell [ref=f5e1852]
+                      - row [ref=f5e1855]:
+                        - gridcell "Select row" [ref=f5e1856]:
+                          - checkbox "Select row" [ref=f5e1858] [cursor=pointer]
+                          - generic [ref=f5e1859] [cursor=pointer]
+                        - gridcell [ref=f5e1860]:
+                          - button [ref=f5e1861]:
+                            - img "part_16.jpg" [ref=f5e1862]
+                        - gridcell [ref=f5e1863]
+                        - gridcell [ref=f5e1865]:
+                          - button "Proximity Sensor M12" [ref=f5e1866] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-016" [ref=f5e1867]
+                        - gridcell "Sensors" [ref=f5e1868]
+                        - gridcell "$26.00" [ref=f5e1872]
+                        - gridcell "6" [ref=f5e1873]
+                        - gridcell "8" [ref=f5e1874]
+                        - gridcell "2026-04-13" [ref=f5e1875]
+                        - gridcell "Low Stock" [ref=f5e1876]
+                        - gridcell [ref=f5e1880]
+                      - row [ref=f5e1883]:
+                        - gridcell "Select row" [ref=f5e1884]:
+                          - checkbox "Select row" [ref=f5e1886] [cursor=pointer]
+                          - generic [ref=f5e1887] [cursor=pointer]
+                        - gridcell [ref=f5e1888]:
+                          - button [ref=f5e1889]:
+                            - img "part_21.jpg" [ref=f5e1890]
+                        - gridcell [ref=f5e1891]
+                        - gridcell [ref=f5e1893]:
+                          - button "Relay Module 4-Channel" [ref=f5e1894] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-021" [ref=f5e1895]
+                        - gridcell "Controls" [ref=f5e1896]
+                        - gridcell "$6.85" [ref=f5e1900]
+                        - gridcell "23" [ref=f5e1901]
+                        - gridcell "12" [ref=f5e1902]
+                        - gridcell "2026-04-15" [ref=f5e1903]
+                        - gridcell "In Stock" [ref=f5e1904]
+                        - gridcell [ref=f5e1908]
+                      - row [ref=f5e1911]:
+                        - gridcell "Select row" [ref=f5e1912]:
+                          - checkbox "Select row" [ref=f5e1914] [cursor=pointer]
+                          - generic [ref=f5e1915] [cursor=pointer]
+                        - gridcell [ref=f5e1916]:
+                          - button [ref=f5e1917]:
+                            - img "part_30.jpg" [ref=f5e1918]
+                        - gridcell [ref=f5e1919]
+                        - gridcell [ref=f5e1921]:
+                          - button "Safety Guard Bracket" [ref=f5e1922] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-030" [ref=f5e1923]
+                        - gridcell "Fabricated Parts" [ref=f5e1924]
+                        - gridcell "$15.50" [ref=f5e1928]
+                        - gridcell "0" [ref=f5e1929]
+                        - gridcell "6" [ref=f5e1930]
+                        - gridcell "2026-04-20" [ref=f5e1931]
+                        - gridcell "Out of Stock" [ref=f5e1932]
+                        - gridcell [ref=f5e1936]
+                      - row [ref=f5e1939]:
+                        - gridcell "Select row" [ref=f5e1940]:
+                          - checkbox "Select row" [ref=f5e1942] [cursor=pointer]
+                          - generic [ref=f5e1943] [cursor=pointer]
+                        - gridcell [ref=f5e1944]:
+                          - button [ref=f5e1945]:
+                            - img "part_12.jpg" [ref=f5e1946]
+                        - gridcell [ref=f5e1947]
+                        - gridcell [ref=f5e1949]:
+                          - button "Solenoid Valve 24V" [ref=f5e1950] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-012" [ref=f5e1951]
+                        - gridcell "Electrical" [ref=f5e1952]
+                        - gridcell "$32.50" [ref=f5e1956]
+                        - gridcell "7" [ref=f5e1957]
+                        - gridcell "5" [ref=f5e1958]
+                        - gridcell "2026-04-11" [ref=f5e1959]
+                        - gridcell "In Stock" [ref=f5e1960]
+                        - gridcell [ref=f5e1964]
+                      - row [ref=f5e1967]:
+                        - gridcell "Select row" [ref=f5e1968]:
+                          - checkbox "Select row" [ref=f5e1970] [cursor=pointer]
+                          - generic [ref=f5e1971] [cursor=pointer]
+                        - gridcell [ref=f5e1972]:
+                          - button [ref=f5e1973]:
+                            - img "part_19.jpg" [ref=f5e1974]
+                        - gridcell [ref=f5e1975]
+                        - gridcell [ref=f5e1977]:
+                          - button "Stepper Motor NEMA 17" [ref=f5e1978] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-019" [ref=f5e1979]
+                        - gridcell "Motors" [ref=f5e1980]
+                        - gridcell "$24.95" [ref=f5e1984]
+                        - gridcell "11" [ref=f5e1985]
+                        - gridcell "6" [ref=f5e1986]
+                        - gridcell "2026-04-14" [ref=f5e1987]
+                        - gridcell "In Stock" [ref=f5e1988]
+                        - gridcell [ref=f5e1992]
+                      - row [ref=f5e1995]:
+                        - gridcell "Select row" [ref=f5e1996]:
+                          - checkbox "Select row" [ref=f5e1998] [cursor=pointer]
+                          - generic [ref=f5e1999] [cursor=pointer]
+                        - gridcell [ref=f5e2000]:
+                          - button [ref=f5e2001]:
+                            - img "part_18.jpg" [ref=f5e2002]
+                        - gridcell [ref=f5e2003]
+                        - gridcell [ref=f5e2005]:
+                          - button "Thermocouple Type K" [ref=f5e2006] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-018" [ref=f5e2007]
+                        - gridcell "Sensors" [ref=f5e2008]
+                        - gridcell "$9.60" [ref=f5e2012]
+                        - gridcell "32" [ref=f5e2013]
+                        - gridcell "15" [ref=f5e2014]
+                        - gridcell "2026-04-14" [ref=f5e2015]
+                        - gridcell "In Stock" [ref=f5e2016]
+                        - gridcell [ref=f5e2020]
+                      - row [ref=f5e2023]:
+                        - gridcell "Select row" [ref=f5e2024]:
+                          - checkbox "Select row" [ref=f5e2026] [cursor=pointer]
+                          - generic [ref=f5e2027] [cursor=pointer]
+                        - gridcell [ref=f5e2028]:
+                          - button [ref=f5e2029]:
+                            - img "part_27.jpg" [ref=f5e2030]
+                        - gridcell [ref=f5e2031]
+                        - gridcell [ref=f5e2033]:
+                          - button "Threadlocker Blue" [ref=f5e2034] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-027" [ref=f5e2035]
+                        - gridcell "Consumables" [ref=f5e2036]
+                        - gridcell "$7.25" [ref=f5e2040]
+                        - gridcell "19" [ref=f5e2041]
+                        - gridcell "10" [ref=f5e2042]
+                        - gridcell "2026-04-18" [ref=f5e2043]
+                        - gridcell "In Stock" [ref=f5e2044]
+                        - gridcell [ref=f5e2048]
+                      - row [ref=f5e2051]:
+                        - gridcell "Select row" [ref=f5e2052]:
+                          - checkbox "Select row" [ref=f5e2054] [cursor=pointer]
+                          - generic [ref=f5e2055] [cursor=pointer]
+                        - gridcell [ref=f5e2056]:
+                          - button [ref=f5e2057]:
+                            - img "part_6.jpg" [ref=f5e2058]
+                        - gridcell [ref=f5e2059]
+                        - gridcell [ref=f5e2061]:
+                          - button "Timing Belt 5M-450" [ref=f5e2062] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-006" [ref=f5e2063]
+                        - gridcell "Belts" [ref=f5e2064]
+                        - gridcell "$12.40" [ref=f5e2068]
+                        - gridcell "18" [ref=f5e2069]
+                        - gridcell "10" [ref=f5e2070]
+                        - gridcell "2026-04-07" [ref=f5e2071]
+                        - gridcell "In Stock" [ref=f5e2072]
+                        - gridcell [ref=f5e2076]
+                      - row [ref=f5e2079]:
+                        - gridcell "Select row" [ref=f5e2080]:
+                          - checkbox "Select row" [ref=f5e2082] [cursor=pointer]
+                          - generic [ref=f5e2083] [cursor=pointer]
+                        - gridcell [ref=f5e2084]:
+                          - button [ref=f5e2085]:
+                            - img "part_7.jpg" [ref=f5e2086]
+                        - gridcell [ref=f5e2087]
+                        - gridcell [ref=f5e2089]:
+                          - button "V-Belt A32" [ref=f5e2090] [cursor=pointer]
+                          - generic:  
+                        - gridcell "APR26-007" [ref=f5e2091]
+                        - gridcell "Belts" [ref=f5e2092]
+                        - gridcell "$8.75" [ref=f5e2096]
+                        - gridcell "9" [ref=f5e2097]
+                        - gridcell "12" [ref=f5e2098]
+                        - gridcell "2026-04-08" [ref=f5e2099]
+                        - gridcell "Low Stock" [ref=f5e2100]
+                        - gridcell [ref=f5e2104]
+                    - grid [ref=f5e1191]
+                    - status [ref=f5e1192]
+            - iframe [active] [ref=f5e1248]:
+              - generic [ref=f8e7]:
+                - generic [ref=f8e8]:
+                  - generic [ref=f8e9]:
+                    - heading "Copilot" [level=2] [ref=f8e11]
+                    - generic [ref=f8e12]:
+                      - button "Chat options" [ref=f8e13]
+                      - button "Close" [ref=f8e17]
+                  - generic [ref=f8e24]:
+                    - feed [ref=f8e28]:
+                      - generic [ref=f8e30]:
+                        - generic [ref=f8e32]:
+                          - heading "Hello Vaibhav Verma (DESIGN)!" [level=2] [ref=f8e34]
+                          - generic [ref=f8e35]: What can I help with in Parts Inventory Apr 2026 ER?
+                        - menu [ref=f8e38]:
+                          - generic [ref=f8e39]:
+                            - menuitem [ref=f8e40] [cursor=pointer]:
+                              - generic [ref=f8e41]: Find recent items
+                            - menuitem [ref=f8e43] [cursor=pointer]:
+                              - generic [ref=f8e44]: Add items from file
+                            - menuitem [ref=f8e46] [cursor=pointer]:
+                              - generic [ref=f8e47]: Set due date reminders
+                            - menuitem [ref=f8e49] [cursor=pointer]:
+                              - generic [ref=f8e50]: Format the list for readability
+                      - list "Chat Messages" [ref=f8e90]:
+                        - listitem [ref=f8e91]:
+                          - article [ref=f8e93]:
+                            - heading "You said:" [level=5] [ref=f8e94]
+                            - paragraph [ref=f8e98]: Create an HTML report showing the stock status of the various parts in this Parts Inventory Apr 2026 ER list, with financials based on the available list data.
+                        - listitem [ref=f8e100]:
+                          - article [ref=f8e102]:
+                            - generic [ref=f8e103]:
+                              - heading "Copilot said:" [level=6] [ref=f8e104]
+                              - generic [aria-hidden] [ref=f8e108]: Copilot
+                            - button "Reasoning completed in 1 step" [ref=f8e112]
+                            - toolbar
+                        - listitem [ref=f8e120]:
+                          - article [ref=f8e122]:
+                            - heading "Copilot said:" [level=6] [ref=f8e123]
+                            - status "Used built-in skill html-report-design-guideline" [ref=f8e126]:
+                              - generic [ref=f8e127]: Used built-in skill
+                              - generic [ref=f8e128]: html-report-design-guideline
+                            - toolbar
+                        - listitem [ref=f8e136]:
+                          - article [ref=f8e138]:
+                            - heading "Copilot said:" [level=6] [ref=f8e139]
+                            - button "Reasoning completed in 7 steps" [ref=f8e143]
+                            - toolbar
+                        - listitem [ref=f8e151]:
+                          - article [ref=f8e153]:
+                            - heading "Copilot said:" [level=6] [ref=f8e154]
+                            - paragraph [ref=f8e158]:
+                              - text: The report is ready in the preview. It covers
+                              - strong [ref=f8e159]: 29 parts
+                              - text: ","
+                              - strong [ref=f8e160]: $4,714.80
+                              - text: in inventory value,
+                              - strong [ref=f8e161]: "7"
+                              - text: parts needing attention, and an estimated
+                              - strong [ref=f8e162]: $313.30
+                              - text: replenishment cost.
+                            - toolbar [ref=f8e163]:
+                              - generic [ref=f8e165]:
+                                - button "Copy" [ref=f8e168]
+                                - generic [ref=f8e172]:
+                                  - button "Like" [ref=f8e173]
+                                  - button "Dislike" [ref=f8e177]
+                    - group "Suggested Prompts" [ref=f8e184]:
+                      - button "Add a detailed financial summary" [ref=f8e185]
+                      - button "Highlight recommended replenishment quantities" [ref=f8e186]
+                      - button "Show the 7 parts needing attention" [ref=f8e187]
+                    - generic [ref=f8e53]:
+                      - generic [ref=f8e60]:
+                        - button "Open input menu" [ref=f8e64]
+                        - generic [ref=f8e68]:
+                          - textbox "Prompt" [active] [ref=f8e69]:
+                            - paragraph [ref=f8e190]
+                          - generic: Ask a question about Parts Inventory Apr 2026 ER
+                        - alert "Microphone Disabled" [ref=f8e74]:
+                          - switch "Microphone Disabled" [ref=f8e76]:
+                            - img "Mic-Regular" [ref=f8e78]
+                      - status [ref=f8e80]
+                  - generic [ref=f8e83]: AI-generated content may be incorrect
+                - status
+      - generic [ref=f5e1193]:
+        - button "3️⃣ ✓" [ref=f5e1249] [cursor=pointer]:
+          - text: 3️⃣
+          - generic [ref=f5e1250]: ✓
+        - button "⚛️ ✗" [ref=f5e1251] [cursor=pointer]:
+          - text: ⚛️
+          - generic [ref=f5e1252]: ✗
+        - button [ref=f5e1253] [cursor=pointer]:
+          - img "ODSP Labs" [ref=f5e1254]
+        - button "🚀" [ref=f5e1255] [cursor=pointer]
+        - button "🔍" [ref=f5e1256] [cursor=pointer]
+        - button "🐞" [ref=f5e1257] [cursor=pointer]
+        - button "DF - CAN" [ref=f5e1258] [cursor=pointer]
+        - 'button "🥳 FCI: 680" [ref=f5e1259] [cursor=pointer]':
+          - generic [ref=f5e1260]: 🥳
+          - generic [ref=f5e1261]: "FCI: 680"
+        - button "🔄" [ref=f5e1207] [cursor=pointer]
+        - button "⚛️" [ref=f5e1262] [cursor=pointer]
+  - generic [ref=f5e2108]:
+    - generic [ref=f5e2109]:
+      - generic "Parts Inventory Stock Status Report.html" [ref=f5e2112]
+      - menubar "Content preview actions" [ref=f5e2117]:
+        - group [ref=f5e2118]:
+          - menuitem "Close" [ref=f5e2120] [cursor=pointer]
+    - iframe [ref=f5e2125]:
+      - dialog [ref=f12e3]:
+        - generic [ref=f12e8]:
+          - alert [ref=f12e9]: Previewing Parts Inventory Stock Status Report.html
+          - main [ref=f12e10]:
+            - iframe [ref=f12e16]:
+              - iframe [ref=f13e2]:
+                - generic [ref=f14e2]:
+                  - generic [ref=f14e3]:
+                    - heading "Parts Inventory Stock Status Report" [level=1] [ref=f14e5]
+                    - generic [ref=f14e6]: 29 parts valued at $4,714.80; 7 parts need attention.
+                  - generic [ref=f14e7]:
+                    - generic [ref=f14e8]:
+                      - generic [ref=f14e9]:
+                        - generic [ref=f14e10]: Stock status
+                        - combobox "Stock status" [ref=f14e11] [cursor=pointer]:
+                          - option "All" [selected]
+                          - option "In Stock"
+                          - option "Low Stock"
+                          - option "Out of Stock"
+                      - generic [ref=f14e12]:
+                        - generic [ref=f14e13]: Category
+                        - combobox "Category" [ref=f14e14] [cursor=pointer]:
+                          - option "All" [selected]
+                          - option "Bearings"
+                          - option "Belts"
+                          - option "Consumables"
+                          - option "Controls"
+                          - option "Cooling"
+                          - option "Electrical"
+                          - option "Fabricated Parts"
+                          - option "Fasteners"
+                          - option "Hydraulics"
+                          - option "Lubricants"
+                          - option "Motors"
+                          - option "Pneumatics"
+                          - option "Seals"
+                          - option "Sensors"
+                      - button "Reset" [ref=f14e15] [cursor=pointer]
+                    - generic [ref=f14e16]: 29 of 29 records
+                  - generic [ref=f14e17]:
+                    - generic [ref=f14e18]:
+                      - generic [ref=f14e19]: Inventory value
+                      - generic [ref=f14e20]: $4,714.80
+                      - generic [ref=f14e21]: Across 5,587 units
+                    - generic [ref=f14e22]:
+                      - generic [ref=f14e23]: In stock
+                      - generic [ref=f14e24]: "22"
+                      - generic [ref=f14e25]: 75.9% of parts
+                    - generic [ref=f14e26]:
+                      - generic [ref=f14e27]: Needs attention
+                      - generic [ref=f14e28]: "7"
+                      - generic [ref=f14e29]: 6 low stock · 1 out of stock
+                    - generic [ref=f14e30]:
+                      - generic [ref=f14e31]: Replenishment cost
+                      - generic [ref=f14e32]: $313.30
+                      - generic [ref=f14e33]: To restore items to reorder level
+                  - generic [ref=f14e34]:
+                    - generic [ref=f14e35]:
+                      - heading "Stock status mix" [level=3] [ref=f14e36]
+                      - generic [ref=f14e37]:
+                        - img [ref=f14e38]:
+                          - 'generic "In Stock: 5,529 (99%)" [ref=f14e39]'
+                          - 'generic "Low Stock: 58 (1%)" [ref=f14e40]'
+                          - 'generic "Out of Stock: 0 (0%)" [ref=f14e41]'
+                          - generic [ref=f14e43]: 5,587
+                          - generic [ref=f14e44]: Total
+                        - generic [ref=f14e45]:
+                          - generic [ref=f14e46]:
+                            - generic "In Stock" [ref=f14e48]
+                            - generic [ref=f14e49]:
+                              - text: 5,529
+                              - emphasis [ref=f14e50]: 99%
+                          - generic [ref=f14e51]:
+                            - generic "Low Stock" [ref=f14e53]
+                            - generic [ref=f14e54]:
+                              - text: "58"
+                              - emphasis [ref=f14e55]: 1%
+                          - generic [ref=f14e56]:
+                            - generic "Out of Stock" [ref=f14e58]
+                            - generic [ref=f14e59]:
+                              - text: "0"
+                              - emphasis [ref=f14e60]: 0%
+                    - generic [ref=f14e61]:
+                      - heading "Inventory value by category" [level=3] [ref=f14e62]
+                      - generic [ref=f14e63]:
+                        - 'generic "Electrical: $829.80" [ref=f14e64]':
+                          - generic [ref=f14e65]: Electrical
+                          - generic [ref=f14e68]:
+                            - text: $829.80
+                            - generic [ref=f14e69]: 17.6%
+                        - 'generic "Sensors: $616.20" [ref=f14e70]':
+                          - generic [ref=f14e71]: Sensors
+                          - generic [ref=f14e74]:
+                            - text: $616.20
+                            - generic [ref=f14e75]: 13.1%
+                        - 'generic "Controls: $597.55" [ref=f14e76]':
+                          - generic [ref=f14e77]: Controls
+                          - generic [ref=f14e80]:
+                            - text: $597.55
+                            - generic [ref=f14e81]: 12.7%
+                        - 'generic "Motors: $421.45" [ref=f14e82]':
+                          - generic [ref=f14e83]: Motors
+                          - generic [ref=f14e86]:
+                            - text: $421.45
+                            - generic [ref=f14e87]: 8.9%
+                        - 'generic "Cooling: $370.40" [ref=f14e88]':
+                          - generic [ref=f14e89]: Cooling
+                          - generic [ref=f14e92]:
+                            - text: $370.40
+                            - generic [ref=f14e93]: 7.9%
+                        - 'generic "Seals: $344.10" [ref=f14e94]':
+                          - generic [ref=f14e95]: Seals
+                          - generic [ref=f14e98]:
+                            - text: $344.10
+                            - generic [ref=f14e99]: 7.3%
+                        - 'generic "Belts: $301.95" [ref=f14e100]':
+                          - generic [ref=f14e101]: Belts
+                          - generic [ref=f14e104]:
+                            - text: $301.95
+                            - generic [ref=f14e105]: 6.4%
+                        - 'generic "Bearings: $288.20" [ref=f14e106]':
+                          - generic [ref=f14e107]: Bearings
+                          - generic [ref=f14e110]:
+                            - text: $288.20
+                            - generic [ref=f14e111]: 6.1%
+                        - 'generic "Hydraulics: $264.60" [ref=f14e112]':
+                          - generic [ref=f14e113]: Hydraulics
+                          - generic [ref=f14e116]:
+                            - text: $264.60
+                            - generic [ref=f14e117]: 5.6%
+                        - 'generic "Consumables: $212.75" [ref=f14e118]':
+                          - generic [ref=f14e119]: Consumables
+                          - generic [ref=f14e122]:
+                            - text: $212.75
+                            - generic [ref=f14e123]: 4.5%
+                        - 'generic "Lubricants: $179.60" [ref=f14e124]':
+                          - generic [ref=f14e125]: Lubricants
+                          - generic [ref=f14e128]:
+                            - text: $179.60
+                            - generic [ref=f14e129]: 3.8%
+                        - 'generic "Fasteners: $150.20" [ref=f14e130]':
+                          - generic [ref=f14e131]: Fasteners
+                          - generic [ref=f14e134]:
+                            - text: $150.20
+                            - generic [ref=f14e135]: 3.2%
+                        - 'generic "Pneumatics: $138.00" [ref=f14e136]':
+                          - generic [ref=f14e137]: Pneumatics
+                          - generic [ref=f14e140]:
+                            - text: $138.00
+                            - generic [ref=f14e141]: 2.9%
+                        - 'generic "Fabricated Parts: $0.00" [ref=f14e142]':
+                          - generic [ref=f14e143]: Fabricated Parts
+                          - generic [ref=f14e146]:
+                            - text: $0.00
+                            - generic [ref=f14e147]: 0%
+                    - generic [ref=f14e148]:
+                      - heading "Highest-value parts on hand" [level=3] [ref=f14e149]
+                      - table [ref=f14e150]:
+                        - rowgroup [ref=f14e151]:
+                          - row [ref=f14e152]:
+                            - columnheader "part" [ref=f14e153]
+                            - columnheader "Inventory value" [ref=f14e154]
+                        - rowgroup [ref=f14e155]:
+                          - row [ref=f14e156]:
+                            - cell "Limit Switch Roller Lever" [ref=f14e157]
+                            - cell "$310.80" [ref=f14e158]
+                          - row [ref=f14e159]:
+                            - cell "Thermocouple Type K" [ref=f14e160]
+                            - cell "$307.20" [ref=f14e161]
+                          - row [ref=f14e162]:
+                            - cell "Stepper Motor NEMA 17" [ref=f14e163]
+                            - cell "$274.45" [ref=f14e164]
+                          - row [ref=f14e165]:
+                            - cell "Hydraulic Hose 1/2in" [ref=f14e166]
+                            - cell "$264.60" [ref=f14e167]
+                          - row [ref=f14e168]:
+                            - cell "PLC Input Module" [ref=f14e169]
+                            - cell "$252.00" [ref=f14e170]
+                          - row [ref=f14e171]:
+                            - cell "Solenoid Valve 24V" [ref=f14e172]
+                            - cell "$227.50" [ref=f14e173]
+                          - row [ref=f14e174]:
+                            - cell "O-Ring NBR 20mm" [ref=f14e175]
+                            - cell "$227.50" [ref=f14e176]
+                          - row [ref=f14e177]:
+                            - cell "DIN Rail Terminal Block" [ref=f14e178]
+                            - cell "$225.50" [ref=f14e179]
+                          - row [ref=f14e180]:
+                            - cell "Timing Belt 5M-450" [ref=f14e181]
+                            - cell "$223.20" [ref=f14e182]
+                          - row [ref=f14e183]:
+                            - cell "Panel Cooling Fan 120mm" [ref=f14e184]
+                            - cell "$207.60" [ref=f14e185]
+                    - generic [ref=f14e186]:
+                      - heading "Replenishment cost by part" [level=3] [ref=f14e187]
+                      - table [ref=f14e188]:
+                        - rowgroup [ref=f14e189]:
+                          - row [ref=f14e190]:
+                            - columnheader "part" [ref=f14e191]
+                            - columnheader "Replenishment gap cost" [ref=f14e192]
+                        - rowgroup [ref=f14e193]:
+                          - row [ref=f14e194]:
+                            - cell "Safety Guard Bracket" [ref=f14e195]
+                            - cell "$93.00" [ref=f14e196]
+                          - row [ref=f14e197]:
+                            - cell "PLC Input Module" [ref=f14e198]
+                            - cell "$84.00" [ref=f14e199]
+                          - row [ref=f14e200]:
+                            - cell "Proximity Sensor M12" [ref=f14e201]
+                            - cell "$52.00" [ref=f14e202]
+                          - row [ref=f14e203]:
+                            - cell "Photoelectric Sensor" [ref=f14e204]
+                            - cell "$38.25" [ref=f14e205]
+                          - row [ref=f14e206]:
+                            - cell "V-Belt A32" [ref=f14e207]
+                            - cell "$26.25" [ref=f14e208]
+                          - row [ref=f14e209]:
+                            - cell "Grease Cartridge EP2" [ref=f14e210]
+                            - cell "$11.90" [ref=f14e211]
+                          - row [ref=f14e212]:
+                            - cell "Needle Bearing NK12" [ref=f14e213]
+                            - cell "$7.90" [ref=f14e214]
+                          - row [ref=f14e215]:
+                            - cell "Flat Washer M6" [ref=f14e216]
+                            - cell "$0.00" [ref=f14e217]
+                          - row [ref=f14e218]:
+                            - cell "Lock Nut M8" [ref=f14e219]
+                            - cell "$0.00" [ref=f14e220]
+                          - row [ref=f14e221]:
+                            - cell "Ball Bearing 608ZZ" [ref=f14e222]
+                            - cell "$0.00" [ref=f14e223]
+                  - generic [ref=f14e224]:
+                    - heading "Availability focus" [level=2] [ref=f14e225]
+                    - generic [ref=f14e226]: 7 parts are below their preferred stock position, including 1 out-of-stock part. The estimated minimum spend to restore these items to their configured reorder levels is $313.30.
+                  - generic [ref=f14e227]:
+                    - heading "Replenishment priorities" [level=2] [ref=f14e228]
+                    - paragraph [ref=f14e229]: Use the table filters to focus on low and out-of-stock items, then sort by gap cost to prioritize the financial exposure.
+                  - generic [ref=f14e230]: "Source: Parts Inventory Apr 2026 ER list. Inventory value = Stock Qty × Unit Cost; replenishment gap cost = max(Reorder Level − Stock Qty, 0) × Unit Cost."

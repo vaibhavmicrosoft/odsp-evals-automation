@@ -1,0 +1,44 @@
+{
+  "runId": "parts-inventory-pilot",
+  "planRef": "plan.json",
+  "submittedAt": "2026-09-18T13:39:50.115Z",
+  "completionObservedAt": "2026-09-18T13:41:00.110Z",
+  "completionConfirmation": "Final response, Copy control present, Stop generating absent; report preview rendered.",
+  "execution": {"submissions":1,"retries":0,"viewport":{"width":1720,"height":878,"devicePixelRatio":2},"timeZone":"Asia/Calcutta","sourceListEdited":false,"publishedOrSharedByEvaluator":false},
+  "artifactUrl": "https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/_layouts/15/embed.aspx?id=%2Fteams%2FDFsitevaibhav2%2FShared%20Documents%2FParts%20Inventory%20Stock%20Status%20Report.html",
+  "artifactNote": "Copilot generated an HTML file in Shared Documents and opened its authenticated preview. The URL is reconstructed from the observed preview source without transient channel parameters. The saved rendered capture includes viewer-injected markup and is not an original file download.",
+  "response": "The report is ready in the preview. It covers 29 parts, $4,714.80 in inventory value, 7 parts needing attention, and an estimated $313.30 replenishment cost.",
+  "checks": [
+    {"id":"PI-01","verdict":"PASS","reason":"An HTML file named Parts Inventory Stock Status Report.html opened in the SharePoint Content preview and rendered an interactive report.","evidence":["../../snapshots/parts-inventory-pilot/response.yaml","../../images/parts-inventory-pilot/response-initial.png"]},
+    {"id":"PI-02","verdict":"PASS","reason":"The report footer explicitly identifies Parts Inventory Apr 2026 ER list as its source.","evidence":["generated-report-capture.json","../../images/parts-inventory-pilot/report-bottom.png"]},
+    {"id":"PI-03","verdict":"FAIL","reason":"The report says 29 of 29 records and names the list without explaining a root-only scope. The inspected folder contains APR26-001, omitted from the model. Thirty observed source parts total $4,812.00, compared with the report's $4,714.80 for 29 root parts. Difference: $97.20 and 540 units.","evidence":["source-records.json","generated-model.json","../../snapshots/parts-inventory-pilot/source-folder.yaml","generated-report-capture.json"]},
+    {"id":"PI-04","verdict":"PASS","reason":"The displayed part names match unique source identities. The embedded 29-row model also preserves Part IDs. This does not imply that all parts appear simultaneously in the top-ten tables.","evidence":["generated-model.json","generated-report-capture.json","source-records.json"]},
+    {"id":"PI-05","verdict":"PASS","reason":"All 29 embedded stockQty values match the corresponding source rows, including Safety Guard Bracket at zero; their sum matches 5,587 displayed units. IMPORTANT: per-part stock quantities are not displayed in the report's tables. This is a data-accuracy pass, not a visible-quantity-coverage pass; the frozen assertion lacks an explicit presence requirement.","evidence":["generated-model.json","source-records.json","generated-report-capture.json"]},
+    {"id":"PI-06","verdict":"PASS","reason":"All 29 included status values match the source. Low Stock and Out of Stock filters expose the matching included parts; DC Gear Motor 12V at quantity 5 and reorder level 5 remains In Stock. The omitted folder part is judged under coverage checks, not treated as an included status mismatch.","evidence":["generated-model.json","source-records.json","../../snapshots/parts-inventory-pilot/filter-low-stock.yaml","../../snapshots/parts-inventory-pilot/filter-out-of-stock.yaml"]},
+    {"id":"PI-07","verdict":"FAIL","reason":"The list-scoped report omits Hex Bolt M67 (APR26-001), whose stored source status is Out of Stock, and gives no folder exclusion. It includes six low-stock parts and Safety Guard Bracket but only seven of eight observed source status exceptions. The source inconsistency (540 units yet Out of Stock) was preserved, not silently corrected. This shares the folder-omission root cause with PI-03.","evidence":["source-records.json","generated-model.json","../../snapshots/parts-inventory-pilot/source-folder.yaml","../../snapshots/parts-inventory-pilot/filter-out-of-stock.yaml"]},
+    {"id":"PI-08","verdict":"PASS","reason":"Inventory-value summary and category breakdown are present. Footer states Inventory value = Stock Qty x Unit Cost.","evidence":["generated-report-capture.json","../../images/parts-inventory-pilot/report-bottom.png"]},
+    {"id":"PI-09","verdict":"PASS","reason":"All 29 embedded line values and reorder-gap costs match integer-cent calculations. Included-record total $4,714.80, fourteen category values, both displayed monetary tables and estimated reorder-level top-up $313.30 reconcile. This checks arithmetic for included records; the incorrect implied whole-list coverage is separately failed under PI-03.","evidence":["baseline.json","generated-model.json","generated-report-capture.json","calculation-checks.json"]},
+    {"id":"PI-10","verdict":"PASS","reason":"Displayed monetary values carry the dollar symbol, consistent with Unit Cost ($). No national currency code is visibly claimed. The internal formatter uses USD, which is not independently established by source metadata; this is a limitation, not a visible currency-label failure.","evidence":["generated-report-capture.json","../../snapshots/parts-inventory-pilot/source-root.yaml"]},
+    {"id":"PI-11","verdict":"PASS","reason":"Replenishment is described as an estimate to restore configured reorder levels, with explicit max(Reorder Level - Stock Qty, 0) x Unit Cost formula. No verified revenue, margin, forecast or supplier quote is claimed. The estimate is not a purchase recommendation based on demand or lead time.","evidence":["generated-report-capture.json","../../images/parts-inventory-pilot/report-bottom.png"]},
+    {"id":"PI-12","verdict":"PASS","reason":"At the observed 1720 x 878 viewport, shown part names, totals and monetary table cells are readable without overlap or inaccessible clipping. Normal wheel scrolling exposed the full preview. This does not certify mobile, accessibility compliance or missing fields.","evidence":["../../images/parts-inventory-pilot/response-initial.png","../../images/parts-inventory-pilot/report-middle.png","../../images/parts-inventory-pilot/report-lower.png","../../images/parts-inventory-pilot/report-bottom.png"]}
+  ],
+  "counts":{"pass":10,"fail":2,"unable":0,"notApplicable":0},
+  "scorePercent":83.33333333333334,
+  "coveragePercent":100,
+  "observations": [
+    "Per-part quantities, reorder levels and explicit status columns are absent from the rendered tables, although present in the embedded data model. Future assertions need explicit visible-field coverage; do not retrofit it into this run.",
+    "Stock/category filters change charts, record count and tables but leave headline KPIs and narrative at all-record values without explicitly labelling them as unfiltered. No frozen filter-consistency assertion exists, so this is unscored.",
+    "The narrative suggests sorting by gap cost, but no sorting control was observed; tables render pre-sorted top-ten values. This is unscored.",
+    "The stock-status donut measures units, making zero-unit out-of-stock parts contribute zero to the chart. Part-count and unit-count interpretations should be tested separately in a future version.",
+    "PI-03 and PI-07 detect the same omitted folder item from different scope and exception-coverage requirements. Their failures are not two independent root causes.",
+    "PI-05 checks embedded-data correctness but did not freeze a rendering requirement. Its PASS must not be read as a usable part-level stock ledger."
+  ],
+  "limitations":[
+    "Source baseline is a verified UI transcription of 29 root records and one folder record, not an authoritative API export or backend completeness guarantee; API returned HTTP 401 and was not bypassed.",
+    "Source values represent the observed list, not independently verified physical stock or accounting records. The folder item's stock/status conflict remains unresolved.",
+    "National currency, business audience, demand, lead time, tax and supplier terms were not supplied. Last-restocked dates are not report freshness timestamps.",
+    "The twelve assertions were generated and frozen before execution by the agent. They are not human-calibrated and do not constitute an implemented end-to-end UKB skill pipeline.",
+    "No follow-up repair prompt, source edit or evaluator publication/sharing. Report creation itself created a file in the site's Shared Documents as part of the requested task.",
+    "This is one agent-driven pilot, not an unattended runner. UI/API tooling errors and browser warnings are not scored as product failures."
+  ]
+}

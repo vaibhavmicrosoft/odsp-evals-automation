@@ -1,0 +1,111 @@
+- iframe [active] [ref=f1e2024]:
+  - generic [ref=f6e7]:
+    - generic [ref=f6e8]:
+      - generic [ref=f6e9]:
+        - heading "Copilot" [level=2] [ref=f6e11]
+        - generic [ref=f6e12]:
+          - button "Chat options" [ref=f6e13]
+          - button "Close" [ref=f6e17]
+      - generic [ref=f6e24]:
+        - feed [ref=f6e28]:
+          - generic [ref=f6e30]:
+            - generic [ref=f6e32]:
+              - heading "Hello Vaibhav Verma (DESIGN)!" [level=2] [ref=f6e34]
+              - generic [ref=f6e35]: What can I help with in Fujitsu 20K V4?
+            - menu [ref=f6e38]:
+              - generic [ref=f6e39]:
+                - menuitem [ref=f6e40] [cursor=pointer]:
+                  - generic [ref=f6e41]: Find recent items
+                - menuitem [ref=f6e43] [cursor=pointer]:
+                  - generic [ref=f6e44]: Add items from file
+                - menuitem [ref=f6e46] [cursor=pointer]:
+                  - generic [ref=f6e47]: Set due date reminders
+                - menuitem [ref=f6e49] [cursor=pointer]:
+                  - generic [ref=f6e50]: Format the list for readability
+          - list "Chat Messages" [ref=f6e2705]:
+            - listitem [ref=f6e2706]:
+              - article [ref=f6e2708]:
+                - heading "You said:" [level=5] [ref=f6e2709]
+                - paragraph [ref=f6e2713]: Which events are online?
+            - listitem [ref=f6e2743]:
+              - article [ref=f6e2745]:
+                - generic [ref=f6e2746]:
+                  - heading "Copilot said:" [level=6] [ref=f6e2747]
+                  - generic [aria-hidden] [ref=f6e2751]: Copilot
+                - button "Reasoning completed in 1 step" [ref=f6e2755]
+                - toolbar
+            - listitem [ref=f6e2763]:
+              - article [ref=f6e2765]:
+                - heading "Copilot said:" [level=6] [ref=f6e2766]
+                - generic [ref=f6e2769]:
+                  - paragraph [ref=f6e2770]:
+                    - strong [ref=f6e2771]: 8,034 of 20,000 events
+                    - text: are marked
+                    - strong [ref=f6e2772]: Online Only
+                    - text: .
+                    - button "3" [ref=f6e2773] [cursor=pointer]
+                  - heading "Sample (5 of 8,034)" [level=3] [ref=f6e2774]
+                  - table [ref=f6e2776]:
+                    - rowgroup [ref=f6e2777]:
+                      - row [ref=f6e2778]:
+                        - columnheader "Event" [ref=f6e2779]
+                        - columnheader "Start" [ref=f6e2780]
+                        - columnheader "Type" [ref=f6e2781]
+                    - rowgroup [ref=f6e2782]:
+                      - row [ref=f6e2783]:
+                        - cell "Bing Search for UX Designers – Season 1, Episode 1" [ref=f6e2784]
+                        - cell "Feb 19, 2026, 3:00 PM" [ref=f6e2785]
+                        - cell "Webinar" [ref=f6e2786]
+                      - row [ref=f6e2787]:
+                        - 'cell "Ask-me-anything: Power Platform rollout" [ref=f6e2788]'
+                        - cell "Mar 13, 2024, 3:30 PM" [ref=f6e2789]
+                        - cell "Webinar" [ref=f6e2790]
+                      - row [ref=f6e2791]:
+                        - cell "Microsoft Forms for Decision Makers – Season 1, Episode 3" [ref=f6e2792]
+                        - cell "Apr 15, 2026, 4:30 PM" [ref=f6e2793]
+                        - cell "Webinar" [ref=f6e2794]
+                      - row [ref=f6e2795]:
+                        - cell "Power Platform for Decision Makers – Season 1, Episode 5" [ref=f6e2796]
+                        - cell "Sep 26, 2025, 4:00 PM" [ref=f6e2797]
+                        - cell "Training" [ref=f6e2798]
+                      - row [ref=f6e2799]:
+                        - cell "FY26 Dynamics 365 Business Central planning session" [ref=f6e2800]
+                        - cell "Oct 9, 2024, 4:30 PM" [ref=f6e2801]
+                        - cell "Training" [ref=f6e2802]
+                  - paragraph [ref=f6e2803]: Want me to narrow these to upcoming online events?
+                - generic [ref=f6e2805]:
+                  - generic [ref=f6e2806]:
+                    - button "1 SharePoint Bing Search for UX Designers – Season 1, Episode 1" [ref=f6e2808]:
+                      - generic [ref=f6e2809]: "1"
+                      - generic [ref=f6e2811]:
+                        - img "SharePoint" [ref=f6e2813]
+                        - generic "Bing Search for UX Designers – Season 1, Episode 1" [ref=f6e2814] [cursor=pointer]
+                    - 'button "2 SharePoint Ask-me-anything: Power Platform rollout" [ref=f6e2815]':
+                      - generic [ref=f6e2816]: "2"
+                      - generic [ref=f6e2818]:
+                        - img "SharePoint" [ref=f6e2820]
+                        - 'generic "Ask-me-anything: Power Platform rollout" [ref=f6e2821] [cursor=pointer]'
+                  - button "+1" [ref=f6e2824] [cursor=pointer]
+                - toolbar [ref=f6e2825]:
+                  - generic [ref=f6e2827]:
+                    - button "Copy" [ref=f6e2830]
+                    - generic [ref=f6e2834]:
+                      - button "Like" [ref=f6e2835]
+                      - button "Dislike" [ref=f6e2839]
+        - group "Suggested Prompts" [ref=f6e2846]:
+          - button "Filter online events by month" [ref=f6e2847]
+          - button "List online webinars only" [ref=f6e2848]
+          - button "Show upcoming online events" [ref=f6e2849]
+        - generic [ref=f6e53]:
+          - generic [ref=f6e60]:
+            - button "Open input menu" [ref=f6e64]
+            - generic [ref=f6e68]:
+              - textbox "Prompt" [active] [ref=f6e69]:
+                - paragraph [ref=f6e2736]
+              - generic: Ask a question about Fujitsu 20K V4
+            - alert "Microphone Disabled" [ref=f6e74]:
+              - switch "Microphone Disabled" [ref=f6e76]:
+                - img "Mic-Regular" [ref=f6e78]
+          - status [ref=f6e80]
+      - generic [ref=f6e83]: AI-generated content may be incorrect
+    - status

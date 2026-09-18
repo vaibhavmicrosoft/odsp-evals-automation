@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Parts Inventory | Evaluation pilot</title><style>
+    :root { --ink: #202724; --muted: #59635f; --line: #dce3df; --paper: #fff; --canvas: #f4f7f5; --green: #176343; --green-soft: #e8f4ec; --amber: #795400; --amber-soft: #fff5d9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--canvas); font: 15px/1.6 "Segoe UI", "Helvetica Neue", sans-serif; letter-spacing: 0; }
+    a { color: var(--green); text-underline-offset: 3px; overflow-wrap: anywhere; }
+    :focus-visible { outline: 3px solid #227dbe; outline-offset: 4px; }
+    .skip { position: absolute; top: -80px; left: 16px; background: white; padding: 10px; z-index: 5; }
+    .skip:focus { top: 8px; }
+    .masthead { padding: 16px 32px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; background: var(--paper); border-bottom: 1px solid var(--line); }
+    .brand { font-weight: 700; font-size: 14px; }
+    .brand::before { content: ""; display: inline-block; width: 10px; height: 10px; background: var(--green); margin-right: 10px; }
+    .meta, figcaption { color: var(--muted); font-size: 12px; }
+    .report-layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); align-items: start; }
+    .sidebar { position: sticky; top: 0; height: 100vh; overflow-y: auto; padding: 28px 16px; background: var(--paper); border-right: 1px solid var(--line); }
+    .sidebar-title { font-weight: 700; margin: 0 12px 4px; }
+    .sidebar .meta { display: block; margin: 0 12px 24px; }
+    .nav-label { margin: 24px 12px 8px; color: var(--muted); font-size: 11px; text-transform: uppercase; font-weight: 700; }
+    .sidebar a { display: block; padding: 13px 12px; margin: 4px 0; border-radius: 4px; border-left: 3px solid transparent; text-decoration: none; color: var(--ink); font-size: 14px; }
+    .sidebar a:hover { background: var(--canvas); }
+    .sidebar a[aria-current="page"] { background: var(--green-soft); border-left-color: var(--green); color: var(--green); font-weight: 600; }
+    .sidebar small { display: block; font-size: 11px; color: var(--muted); margin-top: 5px; font-weight: 400; }
+    main { min-width: 0; width: 100%; max-width: 1240px; padding: 36px; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { font: 40px/1.15 Georgia, serif; margin-bottom: 12px; overflow-wrap: anywhere; }
+    h2 { font-size: 24px; line-height: 1.3; }
+    h3 { font-size: 17px; line-height: 1.4; }
+    .eyebrow { color: var(--green); font-size: 12px; font-weight: 700; text-transform: uppercase; margin-bottom: 8px; }
+    .intro { max-width: 800px; color: var(--muted); }
+    .links { display: flex; gap: 10px 24px; flex-wrap: wrap; font-size: 13px; }
+    .summary { margin: 28px 0 12px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-block: 1px solid var(--line); background: var(--paper); }
+    .metric { padding: 20px; border-right: 1px solid var(--line); }
+    .metric:last-child { border: 0; }
+    .metric strong { display: block; font: 34px/1.2 Georgia, serif; color: var(--green); margin-bottom: 6px; }
+    .metric span { color: var(--muted); font-size: 13px; }
+    .note { padding: 12px 16px; border-left: 3px solid #bd8e24; background: var(--amber-soft); font-size: 14px; }
+    section + section, .section { margin-top: 36px; }
+    .findings { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+    .finding { padding: 20px 24px 12px 0; border-bottom: 1px solid var(--line); }
+    .finding + .finding { padding-left: 24px; border-left: 1px solid var(--line); }
+    .finding p { color: var(--muted); font-size: 14px; }
+    figure { margin: 20px 0 28px; }
+    figure img { display: block; width: 100%; height: auto; aspect-ratio: 2552 / 1326; border: 1px solid var(--line); background: var(--paper); }
+    figcaption { margin-top: 8px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .scope { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    dl { margin: 0; } dt { color: var(--muted); font-size: 12px; } dd { margin: 0 0 16px; font-size: 14px; overflow-wrap: anywhere; }
+    ul { padding-left: 20px; } li { margin-bottom: 10px; }
+    blockquote { margin: 12px 0 24px; padding-left: 20px; border-left: 3px solid var(--green); }
+    #exact-prompt { font-size: 14px; overflow-wrap: anywhere; }
+    .response { font: 20px/1.5 Georgia, serif; }
+    .badges { display: flex; gap: 8px; flex-wrap: wrap; margin: 16px 0; }
+    .badge { display: inline-block; border-radius: 4px; padding: 3px 8px; background: var(--green-soft); color: var(--green); font-size: 11px; font-weight: 700; }
+    .controls { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; border-block: 1px solid var(--line); padding: 14px 0; margin: 20px 0; }
+    fieldset { padding: 0; margin: 0; border: 0; min-width: 0; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .filters { display: flex; gap: 4px; flex-wrap: wrap; }
+    .filters span { display: block; padding: 7px 12px; min-height: 40px; border-radius: 4px; cursor: pointer; font-size: 13px; }
+    .filters input:checked + span { background: var(--ink); color: white; }
+    .filters input:focus-visible + span { outline: 3px solid #227dbe; outline-offset: 2px; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; background: var(--paper); }
+    th { text-align: left; font-size: 11px; text-transform: uppercase; color: var(--muted); background: #edf2ef; }
+    th, td { padding: 12px 16px; border-bottom: 1px solid var(--line); vertical-align: top; overflow-wrap: anywhere; }
+    td { font-size: 13px; } th:first-child { width: 36%; } th:nth-child(2) { width: 92px; }
+    td small { display: block; color: var(--muted); margin-top: 6px; }
+    [hidden] { display: none !important; }
+    footer { border-top: 1px solid var(--line); padding: 20px 32px; font-size: 12px; color: var(--muted); }
+    @media (max-width: 1100px) {
+      .report-layout { grid-template-columns: 230px minmax(0, 1fr); }
+      main { padding: 28px; }
+      .summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .metric:nth-child(2) { border-right: 0; } .metric:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+    }
+    @media (max-width: 640px) {
+      .masthead { padding: 16px; } .report-layout { grid-template-columns: minmax(0, 1fr); }
+      .sidebar { position: static; height: auto; padding: 12px 16px; border-right: 0; border-bottom: 1px solid var(--line); }
+      .sidebar-title, .sidebar .meta, .sidebar small { display: none; }
+      .nav-label { margin: 8px 12px 0; } .sidebar a { padding: 10px 12px; }
+      main { padding: 24px 16px; } h1 { font-size: 32px; } h2 { font-size: 22px; }
+      .metric { padding: 16px; } .metric strong { font-size: 30px; }
+      .findings, .scope { grid-template-columns: minmax(0, 1fr); }
+      .finding + .finding { padding-left: 0; border-left: 0; }
+      table, tbody, tr, td { display: block; width: 100%; }
+      thead { position: absolute; clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; }
+      tr { padding: 12px; border-bottom: 1px solid var(--line); } td { padding: 4px 0; border: 0; }
+      footer { padding: 20px 16px; }
+    }
+    @media print {
+      body { background: white; } .sidebar, .controls, .skip { display: none; }
+      .report-layout { display: block; } main { max-width: none; padding: 20px 0; }
+      #overview[hidden], #case-01[hidden], #checks tr[hidden] { display: block !important; }
+      #checks tr[hidden] { display: table-row !important; } #empty { display: none; }
+      figure, tr { break-inside: avoid; }
+    }
+  
+.badge.fail{background:#fbecef;color:#a02941}.metric.fail strong{color:#a02941}.response-text{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}.assertion-text{margin:8px 0}details{margin:12px 0}summary{cursor:pointer;color:var(--green)}figure img{aspect-ratio:1720/878}#case-01{margin-top:0}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:24px;border-block:1px solid var(--line);padding:20px 0}.comparison strong{font-size:24px}@media(max-width:640px){.comparison{grid-template-columns:1fr}}
+</style></head><body>
+<a class="skip" href="#main">Skip to report</a><header class="masthead"><span class="brand">ODSP / Evaluation notebook</span><span class="meta">PARTS INVENTORY / SEPTEMBER 18, 2026</span></header>
+<div class="report-layout"><aside class="sidebar"><p class="sidebar-title">Parts Inventory</p><span class="meta">Generated assertions / 1 prompt</span><nav aria-label="Report navigation"><a href="#overview" aria-current="page">Overview</a><p class="nav-label">Prompts</p><a href="#case-01">01 &nbsp; Create a stock and financial HTML report<small>10 pass / 2 fail / 0 unable</small></a></nav></aside>
+<main id="main" tabindex="-1"><div id="overview"><p class="eyebrow">SharePoint Lists / Assertion-generation pilot</p><h1 tabindex="-1">Parts Inventory Apr 2026 ER</h1><p class="intro">Twelve assertions generated from the user's task and observed source fields, frozen before one Copilot submission. No supplied assertion set or V2.2 defaults.</p>
+<div class="links"><a href="https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/_layouts/15/embed.aspx?id=%2Fteams%2FDFsitevaibhav2%2FShared%20Documents%2FParts%20Inventory%20Stock%20Status%20Report.html" target="_blank" rel="noopener noreferrer">Open Copilot's stock report</a><a href="https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/Lists/Parts%20Inventory%20Apr%202026%20ER/AllItems.aspx" target="_blank" rel="noopener noreferrer">Source list</a><a href="report.md">Evaluation source report</a><a href="../../runs/parts-inventory-pilot/plan.json">Frozen assertions</a><a href="../../intake/cases/parts-inventory-pilot/r1/brief.md">Pre-run intake brief</a></div>
+<div class="summary"><div class="metric"><strong>83.3%</strong><span>Provisional assertion score / 10 of 12</span></div><div class="metric"><strong>100%</strong><span>Judgment coverage / 12 of 12</span></div><div class="metric"><strong>10</strong><span>Assertions passed</span></div><div class="metric fail"><strong>2</strong><span>Assertions failed</span></div></div>
+<p class="note"><strong>Not an overall quality rating.</strong> Both failures share a folder-omission root cause. Quantity accuracy passes on embedded data, not visible field coverage. The assertion set itself has gaps. No UNABLE or N/A verdicts.</p>
+<section class="section"><h2>A correct subtotal presented as a whole-list report</h2><div class="comparison"><div><span class="meta">REPORT / 29 ROOT PARTS</span><p><strong>$4,714.80</strong><br>5,587 units / 7 status exceptions</p></div><div><span class="meta">OBSERVED SOURCE / ROOT + FOLDER</span><p><strong>$4,812.00</strong><br>6,127 units / 8 stored-status exceptions</p></div></div><p>The omitted <strong>Hex Bolt M67 (APR26-001)</strong> contributes 540 units and $97.20. It is stored as Out of Stock despite its positive quantity. The report excludes it without a folder-scope note.</p><figure><a href="../../images/parts-inventory-pilot/response-initial.png" target="_blank" rel="noopener"><img src="../../images/parts-inventory-pilot/response-initial.png" width="1720" height="878" alt="Generated stock report and completed Copilot response showing 29 parts and $4,714.80."></a><figcaption>Original completed preview / 1720 x 878 visible viewport</figcaption></figure><a href="#case-01">View assertions, response and evidence</a></section>
+<section class="section"><h2>What the assertions caught</h2><div class="findings"><article class="finding"><p class="eyebrow">PI-03 / FAIL</p><h3>Undisclosed folder exclusion</h3><p>The source label names the list and the counter says 29 of 29 records, without explaining that the folder's part is excluded.</p></article><article class="finding"><p class="eyebrow">PI-07 / FAIL</p><h3>An out-of-stock part is missing</h3><p>Six low-stock parts and one out-of-stock part appear. The observed source contains two stored out-of-stock records. The source inconsistency was preserved by the evaluator.</p></article></div><p>All included row values match the source. The $313.30 reorder-level top-up estimate and displayed monetary calculations reconcile to the stated formula.</p></section>
+<section class="section"><h2>Assertion-generation review</h2><p><strong>Useful but incomplete.</strong> The set detected a real scope failure and tested source-backed financial accuracy. It did not fully specify a usable visible stock ledger or consistent filter behavior.</p><ul><li>Per-part quantities, reorder levels and explicit status columns are absent from the rendered tables, although present in the embedded data model. Future assertions need explicit visible-field coverage; do not retrofit it into this run.</li><li>Stock/category filters change charts, record count and tables but leave headline KPIs and narrative at all-record values without explicitly labelling them as unfiltered. No frozen filter-consistency assertion exists, so this is unscored.</li><li>The narrative suggests sorting by gap cost, but no sorting control was observed; tables render pre-sorted top-ten values. This is unscored.</li><li>The stock-status donut measures units, making zero-unit out-of-stock parts contribute zero to the chart. Part-count and unit-count interpretations should be tested separately in a future version.</li><li>PI-03 and PI-07 detect the same omitted folder item from different scope and exception-coverage requirements. Their failures are not two independent root causes.</li><li>PI-05 checks embedded-data correctness but did not freeze a rendering requirement. Its PASS must not be read as a usable part-level stock ledger.</li></ul><p class="note">These observations are outside the frozen score. No assertions were added or rewritten after seeing the response. They inform a future criteria version, not retrospective rescoring.</p></section>
+<section class="section"><h2>Method and limitations</h2><div class="scope"><dl><dt>Financial interpretation</dt><dd>Inventory valuation from Stock Qty and Unit Cost ($). No revenue or profit inferred. Optional replenishment estimates require a stated basis.</dd><dt>Execution</dt><dd>Bottom-right Copilot, verified fresh chat, one submission, no repair prompts. Submitted 2026-09-18T13:39:50.115Z; completion observed 2026-09-18T13:41:00.110Z, about 70 seconds later. Copy present, Stop generating absent, preview rendered.</dd><dt>Artifact</dt><dd>Copilot created Parts Inventory Stock Status Report.html in Shared Documents. No evaluator publish/share action or source-list edit.</dd><dt>Evidence</dt><dd>UI baseline captured before submission. Integer-cent checks verified 29 included model rows, 20 monetary table cells and 14 category amounts. Original screenshot saved before scrolling. Filters restored to All.</dd><dt>Environment</dt><dd>1720 x 878 CSS pixels, DPR 2, screenshots at CSS scale. Asia/Calcutta. Generated report not evaluated on mobile.</dd><dt>Scoring</dt><dd>PASS/(PASS+FAIL) = 10/12. Coverage=(PASS+FAIL)/(PASS+FAIL+UNABLE) = 12/12. N/A excluded.</dd></dl><ul><li>Source baseline is a verified UI transcription of 29 root records and one folder record, not an authoritative API export or backend completeness guarantee; API returned HTTP 401 and was not bypassed.</li><li>Source values represent the observed list, not independently verified physical stock or accounting records. The folder item&#39;s stock/status conflict remains unresolved.</li><li>National currency, business audience, demand, lead time, tax and supplier terms were not supplied. Last-restocked dates are not report freshness timestamps.</li><li>The twelve assertions were generated and frozen before execution by the agent. They are not human-calibrated and do not constitute an implemented end-to-end UKB skill pipeline.</li><li>No follow-up repair prompt, source edit or evaluator publication/sharing. Report creation itself created a file in the site&#39;s Shared Documents as part of the requested task.</li><li>This is one agent-driven pilot, not an unattended runner. UI/API tooling errors and browser warnings are not scored as product failures.</li></ul></div></section></div>
+<section id="case-01" hidden aria-labelledby="case-heading"><p class="eyebrow">Prompt 01 / Assertions v1</p><h1 id="case-heading" tabindex="-1">Create a stock and financial HTML report</h1><p class="intro">10 PASS / 2 FAIL / 0 UNABLE / 0 N/A. Provisional score 83.3% (10/12); judgment coverage 100% (12/12). Source coverage is not judgment coverage.</p>
+<section><h2>Exact submitted prompt</h2><blockquote id="exact-prompt">Create an HTML report showing the stock status of the various parts in this Parts Inventory Apr 2026 ER list, with financials based on the available list data.</blockquote><details><summary>Original user request and interpretation</summary><p>lets do another pilot....this time, I will only provide a list....this is your test for good assertion generation....the task id to create a HTML report using this List https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/Lists/Parts%20Inventory%20Apr%202026%20ER/AllItems.aspx ....you have to click on copilot icon on bottom right, ask it to create a report to get the status stocks of various parts in this List, which financials</p><p>Financials means inventory value using Stock Qty and Unit Cost ($). Replenishment estimates are optional and must state their basis. No revenue, profit, demand forecast or supplier pricing is required or inferred.</p></details></section>
+<section><h2>Full Copilot response</h2><blockquote class="response" id="full-response">The report is ready in the preview. It covers 29 parts, $4,714.80 in inventory value, 7 parts needing attention, and an estimated $313.30 replenishment cost.</blockquote><p>Copilot also displayed the built-in skill label <code>html-report-design-guideline</code>. Hidden reasoning was not used for judging.</p><a href="../../snapshots/parts-inventory-pilot/response.yaml">Original response and preview snapshot</a></section>
+<section><h2>Assertions</h2><div class="controls"><fieldset><legend class="sr-only">Filter assertion verdicts</legend><div class="filters"><label><input class="sr-only" type="radio" name="verdict" value="ALL" checked><span>All assertions</span></label><label><input class="sr-only" type="radio" name="verdict" value="FAIL"><span>Failed</span></label><label><input class="sr-only" type="radio" name="verdict" value="UNABLE"><span>Unable</span></label><label><input class="sr-only" type="radio" name="verdict" value="PASS"><span>Passed</span></label><label><input class="sr-only" type="radio" name="verdict" value="N/A"><span>N/A</span></label></div></fieldset><span class="meta" id="filter-status" role="status" aria-live="polite"></span></div><table><thead><tr><th scope="col">Assertion</th><th scope="col">Verdict</th><th scope="col">Reason and evidence</th></tr></thead><tbody id="checks"><tr data-verdict="PASS"><td><strong>PI-01</strong><p class="assertion-text">The response provides an accessible HTML stock report artifact or complete HTML source that can be saved as a report.</p><details><summary>Frozen evidence rule</summary><p>Open the returned artifact using normal UI or inspect complete HTML source; a promise, inaccessible link or chat-only summary is insufficient.</p></details></td><td><span class="badge pass">PASS</span></td><td>An HTML file named Parts Inventory Stock Status Report.html opened in the SharePoint Content preview and rendered an interactive report.<div class="links"><a href="../../snapshots/parts-inventory-pilot/response.yaml">Evidence 1</a><a href="../../images/parts-inventory-pilot/response-initial.png">Evidence 2</a></div></td></tr>
+<tr data-verdict="PASS"><td><strong>PI-02</strong><p class="assertion-text">The report explicitly identifies the source list as Parts Inventory Apr 2026 ER.</p><details><summary>Frozen evidence rule</summary><p>Report title, source label or source link; unrelated source fails.</p></details></td><td><span class="badge pass">PASS</span></td><td>The report footer explicitly identifies Parts Inventory Apr 2026 ER list as its source.<div class="links"><a href="../../runs/parts-inventory-pilot/generated-report-capture.json">Evidence 1</a><a href="../../images/parts-inventory-pilot/report-bottom.png">Evidence 2</a></div></td></tr>
+<tr data-verdict="FAIL"><td><strong>PI-03</strong><p class="assertion-text">The report accurately states the scope of records covered, including any folder or subset exclusions.</p><details><summary>Frozen evidence rule</summary><p>Compare report coverage with inspected root and folder records. Claiming complete coverage while omitting records fails; inaccessible source scope makes this UNABLE.</p></details></td><td><span class="badge fail">FAIL</span></td><td>The report says 29 of 29 records and names the list without explaining a root-only scope. The inspected folder contains APR26-001, omitted from the model. Thirty observed source parts total $4,812.00, compared with the report&#39;s $4,714.80 for 29 root parts. Difference: $97.20 and 540 units.<div class="links"><a href="../../runs/parts-inventory-pilot/source-records.json">Evidence 1</a><a href="../../runs/parts-inventory-pilot/generated-model.json">Evidence 2</a><a href="../../snapshots/parts-inventory-pilot/source-folder.yaml">Evidence 3</a><a href="../../runs/parts-inventory-pilot/generated-report-capture.json">Evidence 4</a></div></td></tr>
+<tr data-verdict="PASS"><td><strong>PI-04</strong><p class="assertion-text">Each reported part is unambiguously identifiable by its source Part Name or Part ID.</p><details><summary>Frozen evidence rule</summary><p>Compare report rows against source identifiers; aggregated charts alone do not establish part-level reporting.</p></details></td><td><span class="badge pass">PASS</span></td><td>The displayed part names match unique source identities. The embedded 29-row model also preserves Part IDs. This does not imply that all parts appear simultaneously in the top-ten tables.<div class="links"><a href="../../runs/parts-inventory-pilot/generated-model.json">Evidence 1</a><a href="../../runs/parts-inventory-pilot/generated-report-capture.json">Evidence 2</a><a href="../../runs/parts-inventory-pilot/source-records.json">Evidence 3</a></div></td></tr>
+<tr data-verdict="PASS"><td><strong>PI-05</strong><p class="assertion-text">Each reported stock quantity matches the corresponding source Stock Qty.</p><details><summary>Frozen evidence rule</summary><p>Compare all reported quantities with source rows, preserving zero; unsupported rows UNABLE rather than inferred.</p></details></td><td><span class="badge pass">PASS</span></td><td>All 29 embedded stockQty values match the corresponding source rows, including Safety Guard Bracket at zero; their sum matches 5,587 displayed units. IMPORTANT: per-part stock quantities are not displayed in the report&#39;s tables. This is a data-accuracy pass, not a visible-quantity-coverage pass; the frozen assertion lacks an explicit presence requirement.<div class="links"><a href="../../runs/parts-inventory-pilot/generated-model.json">Evidence 1</a><a href="../../runs/parts-inventory-pilot/source-records.json">Evidence 2</a><a href="../../runs/parts-inventory-pilot/generated-report-capture.json">Evidence 3</a></div></td></tr>
+<tr data-verdict="PASS"><td><strong>PI-06</strong><p class="assertion-text">Each reported stock status preserves the source Status or is explicitly labelled as a derived classification with a consistently applied rule.</p><details><summary>Frozen evidence rule</summary><p>Check In Stock, Low Stock and Out of Stock against source, including zero stock and equality with reorder level.</p></details></td><td><span class="badge pass">PASS</span></td><td>All 29 included status values match the source. Low Stock and Out of Stock filters expose the matching included parts; DC Gear Motor 12V at quantity 5 and reorder level 5 remains In Stock. The omitted folder part is judged under coverage checks, not treated as an included status mismatch.<div class="links"><a href="../../runs/parts-inventory-pilot/generated-model.json">Evidence 1</a><a href="../../runs/parts-inventory-pilot/source-records.json">Evidence 2</a><a href="../../snapshots/parts-inventory-pilot/filter-low-stock.yaml">Evidence 3</a><a href="../../snapshots/parts-inventory-pilot/filter-out-of-stock.yaml">Evidence 4</a></div></td></tr>
+<tr data-verdict="FAIL"><td><strong>PI-07</strong><p class="assertion-text">The report includes every source part marked Low Stock or Out of Stock within its declared scope.</p><details><summary>Frozen evidence rule</summary><p>Compare the source exception set with report entries; a missing exception fails. Unverified source scope makes completeness UNABLE.</p></details></td><td><span class="badge fail">FAIL</span></td><td>The list-scoped report omits Hex Bolt M67 (APR26-001), whose stored source status is Out of Stock, and gives no folder exclusion. It includes six low-stock parts and Safety Guard Bracket but only seven of eight observed source status exceptions. The source inconsistency (540 units yet Out of Stock) was preserved, not silently corrected. This shares the folder-omission root cause with PI-03.<div class="links"><a href="../../runs/parts-inventory-pilot/source-records.json">Evidence 1</a><a href="../../runs/parts-inventory-pilot/generated-model.json">Evidence 2</a><a href="../../snapshots/parts-inventory-pilot/source-folder.yaml">Evidence 3</a><a href="../../snapshots/parts-inventory-pilot/filter-out-of-stock.yaml">Evidence 4</a></div></td></tr>
+<tr data-verdict="PASS"><td><strong>PI-08</strong><p class="assertion-text">The report provides a stock-value financial summary derived from Stock Qty multiplied by Unit Cost ($).</p><details><summary>Frozen evidence rule</summary><p>Report shows inventory value and identifies its calculation basis; do not require revenue or profit fields absent from the list.</p></details></td><td><span class="badge pass">PASS</span></td><td>Inventory-value summary and category breakdown are present. Footer states Inventory value = Stock Qty x Unit Cost.<div class="links"><a href="../../runs/parts-inventory-pilot/generated-report-capture.json">Evidence 1</a><a href="../../images/parts-inventory-pilot/report-bottom.png">Evidence 2</a></div></td></tr>
+<tr data-verdict="PASS"><td><strong>PI-09</strong><p class="assertion-text">Every reported monetary calculation reconciles with the source values and its stated formula to the displayed currency precision.</p><details><summary>Frozen evidence rule</summary><p>Independently calculate line values, totals, category values and any optional replenishment estimates; tolerance half of the final displayed unit. UNABLE if relevant source values unavailable; N/A only if no monetary calculations are reported, with PI-08 judged separately.</p></details></td><td><span class="badge pass">PASS</span></td><td>All 29 embedded line values and reorder-gap costs match integer-cent calculations. Included-record total $4,714.80, fourteen category values, both displayed monetary tables and estimated reorder-level top-up $313.30 reconcile. This checks arithmetic for included records; the incorrect implied whole-list coverage is separately failed under PI-03.<div class="links"><a href="../../runs/parts-inventory-pilot/baseline.json">Evidence 1</a><a href="../../runs/parts-inventory-pilot/generated-model.json">Evidence 2</a><a href="../../runs/parts-inventory-pilot/generated-report-capture.json">Evidence 3</a><a href="../../runs/parts-inventory-pilot/calculation-checks.json">Evidence 4</a></div></td></tr>
+<tr data-verdict="PASS"><td><strong>PI-10</strong><p class="assertion-text">Monetary figures have a clear currency label consistent with the source&#39;s dollar-denominated Unit Cost ($) field.</p><details><summary>Frozen evidence rule</summary><p>Dollar symbol or an explicit applicable table/section currency label; a specific national currency must have source support. N/A only when no monetary figures appear.</p></details></td><td><span class="badge pass">PASS</span></td><td>Displayed monetary values carry the dollar symbol, consistent with Unit Cost ($). No national currency code is visibly claimed. The internal formatter uses USD, which is not independently established by source metadata; this is a limitation, not a visible currency-label failure.<div class="links"><a href="../../runs/parts-inventory-pilot/generated-report-capture.json">Evidence 1</a><a href="../../snapshots/parts-inventory-pilot/source-root.yaml">Evidence 2</a></div></td></tr>
+<tr data-verdict="PASS"><td><strong>PI-11</strong><p class="assertion-text">Financial claims that cannot be established from the list are explicitly identified as assumptions or unavailable information.</p><details><summary>Frozen evidence rule</summary><p>Unsupported revenue, margin, forecasts, order quantities or prices must not be stated as verified facts. N/A if no such claims are made.</p></details></td><td><span class="badge pass">PASS</span></td><td>Replenishment is described as an estimate to restore configured reorder levels, with explicit max(Reorder Level - Stock Qty, 0) x Unit Cost formula. No verified revenue, margin, forecast or supplier quote is claimed. The estimate is not a purchase recommendation based on demand or lead time.<div class="links"><a href="../../runs/parts-inventory-pilot/generated-report-capture.json">Evidence 1</a><a href="../../images/parts-inventory-pilot/report-bottom.png">Evidence 2</a></div></td></tr>
+<tr data-verdict="PASS"><td><strong>PI-12</strong><p class="assertion-text">The generated HTML report&#39;s part names, stock values and financial values are readable without overlapping or inaccessible clipping at the execution viewport.</p><details><summary>Frozen evidence rule</summary><p>Inspect rendered report screenshots and normal scrolling. Ordinary usable horizontal scrolling is permitted. UNABLE if the generated artifact cannot be opened; do not judge our evaluation-report UI instead.</p></details></td><td><span class="badge pass">PASS</span></td><td>At the observed 1720 x 878 viewport, shown part names, totals and monetary table cells are readable without overlap or inaccessible clipping. Normal wheel scrolling exposed the full preview. This does not certify mobile, accessibility compliance or missing fields.<div class="links"><a href="../../images/parts-inventory-pilot/response-initial.png">Evidence 1</a><a href="../../images/parts-inventory-pilot/report-middle.png">Evidence 2</a><a href="../../images/parts-inventory-pilot/report-lower.png">Evidence 3</a><a href="../../images/parts-inventory-pilot/report-bottom.png">Evidence 4</a></div></td></tr></tbody></table><p id="empty" hidden>No assertions have this verdict.</p></section>
+<section><h2>Generated report text</h2><p class="meta">Transcription of the unfiltered rendered preview, not an original HTML file download.</p><details><summary>Full report transcription, including tables</summary><div class="response-text">Parts Inventory Stock Status Report
+29 parts valued at $4,714.80; 7 parts need attention.
+STOCK STATUS
+All
+In Stock
+Low Stock
+Out of Stock
+CATEGORY
+All
+Bearings
+Belts
+Consumables
+Controls
+Cooling
+Electrical
+Fabricated Parts
+Fasteners
+Hydraulics
+Lubricants
+Motors
+Pneumatics
+Seals
+Sensors
+Reset
+29 of 29 records
+INVENTORY VALUE
+$4,714.80
+Across 5,587 units
+IN STOCK
+22
+75.9% of parts
+NEEDS ATTENTION
+7
+6 low stock · 1 out of stock
+REPLENISHMENT COST
+$313.30
+To restore items to reorder level
+Stock status mix
+5,587
+TOTAL
+In Stock
+5,529 99%
+Low Stock
+58 1%
+Out of Stock
+0 0%
+Inventory value by category
+Electrical
+$829.80
+17.6%
+Sensors
+$616.20
+13.1%
+Controls
+$597.55
+12.7%
+Motors
+$421.45
+8.9%
+Cooling
+$370.40
+7.9%
+Seals
+$344.10
+7.3%
+Belts
+$301.95
+6.4%
+Bearings
+$288.20
+6.1%
+Hydraulics
+$264.60
+5.6%
+Consumables
+$212.75
+4.5%
+Lubricants
+$179.60
+3.8%
+Fasteners
+$150.20
+3.2%
+Pneumatics
+$138.00
+2.9%
+Fabricated Parts
+$0.00
+0%
+Highest-value parts on hand
+PART	INVENTORY VALUE
+Limit Switch Roller Lever	$310.80
+Thermocouple Type K	$307.20
+Stepper Motor NEMA 17	$274.45
+Hydraulic Hose 1/2in	$264.60
+PLC Input Module	$252.00
+Solenoid Valve 24V	$227.50
+O-Ring NBR 20mm	$227.50
+DIN Rail Terminal Block	$225.50
+Timing Belt 5M-450	$223.20
+Panel Cooling Fan 120mm	$207.60
+Replenishment cost by part
+PART	REPLENISHMENT GAP COST
+Safety Guard Bracket	$93.00
+PLC Input Module	$84.00
+Proximity Sensor M12	$52.00
+Photoelectric Sensor	$38.25
+V-Belt A32	$26.25
+Grease Cartridge EP2	$11.90
+Needle Bearing NK12	$7.90
+Flat Washer M6	$0.00
+Lock Nut M8	$0.00
+Ball Bearing 608ZZ	$0.00
+Availability focus
+7 parts are below their preferred stock position, including 1 out-of-stock part. The estimated minimum spend to restore these items to their configured reorder levels is $313.30.
+Replenishment priorities
+
+Use the table filters to focus on low and out-of-stock items, then sort by gap cost to prioritize the financial exposure.
+
+Source: Parts Inventory Apr 2026 ER list. Inventory value = Stock Qty × Unit Cost; replenishment gap cost = max(Reorder Level − Stock Qty, 0) × Unit Cost.</div></details><div class="links"><a href="../../runs/parts-inventory-pilot/generated-report-capture.json">Rendered HTML and tables</a><a href="../../runs/parts-inventory-pilot/generated-model.json">Embedded data model</a></div></section>
+<section><h2>Independent source baseline</h2><p>Thirty observed parts: 29 at root and one in Folder. UI transcription, not an API export or guaranteed backend count. The initial intake completeness gap was narrowed through folder inspection; national currency and backend completeness remain unresolved.</p><div class="links"><a href="../../snapshots/parts-inventory-pilot/source-root.yaml">Root snapshot</a><a href="../../snapshots/parts-inventory-pilot/source-folder.yaml">Folder snapshot</a><a href="../../runs/parts-inventory-pilot/source-records.json">All 30 source records</a><a href="../../runs/parts-inventory-pilot/baseline.json">Calculated baseline</a><a href="../../runs/parts-inventory-pilot/calculation-checks.json">Calculation checks</a></div></section>
+<section><h2>Captured evidence</h2><p>Separate full-window captures, never stitched. Preview moved with normal wheel gestures only. The overlay obscures much of the list; source snapshots and the folder screenshot provide separate source evidence.</p><figure><a href="../../images/parts-inventory-pilot/response-initial.png" target="_blank" rel="noopener"><img src="../../images/parts-inventory-pilot/response-initial.png" width="1720" height="878" loading="lazy" alt="Original response and report preview"></a><figcaption><span>Original response and report preview</span><span>2026-09-18T13:41:04.590Z (file timestamp) / preview scroll 0 px</span></figcaption></figure>
+<figure><a href="../../images/parts-inventory-pilot/report-middle.png" target="_blank" rel="noopener"><img src="../../images/parts-inventory-pilot/report-middle.png" width="1720" height="878" loading="lazy" alt="Category values after a normal +563 px wheel gesture"></a><figcaption><span>Category values after a normal +563 px wheel gesture</span><span>2026-09-18T13:41:41.259Z (file timestamp) / preview scroll 563 px</span></figcaption></figure>
+<figure><a href="../../images/parts-inventory-pilot/report-lower.png" target="_blank" rel="noopener"><img src="../../images/parts-inventory-pilot/report-lower.png" width="1720" height="878" loading="lazy" alt="Monetary tables after a further +550 px wheel gesture"></a><figcaption><span>Monetary tables after a further +550 px wheel gesture</span><span>2026-09-18T13:41:49.343Z (file timestamp) / preview scroll 1113 px</span></figcaption></figure>
+<figure><a href="../../images/parts-inventory-pilot/report-bottom.png" target="_blank" rel="noopener"><img src="../../images/parts-inventory-pilot/report-bottom.png" width="1720" height="878" loading="lazy" alt="Source and formulas after a further +400 px wheel gesture"></a><figcaption><span>Source and formulas after a further +400 px wheel gesture</span><span>2026-09-18T13:42:01.240Z (file timestamp) / preview scroll 1336.5 px</span></figcaption></figure>
+<figure><a href="../../images/parts-inventory-pilot/filter-out-of-stock.png" target="_blank" rel="noopener"><img src="../../images/parts-inventory-pilot/filter-out-of-stock.png" width="1720" height="878" loading="lazy" alt="Out of Stock filter; headline KPIs remain unfiltered"></a><figcaption><span>Out of Stock filter; headline KPIs remain unfiltered</span><span>2026-09-18T13:42:59.461Z (file timestamp) / preview scroll 0 px</span></figcaption></figure>
+<figure><a href="../../images/parts-inventory-pilot/source-folder.png" target="_blank" rel="noopener"><img src="../../images/parts-inventory-pilot/source-folder.png" width="1720" height="878" loading="lazy" alt="Folder source: Hex Bolt M67, 540 units, stored Out of Stock"></a><figcaption><span>Folder source: Hex Bolt M67, 540 units, stored Out of Stock</span><span>2026-09-18T13:39:27.678Z (file timestamp)</span></figcaption></figure></section></section>
+<noscript><p><a href="report.md">Full Markdown report</a></p></noscript></main></div><footer>Confidential / Internal-Only. Local evaluation report, not a published site. <a href="../../meeting-brief.md">Project status</a> / <a href="../../runs/parts-inventory-pilot/results.json">Structured results</a></footer>
+<script>
+function showView(focus=false){const selected=location.hash==='#case-01'?'case-01':'overview';for(const view of ['overview','case-01'])document.getElementById(view).hidden=view!==selected;for(const link of document.querySelectorAll('nav a')){if(link.hash==='#'+selected)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current');}if(focus){document.querySelector('#'+selected+' h1').focus({preventScroll:true});window.scrollTo(0,0);}}
+function filterChecks(){const selected=document.querySelector('input[name="verdict"]:checked').value;let count=0;for(const row of document.querySelectorAll('#checks tr')){row.hidden=selected!=='ALL'&&row.dataset.verdict!==selected;if(!row.hidden)count++;}document.getElementById('filter-status').textContent=count+' of 12 assertions';document.getElementById('empty').hidden=count!==0;}
+window.addEventListener('hashchange',()=>showView(true));for(const input of document.querySelectorAll('input[name="verdict"]'))input.addEventListener('change',filterChecks);showView();filterChecks();
+</script></body></html>

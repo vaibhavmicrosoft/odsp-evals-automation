@@ -1,0 +1,31 @@
+{
+  "runId": "parts-inventory-pilot",
+  "criteriaVersion": 1,
+  "criteriaFrozenAt": "2026-09-18T13:39:00Z",
+  "targetUrl": "https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/Lists/Parts%20Inventory%20Apr%202026%20ER/AllItems.aspx",
+  "originalRequest": "lets do another pilot....this time, I will only provide a list....this is your test for good assertion generation....the task id to create a HTML report using this List https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/Lists/Parts%20Inventory%20Apr%202026%20ER/AllItems.aspx ....you have to click on copilot icon on bottom right, ask it to create a report to get the status stocks of various parts in this List, which financials",
+  "prompt": "Create an HTML report showing the stock status of the various parts in this Parts Inventory Apr 2026 ER list, with financials based on the available list data.",
+  "origin": "Agent-generated prompt and assertions from the user's task and inspected list columns; no supplied assertion set or Lists V2.2 defaults. Framework-informed, not an executed UKB skill pipeline or human-calibrated rubric.",
+  "interpretation": "Financials means inventory value using Stock Qty and Unit Cost ($). Replenishment estimates are optional and must state their basis. No revenue, profit, demand forecast or supplier pricing is required or inferred.",
+  "checks": [
+    {"id":"PI-01","assertion":"The response provides an accessible HTML stock report artifact or complete HTML source that can be saved as a report.","evidence":"Open the returned artifact using normal UI or inspect complete HTML source; a promise, inaccessible link or chat-only summary is insufficient."},
+    {"id":"PI-02","assertion":"The report explicitly identifies the source list as Parts Inventory Apr 2026 ER.","evidence":"Report title, source label or source link; unrelated source fails."},
+    {"id":"PI-03","assertion":"The report accurately states the scope of records covered, including any folder or subset exclusions.","evidence":"Compare report coverage with inspected root and folder records. Claiming complete coverage while omitting records fails; inaccessible source scope makes this UNABLE."},
+    {"id":"PI-04","assertion":"Each reported part is unambiguously identifiable by its source Part Name or Part ID.","evidence":"Compare report rows against source identifiers; aggregated charts alone do not establish part-level reporting."},
+    {"id":"PI-05","assertion":"Each reported stock quantity matches the corresponding source Stock Qty.","evidence":"Compare all reported quantities with source rows, preserving zero; unsupported rows UNABLE rather than inferred."},
+    {"id":"PI-06","assertion":"Each reported stock status preserves the source Status or is explicitly labelled as a derived classification with a consistently applied rule.","evidence":"Check In Stock, Low Stock and Out of Stock against source, including zero stock and equality with reorder level."},
+    {"id":"PI-07","assertion":"The report includes every source part marked Low Stock or Out of Stock within its declared scope.","evidence":"Compare the source exception set with report entries; a missing exception fails. Unverified source scope makes completeness UNABLE."},
+    {"id":"PI-08","assertion":"The report provides a stock-value financial summary derived from Stock Qty multiplied by Unit Cost ($).","evidence":"Report shows inventory value and identifies its calculation basis; do not require revenue or profit fields absent from the list."},
+    {"id":"PI-09","assertion":"Every reported monetary calculation reconciles with the source values and its stated formula to the displayed currency precision.","evidence":"Independently calculate line values, totals, category values and any optional replenishment estimates; tolerance half of the final displayed unit. UNABLE if relevant source values unavailable; N/A only if no monetary calculations are reported, with PI-08 judged separately."},
+    {"id":"PI-10","assertion":"Monetary figures have a clear currency label consistent with the source's dollar-denominated Unit Cost ($) field.","evidence":"Dollar symbol or an explicit applicable table/section currency label; a specific national currency must have source support. N/A only when no monetary figures appear."},
+    {"id":"PI-11","assertion":"Financial claims that cannot be established from the list are explicitly identified as assumptions or unavailable information.","evidence":"Unsupported revenue, margin, forecasts, order quantities or prices must not be stated as verified facts. N/A if no such claims are made."},
+    {"id":"PI-12","assertion":"The generated HTML report's part names, stock values and financial values are readable without overlapping or inaccessible clipping at the execution viewport.","evidence":"Inspect rendered report screenshots and normal scrolling. Ordinary usable horizontal scrolling is permitted. UNABLE if the generated artifact cannot be opened; do not judge our evaluation-report UI instead."}
+  ],
+  "policy": {
+    "execution":"Fresh chat, submit once through bottom-right Copilot; no follow-up repair prompt, no list edits, no publishing or sharing.",
+    "sourceAccess":"Use accessible UI read-only. Direct API returned 401; do not retry or bypass that denial. Do not infer complete list totals from virtualized visible rows.",
+    "scoring":"Equal weight: PASS/(PASS+FAIL), coverage=(PASS+FAIL)/(PASS+FAIL+UNABLE), N/A excluded and separately counted. Without judged checks use Not scored. Report provisional results, not overall quality.",
+    "missingOutput":"If no report content is produced, PI-01 and the unconditional required-content checks fail; artifact rendering remains UNABLE. If artifact access alone is blocked, dependent content checks are UNABLE.",
+    "freeze":"Do not change criteria to fit the output. Additional observations are unscored. Record timing from tool-observed submission/completion, not this manually recorded freeze timestamp."
+  }
+}

@@ -1,0 +1,362 @@
+- generic [ref=f14e1]:
+  - link "Skip to main content" [ref=f14e10] [cursor=pointer]:
+    - /url: "#"
+  - generic [ref=f14e2]:
+    - banner [ref=f14e12]:
+      - button "App launcher" [ref=f14e15] [cursor=pointer]: 
+      - generic [ref=f14e21]:
+        - generic [ref=f14e22]:
+          - link "Microsoft" [ref=f14e25] [cursor=pointer]:
+            - /url: https://microsoft.sharepoint.com/
+            - img "Microsoft" [ref=f14e26]
+          - link "Go to SharePoint" [ref=f14e30] [cursor=pointer]:
+            - /url: https://microsoft.sharepoint-df.com/_layouts/15/sharepoint.aspx?&login_hint=vaibhavverma@microsoft.com
+            - generic [ref=f14e31]: SharePoint
+        - search "Search this site" [ref=f14e37]:
+          - generic [ref=f14e38]:
+            - button "Search" [ref=f14e39] [cursor=pointer]
+            - combobox "Search this site" [ref=f14e44]
+        - generic [ref=f14e45]:
+          - button "Open Agents" [ref=f14e1046] [cursor=pointer]
+          - button "Next steps to improve your site" [ref=f14e54] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f14e55]: 
+          - button "Provide feedback to Microsoft" [ref=f14e58] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f14e59]: 
+          - button "Feature Flags" [ref=f14e62] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f14e63]: 
+          - button "Settings" [ref=f14e66] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f14e67]: 
+          - button "Help" [ref=f14e70] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f14e71]: 
+      - generic [ref=f14e72]:
+        - button "Account manager for Vaibhav Verma (DESIGN)" [ref=f14e74] [cursor=pointer]:
+          - generic [ref=f14e81]:
+            - generic [aria-hidden] [ref=f14e82]: VV
+            - img "VV" [ref=f14e84]
+        - generic: 
+    - generic [ref=f14e4]:
+      - navigation [ref=f14e86]:
+        - generic [ref=f14e88]:
+          - button "Microsoft, 1 of 5" [ref=f14e89] [cursor=pointer]:
+            - generic [ref=f14e95]: Microsoft
+          - button "Discover, 2 of 5" [ref=f14e97] [cursor=pointer]:
+            - generic [ref=f14e103]: Discover
+          - button "Publish, 3 of 5" [ref=f14e105] [cursor=pointer]:
+            - generic [ref=f14e111]: Publish
+          - button "Build, 4 of 5" [ref=f14e113] [cursor=pointer]:
+            - generic [ref=f14e119]: Build
+          - button "OneDrive, 5 of 5" [ref=f14e121] [cursor=pointer]:
+            - generic [ref=f14e127]: OneDrive
+      - generic [ref=f14e130]:
+        - region "SharePoint Site Header" [ref=f14e1055]:
+          - generic [ref=f14e1056]:
+            - link "DFsitevaibhav2 home" [ref=f14e1058] [cursor=pointer]:
+              - /url: https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2
+            - heading "DFsitevaibhav2" [level=2] [ref=f14e1062]
+            - button "Go to the Microsoft Teams channel" [ref=f14e1064] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f14e1066]: 
+            - navigation "Site navigation. Use arrow keys to move between items." [ref=f14e1067]:
+              - generic [ref=f14e1071]:
+                - list [ref=f14e1072]:
+                  - listitem [ref=f14e1073]:
+                    - link "Home" [ref=f14e1074] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2
+                  - listitem [ref=f14e1076]:
+                    - link "Invoices Doclib" [ref=f14e1077] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/Test library 2/Forms/Shortlisted PDFs.aspx
+                  - listitem [ref=f14e1079]:
+                    - link "Pages" [ref=f14e1080] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/SitePages/Forms/ByAuthor.aspx
+                  - listitem [ref=f14e1082]:
+                    - link "Site contents" [ref=f14e1083] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/_layouts/15/viewlsts.aspx
+                  - listitem [ref=f14e1085]:
+                    - link "Announcement list 2" [ref=f14e1086] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/Lists/Announcement list 2/
+                  - listitem [ref=f14e1088]:
+                    - link "Fruits List" [ref=f14e1089] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/Lists/Fruits List/AllItems.aspx
+                  - listitem [ref=f14e1091]:
+                    - link "FAQ List_Simple" [ref=f14e1092] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/Lists/FAQ List/AllItems.aspx
+                  - listitem [ref=f14e1094]:
+                    - link "FAQ List - Rich Answers" [ref=f14e1095] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/Lists/FAQ List  Rich Answers/AllItems.aspx
+                  - listitem [ref=f14e1097]:
+                    - link "ticket_management_100_rows" [ref=f14e1098] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/Lists/ticket_management_100_rows/
+                  - listitem [ref=f14e1100]:
+                    - link "HYD – Treadmills for Sale" [ref=f14e1101] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/Lists/HYD  Treadmills for Sale/AllItems.aspx
+                  - listitem [ref=f14e1103]:
+                    - link "test M365 conf agenda" [ref=f14e1104] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/Lists/test M365 conf agenda/AllItems.aspx
+                  - listitem [ref=f14e1106]:
+                    - link "bday test 123" [ref=f14e1107] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/Lists/bday test 123/AllItems.aspx
+                - button "More navigation options" [ref=f14e1110] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=f14e1111]: 
+                - button "Edit site navigation" [ref=f14e1113] [cursor=pointer]: Edit navigation
+            - generic [ref=f14e1114]:
+              - generic [ref=f14e1115]:
+                - generic "Private group" [ref=f14e1116]
+                - text: "|"
+                - button "Confidential \\ Internal-Only" [ref=f14e1118] [cursor=pointer]
+              - button "11 members. Open Group Membership pane" [ref=f14e1121] [cursor=pointer]:
+                - generic [ref=f14e1122]:
+                  - generic [aria-hidden] [ref=f14e1123]: 
+                  - generic [ref=f14e1124]: 11 members
+              - button "More" [ref=f14e1127] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f14e1129]: 
+        - generic [ref=f14e198]:
+          - region "Command bar" [ref=f14e199]:
+            - menubar [ref=f14e204]:
+              - group [ref=f14e206]:
+                - button [ref=f14e1131]
+                - menuitem "Translation" [ref=f14e216] [cursor=pointer]:
+                  - generic [ref=f14e217]:
+                    - generic [aria-hidden] [ref=f14e218]: 
+                    - generic [ref=f14e219]: Translation
+                - menuitem "Page details" [ref=f14e222] [cursor=pointer]
+                - menuitem "Preview" [ref=f14e229] [cursor=pointer]
+                - menuitem "Immersive reader" [ref=f14e1139] [cursor=pointer]:
+                  - generic [ref=f14e1140]:
+                    - generic [aria-hidden] [ref=f14e1141]: 
+                    - generic [ref=f14e1142]: Immersive reader
+              - generic "Command bar" [ref=f14e241]:
+                - generic [ref=f14e242]: Draft
+                - menuitem "Share" [ref=f14e245] [cursor=pointer]:
+                  - generic [ref=f14e246]:
+                    - generic [aria-hidden] [ref=f14e247]: 
+                    - generic [ref=f14e248]: Share
+                    - generic [aria-hidden] [ref=f14e250]: 
+                - menuitem "Edit Page" [ref=f14e1145] [cursor=pointer]:
+                  - generic [ref=f14e1146]:
+                    - generic [aria-hidden] [ref=f14e1147]: 
+                    - generic [ref=f14e1148]: Edit
+                - menuitem "Publish page. This will check in your changes, allow others to edit, and make the page visible to everyone who can access your site." [ref=f14e1278] [cursor=pointer]:
+                  - generic [ref=f14e261]:
+                    - generic [aria-hidden] [ref=f14e262]: 
+                    - generic [ref=f14e263]: Publish page
+                - menuitem "Hide header and navigation" [ref=f14e1150] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=f14e269]: 
+          - article [ref=f14e271]:
+            - main [ref=f14e274]:
+              - heading "Contoso Customer Success Stories" [level=1] [ref=f14e275]
+              - generic [ref=f14e276]:
+                - generic [ref=f14e1153]:
+                  - generic [ref=f14e1162]:
+                    - generic [ref=f14e1163]:
+                      - heading "See How Leading Organizations Transform with Contoso" [level=2] [ref=f14e1164]
+                      - link "Permalink for See How Leading Organizations Transform with Contoso" [ref=f14e1165] [cursor=pointer]:
+                        - /url: https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/SitePages/Contoso-Customer-Success-Stories.aspx#see-how-leading-organizations-transform-with-contoso
+                        - generic [aria-hidden] [ref=f14e1166]: 
+                    - paragraph [ref=f14e1167]: Our customers across healthcare, finance, manufacturing, and retail are achieving remarkable results with our platform.
+                  - generic [ref=f14e1179]:
+                    - heading "Featured Case Studies" [level=2] [ref=f14e1185]
+                    - list "Featured Case Studies. There are 6 items in the list. Use left and right arrow key to move between links." [ref=f14e1195]:
+                      - listitem [ref=f14e1198]:
+                        - 'link "Acme Healthcare: 50% Faster Patient Onboarding. 1 of 6" [ref=f14e1199] [cursor=pointer]':
+                          - /url: https://contoso.com/cases/acme-healthcare
+                          - generic [ref=f14e1200]:
+                            - generic [aria-hidden] [ref=f14e1202]: 
+                            - generic [ref=f14e1203]: "Acme Healthcare: 50% Faster Patient Onboarding"
+                      - listitem [ref=f14e1209]:
+                        - 'link "Global Bank: $10M Saved in Compliance Costs. 2 of 6" [ref=f14e1210] [cursor=pointer]':
+                          - /url: https://contoso.com/cases/global-bank
+                          - generic [ref=f14e1211]:
+                            - generic [aria-hidden] [ref=f14e1213]: 
+                            - generic [ref=f14e1214]: "Global Bank: $10M Saved in Compliance Costs"
+                      - listitem [ref=f14e1220]:
+                        - 'link "MegaManufacturing: 99.9% Production Uptime. 3 of 6" [ref=f14e1221] [cursor=pointer]':
+                          - /url: https://contoso.com/cases/mega-manufacturing
+                          - generic [ref=f14e1222]:
+                            - generic [aria-hidden] [ref=f14e1224]: 
+                            - generic [ref=f14e1225]: "MegaManufacturing: 99.9% Production Uptime"
+                      - listitem [ref=f14e1231]:
+                        - 'link "RetailCo: 30% Increase in Customer Satisfaction. 4 of 6" [ref=f14e1232] [cursor=pointer]':
+                          - /url: https://contoso.com/cases/retailco
+                          - generic [ref=f14e1233]:
+                            - generic [aria-hidden] [ref=f14e1235]: 
+                            - generic [ref=f14e1236]: "RetailCo: 30% Increase in Customer Satisfaction"
+                      - listitem [ref=f14e1242]:
+                        - 'link "TechStart: Scaled from 10 to 10,000 Users. 5 of 6" [ref=f14e1243] [cursor=pointer]':
+                          - /url: https://contoso.com/cases/techstart
+                          - generic [ref=f14e1244]:
+                            - generic [aria-hidden] [ref=f14e1246]: 
+                            - generic [ref=f14e1247]: "TechStart: Scaled from 10 to 10,000 Users"
+                      - listitem [ref=f14e1253]:
+                        - 'link "EduFirst: Transformed Remote Learning. 6 of 6" [ref=f14e1254] [cursor=pointer]':
+                          - /url: https://contoso.com/cases/edufirst
+                          - generic [ref=f14e1255]:
+                            - generic [aria-hidden] [ref=f14e1257]: 
+                            - generic [ref=f14e1258]: "EduFirst: Transformed Remote Learning"
+                  - generic [ref=f14e1270]:
+                    - generic [ref=f14e1271]:
+                      - heading "Share Your Success Story" [level=2] [ref=f14e1272]
+                      - link "Permalink for Share Your Success Story" [ref=f14e1273] [cursor=pointer]:
+                        - /url: https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/SitePages/Contoso-Customer-Success-Stories.aspx#share-your-success-story
+                        - generic [aria-hidden] [ref=f14e1274]: 
+                    - paragraph [ref=f14e1275]: Has Contoso helped your organization achieve remarkable results? We’d love to hear about your experience. Submit your success story for a chance to be featured.
+                - generic [ref=f14e821]:
+                  - separator [ref=f14e822]
+                  - heading "You may also be interested in" [level=2] [ref=f14e824]
+                  - generic "Displaying Recommendations" [ref=f14e1276]:
+                    - generic [ref=f14e839]:
+                      - group "There are 8 items in the carousel layout. Displaying Recommendations, Use right and left arrow keys to navigate between cards in the film strip. Use Enter key to access links on items. Use left and right arrow keys to navigate between items in the carousel." [ref=f14e840]:
+                        - img [ref=f14e842] [cursor=pointer]: 
+                        - list [ref=f14e844]:
+                          - listitem [ref=f14e845]:
+                            - list [ref=f14e846]:
+                              - listitem "Hack Week Bengaluru- 2026" [ref=f14e848]:
+                                - generic [ref=f14e849]:
+                                  - link "225 views People read this next Hack Week Bengaluru- 2026 The Garage India Hack Week Bengaluru- 2026" [ref=f14e850] [cursor=pointer]:
+                                    - generic [ref=f14e851]:
+                                      - generic [aria-hidden] [ref=f14e852]: 
+                                      - generic [ref=f14e853]:
+                                        - generic [ref=f14e854]: 225 views
+                                        - generic [ref=f14e855]: People read this next
+                                    - img "Hack Week Bengaluru- 2026" [ref=f14e858]
+                                    - generic [ref=f14e859]:
+                                      - generic [ref=f14e860]: The Garage India
+                                      - generic [ref=f14e862]: Hack Week Bengaluru- 2026
+                                  - generic [ref=f14e865]:
+                                    - button "Remove" [ref=f14e866]:
+                                      - generic [aria-hidden] [ref=f14e867] [cursor=pointer]: 
+                                    - button "Add to favorites" [ref=f14e868]:
+                                      - generic [aria-hidden] [ref=f14e869] [cursor=pointer]: 
+                              - listitem "Community Events" [ref=f14e871]:
+                                - generic [ref=f14e872]:
+                                  - link "76877 views People read this next Community Events Artificial Intelligence and Machine Learning Community Community Events" [ref=f14e873] [cursor=pointer]:
+                                    - generic [ref=f14e874]:
+                                      - generic [aria-hidden] [ref=f14e875]: 
+                                      - generic [ref=f14e876]:
+                                        - generic [ref=f14e877]: 76877 views
+                                        - generic [ref=f14e878]: People read this next
+                                    - img "Community Events" [ref=f14e881]
+                                    - generic [ref=f14e882]:
+                                      - generic [ref=f14e883]: Artificial Intelligence and Machine Learning Community
+                                      - generic [ref=f14e885]: Community Events
+                                  - generic [ref=f14e888]:
+                                    - button "Remove" [ref=f14e889]:
+                                      - generic [aria-hidden] [ref=f14e890] [cursor=pointer]: 
+                                    - button "Add to favorites" [ref=f14e891]:
+                                      - generic [aria-hidden] [ref=f14e892] [cursor=pointer]: 
+                              - 'listitem "Project Blacksmith: Beyond Storage - Secondary Research" [ref=f14e894]':
+                                - generic [ref=f14e895]:
+                                  - 'link "61 views 1 person likes this Project Blacksmith: Beyond Storage - Secondary Research ODSP UX Research Project Blacksmith: Beyond Storage - Secondary Research" [ref=f14e896] [cursor=pointer]':
+                                    - generic [ref=f14e897]:
+                                      - generic [aria-hidden] [ref=f14e898]: 
+                                      - generic [ref=f14e899]:
+                                        - generic [ref=f14e900]: 61 views
+                                        - generic [ref=f14e901]: 1 person likes this
+                                    - 'img "Project Blacksmith: Beyond Storage - Secondary Research" [ref=f14e904]'
+                                    - generic [ref=f14e905]:
+                                      - generic [ref=f14e906]: ODSP UX Research
+                                      - generic [ref=f14e908]: "Project Blacksmith: Beyond Storage - Secondary Research"
+                                  - generic [ref=f14e911]:
+                                    - button "Remove" [ref=f14e912]:
+                                      - generic [aria-hidden] [ref=f14e913] [cursor=pointer]: 
+                                    - button "Add to favorites" [ref=f14e914]:
+                                      - generic [aria-hidden] [ref=f14e915] [cursor=pointer]: 
+                              - listitem "Secure Device User Onboarding Checklist" [ref=f14e917]:
+                                - generic [ref=f14e918]:
+                                  - link "37684 views Popular with your colleagues Secure Device User Onboarding Checklist Secure Devices Program Secure Device User Onboarding Checklist" [ref=f14e919] [cursor=pointer]:
+                                    - generic [ref=f14e920]:
+                                      - generic [aria-hidden] [ref=f14e921]: 
+                                      - generic [ref=f14e922]:
+                                        - generic [ref=f14e923]: 37684 views
+                                        - generic [ref=f14e924]: Popular with your colleagues
+                                    - img "Secure Device User Onboarding Checklist" [ref=f14e927]
+                                    - generic [ref=f14e928]:
+                                      - generic [ref=f14e929]: Secure Devices Program
+                                      - generic [ref=f14e931]: Secure Device User Onboarding Checklist
+                                  - generic [ref=f14e934]:
+                                    - button "Remove" [ref=f14e935]:
+                                      - generic [aria-hidden] [ref=f14e936] [cursor=pointer]: 
+                                    - button "Add to favorites" [ref=f14e937]:
+                                      - generic [aria-hidden] [ref=f14e938] [cursor=pointer]: 
+                          - listitem [ref=f14e939]
+                          - listitem [aria-hidden] [ref=f14e940]:
+                            - list [ref=f14e941]:
+                              - listitem [ref=f14e943]:
+                                - generic [ref=f14e944]:
+                                  - link [ref=f14e945] [cursor=pointer]:
+                                    - generic [ref=f14e946]:
+                                      - generic [aria-hidden] [ref=f14e947]: 
+                                      - generic [ref=f14e948]:
+                                        - generic [ref=f14e949]: 225 views
+                                        - generic [ref=f14e950]: People read this next
+                                    - generic [ref=f14e954]:
+                                      - generic [ref=f14e955]: The Garage India
+                                      - generic [ref=f14e957]: Hack Week Bengaluru- 2026
+                                  - generic [ref=f14e960]:
+                                    - button [ref=f14e961]:
+                                      - generic [aria-hidden] [ref=f14e962] [cursor=pointer]: 
+                                    - button [ref=f14e963]:
+                                      - generic [aria-hidden] [ref=f14e964] [cursor=pointer]: 
+                              - listitem [ref=f14e966]:
+                                - generic [ref=f14e967]:
+                                  - link [ref=f14e968] [cursor=pointer]:
+                                    - generic [ref=f14e969]:
+                                      - generic [aria-hidden] [ref=f14e970]: 
+                                      - generic [ref=f14e971]:
+                                        - generic [ref=f14e972]: 76877 views
+                                        - generic [ref=f14e973]: People read this next
+                                    - generic [ref=f14e977]:
+                                      - generic [ref=f14e978]: Artificial Intelligence and Machine Learning Community
+                                      - generic [ref=f14e980]: Community Events
+                                  - generic [ref=f14e983]:
+                                    - button [ref=f14e984]:
+                                      - generic [aria-hidden] [ref=f14e985] [cursor=pointer]: 
+                                    - button [ref=f14e986]:
+                                      - generic [aria-hidden] [ref=f14e987] [cursor=pointer]: 
+                              - listitem [ref=f14e989]:
+                                - generic [ref=f14e990]:
+                                  - link [ref=f14e991] [cursor=pointer]:
+                                    - generic [ref=f14e992]:
+                                      - generic [aria-hidden] [ref=f14e993]: 
+                                      - generic [ref=f14e994]:
+                                        - generic [ref=f14e995]: 61 views
+                                        - generic [ref=f14e996]: 1 person likes this
+                                    - generic [ref=f14e1000]:
+                                      - generic [ref=f14e1001]: ODSP UX Research
+                                      - generic [ref=f14e1003]: "Project Blacksmith: Beyond Storage - Secondary Research"
+                                  - generic [ref=f14e1006]:
+                                    - button [ref=f14e1007]:
+                                      - generic [aria-hidden] [ref=f14e1008] [cursor=pointer]: 
+                                    - button [ref=f14e1009]:
+                                      - generic [aria-hidden] [ref=f14e1010] [cursor=pointer]: 
+                              - listitem [ref=f14e1012]:
+                                - generic [ref=f14e1013]:
+                                  - link [ref=f14e1014] [cursor=pointer]:
+                                    - generic [ref=f14e1015]:
+                                      - generic [aria-hidden] [ref=f14e1016]: 
+                                      - generic [ref=f14e1017]:
+                                        - generic [ref=f14e1018]: 37684 views
+                                        - generic [ref=f14e1019]: Popular with your colleagues
+                                    - generic [ref=f14e1023]:
+                                      - generic [ref=f14e1024]: Secure Devices Program
+                                      - generic [ref=f14e1026]: Secure Device User Onboarding Checklist
+                                  - generic [ref=f14e1029]:
+                                    - button [ref=f14e1030]:
+                                      - generic [aria-hidden] [ref=f14e1031] [cursor=pointer]: 
+                                    - button [ref=f14e1032]:
+                                      - generic [aria-hidden] [ref=f14e1033] [cursor=pointer]: 
+                          - listitem [aria-hidden] [ref=f14e1034]
+                        - img [ref=f14e1036] [cursor=pointer]: 
+                      - generic [ref=f14e1037]: 1 of 2
+                    - generic [aria-hidden] [ref=f14e1040]: Displaying Recommendations
+                - complementary "Comments" [ref=f14e742]:
+                  - heading "Comments" [level=2] [ref=f14e744]
+                  - generic [ref=f14e750]: The comments section will be displayed after the page is published.
+  - group "Copilot" [ref=f14e449]:
+    - button "Copilot" [ref=f14e455]
+  - alert [ref=f14e798]: Copilot side pane opened.
+  - alert [ref=f14e799]: Your page will be saved every five seconds.
+  - generic:
+    - list:
+      - listitem "Changes saved." [ref=f14e1280]:
+        - generic [ref=f14e1281]:
+          - generic [ref=f14e1285]: Changes saved.
+          - button "Close" [ref=f14e1287]

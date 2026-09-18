@@ -1,0 +1,226 @@
+- generic [ref=f9e1]:
+  - link "Skip to main content" [ref=f9e3] [cursor=pointer]:
+    - /url: "#"
+  - generic [ref=f9e4]:
+    - banner [ref=f9e7]:
+      - button "App launcher" [ref=f9e10] [cursor=pointer]: 
+      - generic [ref=f9e16]:
+        - generic [ref=f9e17]:
+          - link "Microsoft" [ref=f9e20] [cursor=pointer]:
+            - /url: https://microsoft.sharepoint.com/
+            - img "Microsoft" [ref=f9e21]
+          - link "Go to SharePoint" [ref=f9e25] [cursor=pointer]:
+            - /url: https://microsoft.sharepoint-df.com/_layouts/15/sharepoint.aspx?&login_hint=vaibhavverma@microsoft.com
+            - generic [ref=f9e26]: SharePoint
+        - search "Search this site" [ref=f9e32]:
+          - generic [ref=f9e33]:
+            - button "Search" [ref=f9e34] [cursor=pointer]
+            - combobox "Search this site" [ref=f9e39]
+        - generic [ref=f9e40]:
+          - button "Open Agents. Press tab to enter expanded region." [expanded] [ref=f9e43] [cursor=pointer]
+          - button "Next steps to improve your site" [ref=f9e49] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f9e50]: 
+          - button "Provide feedback to Microsoft" [ref=f9e53] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f9e54]: 
+          - button "Feature Flags" [ref=f9e57] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f9e58]: 
+          - button "Settings" [ref=f9e61] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f9e62]: 
+          - button "Help" [ref=f9e65] [cursor=pointer]:
+            - generic [aria-hidden] [ref=f9e66]: 
+      - generic [ref=f9e67]:
+        - button "Account manager for Vaibhav Verma (DESIGN)" [ref=f9e69] [cursor=pointer]:
+          - generic [ref=f9e76]:
+            - generic [aria-hidden] [ref=f9e77]: VV
+            - img "VV" [ref=f9e79]
+        - generic: 
+    - generic [ref=f9e80]:
+      - navigation [ref=f9e83]:
+        - generic [ref=f9e85]:
+          - button "Microsoft, 1 of 5" [ref=f9e86] [cursor=pointer]:
+            - generic [ref=f9e92]: Microsoft
+          - button "Discover, 2 of 5" [ref=f9e94] [cursor=pointer]:
+            - generic [ref=f9e100]: Discover
+          - button "Publish, 3 of 5" [ref=f9e102] [cursor=pointer]:
+            - generic [ref=f9e108]: Publish
+          - button "Build, 4 of 5" [ref=f9e110] [cursor=pointer]:
+            - generic [ref=f9e116]: Build
+          - button "OneDrive, 5 of 5" [ref=f9e118] [cursor=pointer]:
+            - generic [ref=f9e124]: OneDrive
+      - generic [ref=f9e128]:
+        - region "SharePoint Site Header" [ref=f9e134]:
+          - generic [ref=f9e135]:
+            - link "DFsitevaibhav2 home" [ref=f9e137] [cursor=pointer]:
+              - /url: https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2
+            - heading "DFsitevaibhav2" [level=2] [ref=f9e141]
+            - button "Go to the Microsoft Teams channel" [ref=f9e143] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f9e145]: 
+            - navigation "Site navigation. Use arrow keys to move between items." [ref=f9e146]:
+              - generic [ref=f9e150]:
+                - list [ref=f9e151]:
+                  - listitem [ref=f9e152]:
+                    - link "Home" [ref=f9e153] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2
+                  - listitem [ref=f9e155]:
+                    - link "Invoices Doclib" [ref=f9e156] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/Test library 2/Forms/Shortlisted PDFs.aspx
+                  - listitem [ref=f9e158]:
+                    - link "Pages" [ref=f9e159] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/SitePages/Forms/ByAuthor.aspx
+                  - listitem [ref=f9e161]:
+                    - link "Site contents" [ref=f9e162] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/_layouts/15/viewlsts.aspx
+                  - listitem [ref=f9e164]:
+                    - link "Announcement list 2" [ref=f9e165] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/Lists/Announcement list 2/
+                  - listitem [ref=f9e167]:
+                    - link "Fruits List" [ref=f9e168] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/Lists/Fruits List/AllItems.aspx
+                  - listitem [ref=f9e170]:
+                    - link "FAQ List_Simple" [ref=f9e171] [cursor=pointer]:
+                      - /url: /teams/DFsitevaibhav2/Lists/FAQ List/AllItems.aspx
+                - button "More navigation options" [ref=f9e174] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=f9e175]: 
+                - button "Edit site navigation" [ref=f9e177] [cursor=pointer]: Edit navigation
+            - generic [ref=f9e178]:
+              - generic [ref=f9e179]:
+                - generic "Private group" [ref=f9e180]
+                - text: "|"
+                - button "Confidential \\ Internal-Only" [ref=f9e182] [cursor=pointer]
+              - button "11 members. Open Group Membership pane" [ref=f9e185] [cursor=pointer]:
+                - generic [ref=f9e186]:
+                  - generic [aria-hidden] [ref=f9e187]: 
+                  - generic [ref=f9e188]: 11 members
+              - button "More" [ref=f9e191] [cursor=pointer]:
+                - generic [aria-hidden] [ref=f9e193]: 
+        - generic [ref=f9e196]:
+          - region "Command bar" [ref=f9e197]:
+            - menubar [ref=f9e202]:
+              - group [ref=f9e204]:
+                - button [ref=f9e206]
+                - menuitem "Translation" [ref=f9e214] [cursor=pointer]:
+                  - generic [ref=f9e215]:
+                    - generic [aria-hidden] [ref=f9e216]: 
+                    - generic [ref=f9e217]: Translation
+                - menuitem "Page details" [ref=f9e220] [cursor=pointer]
+                - menuitem "Preview" [ref=f9e227] [cursor=pointer]
+                - menuitem "Immersive reader" [ref=f9e234] [cursor=pointer]:
+                  - generic [ref=f9e235]:
+                    - generic [aria-hidden] [ref=f9e236]: 
+                    - generic [ref=f9e237]: Immersive reader
+              - generic "Command bar" [ref=f9e239]:
+                - generic [ref=f9e240]: Draft
+                - menuitem "Share" [ref=f9e243] [cursor=pointer]:
+                  - generic [ref=f9e244]:
+                    - generic [aria-hidden] [ref=f9e245]: 
+                    - generic [ref=f9e246]: Share
+                    - generic [aria-hidden] [ref=f9e248]: 
+                - menuitem "Edit Page" [ref=f9e250] [cursor=pointer]:
+                  - generic [ref=f9e251]:
+                    - generic [aria-hidden] [ref=f9e252]: 
+                    - generic [ref=f9e253]: Edit
+                - menuitem "Publish page. This will check in your changes, allow others to edit, and make the page visible to everyone who can access your site." [ref=f9e258] [cursor=pointer]:
+                  - generic [ref=f9e259]:
+                    - generic [aria-hidden] [ref=f9e260]: 
+                    - generic [ref=f9e261]: Publish page
+                - menuitem "Hide header and navigation" [ref=f9e265] [cursor=pointer]:
+                  - generic [aria-hidden] [ref=f9e267]: 
+          - article [ref=f9e269]:
+            - main [ref=f9e272]:
+              - heading "Contoso Customer Success Stories" [level=1] [ref=f9e273]
+              - generic [ref=f9e274]:
+                - generic [ref=f9e281]:
+                  - generic [ref=f9e290]:
+                    - generic [ref=f9e291]:
+                      - heading "See How Leading Organizations Transform with Contoso" [level=2] [ref=f9e292]
+                      - link "Permalink for See How Leading Organizations Transform with Contoso" [ref=f9e293] [cursor=pointer]:
+                        - /url: https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/SitePages/Contoso-Customer-Success-Stories.aspx#see-how-leading-organizations-transform-with-contoso
+                        - generic [aria-hidden] [ref=f9e294]: 
+                    - paragraph [ref=f9e295]: Our customers across healthcare, finance, manufacturing, and retail are achieving remarkable results with our platform.
+                  - generic [ref=f9e307]:
+                    - heading "Featured Case Studies" [level=2] [ref=f9e313]
+                    - list "Featured Case Studies. There are 6 items in the list. Use left and right arrow key to move between links." [ref=f9e323]:
+                      - listitem [ref=f9e326]:
+                        - 'link "Acme Healthcare: 50% Faster Patient Onboarding. 1 of 6" [ref=f9e327] [cursor=pointer]':
+                          - /url: https://contoso.com/cases/acme-healthcare
+                          - generic [ref=f9e328]:
+                            - generic [aria-hidden] [ref=f9e330]: 
+                            - generic [ref=f9e331]: "Acme Healthcare: 50% Faster Patient Onboarding"
+                      - listitem [ref=f9e337]:
+                        - 'link "Global Bank: $10M Saved in Compliance Costs. 2 of 6" [ref=f9e338] [cursor=pointer]':
+                          - /url: https://contoso.com/cases/global-bank
+                          - generic [ref=f9e339]:
+                            - generic [aria-hidden] [ref=f9e341]: 
+                            - generic [ref=f9e342]: "Global Bank: $10M Saved in Compliance Costs"
+                      - listitem [ref=f9e348]:
+                        - 'link "MegaManufacturing: 99.9% Production Uptime. 3 of 6" [ref=f9e349] [cursor=pointer]':
+                          - /url: https://contoso.com/cases/mega-manufacturing
+                          - generic [ref=f9e350]:
+                            - generic [aria-hidden] [ref=f9e352]: 
+                            - generic [ref=f9e353]: "MegaManufacturing: 99.9% Production Uptime"
+                      - listitem [ref=f9e359]:
+                        - 'link "RetailCo: 30% Increase in Customer Satisfaction. 4 of 6" [ref=f9e360] [cursor=pointer]':
+                          - /url: https://contoso.com/cases/retailco
+                          - generic [ref=f9e361]:
+                            - generic [aria-hidden] [ref=f9e363]: 
+                            - generic [ref=f9e364]: "RetailCo: 30% Increase in Customer Satisfaction"
+                      - listitem [ref=f9e370]:
+                        - 'link "TechStart: Scaled from 10 to 10,000 Users. 5 of 6" [ref=f9e371] [cursor=pointer]':
+                          - /url: https://contoso.com/cases/techstart
+                          - generic [ref=f9e372]:
+                            - generic [aria-hidden] [ref=f9e374]: 
+                            - generic [ref=f9e375]: "TechStart: Scaled from 10 to 10,000 Users"
+                      - listitem [ref=f9e381]:
+                        - 'link "EduFirst: Transformed Remote Learning. 6 of 6" [ref=f9e382] [cursor=pointer]':
+                          - /url: https://contoso.com/cases/edufirst
+                          - generic [ref=f9e383]:
+                            - generic [aria-hidden] [ref=f9e385]: 
+                            - generic [ref=f9e386]: "EduFirst: Transformed Remote Learning"
+                  - generic [ref=f9e398]:
+                    - generic [ref=f9e399]:
+                      - heading "Share Your Success Story" [level=2] [ref=f9e400]
+                      - link "Permalink for Share Your Success Story" [ref=f9e401] [cursor=pointer]:
+                        - /url: https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/SitePages/Contoso-Customer-Success-Stories.aspx#share-your-success-story
+                        - generic [aria-hidden] [ref=f9e402]: 
+                    - paragraph [ref=f9e403]: Has Contoso helped your organization achieve remarkable results? We’d love to hear about your experience. Submit your success story for a chance to be featured.
+                - complementary "Comments" [ref=f9e408]:
+                  - heading "Comments" [level=2] [ref=f9e410]
+                  - generic [ref=f9e411]: The comments section will be displayed after the page is published.
+      - region "property pane" [ref=f9e415]
+  - alert [ref=f9e431]: Copilot side pane opened.
+  - iframe [active] [ref=f9e435]:
+    - generic [ref=f11e7]:
+      - generic [ref=f11e8]:
+        - generic [ref=f11e9]:
+          - heading "Copilot" [level=2] [ref=f11e11]
+          - generic [ref=f11e12]:
+            - button "Chat options" [ref=f11e13]
+            - button "Close" [ref=f11e17]
+        - progressbar "Loading chat…" [ref=f11e22]
+        - generic [ref=f11e27]:
+          - feed [ref=f11e31]:
+            - generic [ref=f11e33]:
+              - generic [ref=f11e35]:
+                - heading "Hello Vaibhav Verma (DESIGN)!" [level=2] [ref=f11e37]
+                - generic [ref=f11e38]: "Ask a question or get started with one of these prompts:"
+              - menu [ref=f11e41]:
+                - generic [ref=f11e42]:
+                  - menuitem [ref=f11e43] [cursor=pointer]:
+                    - generic [ref=f11e44]: How can you help me?
+                  - menuitem [ref=f11e46] [cursor=pointer]:
+                    - generic [ref=f11e47]: Summarize this page
+                  - menuitem [ref=f11e49] [cursor=pointer]:
+                    - generic [ref=f11e50]: Find information about a topic
+          - generic [ref=f11e53]:
+            - generic [ref=f11e60]:
+              - button "Open input menu" [ref=f11e64]
+              - generic [ref=f11e68]:
+                - textbox "Prompt" [active] [ref=f11e69]:
+                  - paragraph [ref=f11e70]
+                - generic: Ask questions or type / to add files or people.
+              - alert "Microphone Disabled" [ref=f11e74]:
+                - switch "Microphone Disabled" [ref=f11e76]:
+                  - img "Mic-Regular" [ref=f11e78]
+            - status [ref=f11e80]
+        - generic [ref=f11e83]: AI-generated content may be incorrect
+      - status

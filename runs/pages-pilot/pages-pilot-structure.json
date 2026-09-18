@@ -1,0 +1,24 @@
+{
+  "provenance": "Condensed transcription of read-only SharePoint ListItemAllFields GET results and rendered DOM inspection, not a raw response export.",
+  "initialCapturedAt": "2026-09-18T11:06:42.011Z",
+  "finalCapturedAt": "2026-09-18T11:07:52.354Z",
+  "itemId": 8,
+  "initialVersion": "0.1",
+  "finalVersion": "0.3",
+  "standaloneTextControls": ["6ce040e9-0ca5-4811-93f8-a8b7dabe39e8", "81de8708-a123-4e4f-8113-0142a99f7b71"],
+  "quickLinks": {
+    "instanceId": "47fd9019-f9c7-481f-9b7a-20f3114e9146",
+    "webPartId": "c70391ea-0b10-4ee9-b2b4-006d3fcad0cd",
+    "layoutId": "Waffle",
+    "editorLabel": "Featured Case Studies showing in the Tiles layout.",
+    "items": [
+      { "title": "Acme Healthcare: 50% Faster Patient Onboarding", "url": "https://contoso.com/cases/acme-healthcare" },
+      { "title": "Global Bank: $10M Saved in Compliance Costs", "url": "https://contoso.com/cases/global-bank" },
+      { "title": "MegaManufacturing: 99.9% Production Uptime", "url": "https://contoso.com/cases/mega-manufacturing" },
+      { "title": "RetailCo: 30% Increase in Customer Satisfaction", "url": "https://contoso.com/cases/retailco" },
+      { "title": "TechStart: Scaled from 10 to 10,000 Users", "url": "https://contoso.com/cases/techstart" },
+      { "title": "EduFirst: Transformed Remote Learning", "url": "https://contoso.com/cases/edufirst" }
+    ]
+  },
+  "note": "Initial CanvasContent1 contains two controlType=4 Text controls and one controlType=3 Quick Links control. Final save retains their IDs and adds a controlType=0 metadata entry; this is not a fourth content web part. Final rendered snapshot verifies all six URLs after serialization normalization."
+}

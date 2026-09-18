@@ -1,0 +1,28 @@
+{
+  "matchedRows": 29,
+  "displayedMonetaryCellsChecked": 20,
+  "categoryCents": {
+    "Fasteners": 15020,
+    "Bearings": 28820,
+    "Belts": 30195,
+    "Seals": 34410,
+    "Hydraulics": 26460,
+    "Pneumatics": 13800,
+    "Electrical": 82980,
+    "Sensors": 61620,
+    "Motors": 42145,
+    "Controls": 59755,
+    "Cooling": 37040,
+    "Consumables": 21275,
+    "Lubricants": 17960,
+    "Fabricated Parts": 0
+  },
+  "totalCents": 471480,
+  "topUpCents": 31330,
+  "omittedIds": [
+    "APR26-001"
+  ],
+  "source": "source-records.json",
+  "generated": "generated-model.json",
+  "note": "Arithmetic matches included records; omitted records are a separate coverage failure. Baseline uses integer cents."
+}

@@ -1,0 +1,80 @@
+{
+  "runId": "pages-case-studies-2026-09-18",
+  "planRef": "pages-pilot-plan.json",
+  "pageUrl": "https://microsoft.sharepoint-df.com/teams/DFsitevaibhav2/SitePages/Contoso-Customer-Success-Stories.aspx",
+  "sourceRecord": 57,
+  "submittedAt": "2026-09-18T11:03:41.908Z",
+  "completionObservedAt": "2026-09-18T11:05:17.183Z",
+  "viewport": {
+    "width": 2552,
+    "height": 1326,
+    "devicePixelRatio": 1,
+    "timeZone": "Asia/Calcutta"
+  },
+  "execution": {
+    "promptsSubmitted": 1,
+    "retries": 0,
+    "completed": true,
+    "published": false,
+    "finalState": "Draft",
+    "initialVersion": "0.1",
+    "finalVersion": "0.3",
+    "itemId": 8
+  },
+  "response": "Created the Contoso Customer Success Stories showcase page with the introduction, six featured tile links, and a success-story submission invitation.",
+  "checks": [
+    {
+      "id": "CSV-R57-Assert1",
+      "verdict": "PASS",
+      "reason": "Exactly one Quick Links control, instance 47fd9019-f9c7-481f-9b7a-20f3114e9146; editor identifies one Quick links Web Part.",
+      "evidence": [
+        "../../snapshots/pages-pilot/pages-pilot-editor.yaml",
+        "pages-pilot-structure.json"
+      ]
+    },
+    {
+      "id": "CSV-R57-Assert2",
+      "verdict": "PASS",
+      "reason": "Same original count requirement as Assert1; preserved as a duplicate supplied check rather than silently deduplicated.",
+      "evidence": [
+        "../../snapshots/pages-pilot/pages-pilot-editor.yaml",
+        "pages-pilot-structure.json"
+      ]
+    },
+    {
+      "id": "CSV-R57-Assert3",
+      "verdict": "PASS",
+      "reason": "Editor accessible label explicitly states Featured Case Studies showing in the Tiles layout; persisted layoutId is Waffle.",
+      "evidence": [
+        "../../snapshots/pages-pilot/pages-pilot-editor.yaml",
+        "pages-pilot-structure.json"
+      ]
+    },
+    {
+      "id": "CSV-R57-Assert4",
+      "verdict": "PASS",
+      "reason": "Two standalone Text controls, introduction and invitation. The rich-text title inside Quick Links is not counted as a separate Text web part.",
+      "evidence": [
+        "../../snapshots/pages-pilot/pages-pilot-editor.yaml",
+        "pages-pilot-structure.json"
+      ]
+    }
+  ],
+  "counts": {
+    "pass": 4,
+    "fail": 0,
+    "unable": 0,
+    "notApplicable": 0,
+    "distinctRequirements": 3
+  },
+  "scorePercent": 100,
+  "coveragePercent": 100,
+  "limitations": [
+    "One scenario; supplied checks measure web-part structure, not holistic content or visual quality.",
+    "One duplicate is preserved in the four-check denominator.",
+    "Synthetic Contoso claims and external destinations were not fact-checked or opened.",
+    "Desktop viewport only; mobile, keyboard and screen-reader workflows not tested.",
+    "Editor inspection/save advanced minor versions and normalized storage; no content or layout edits were intentionally made.",
+    "This was an agent-driven run with supplied criteria, not automated assertion generation or an unattended runner."
+  ]
+}

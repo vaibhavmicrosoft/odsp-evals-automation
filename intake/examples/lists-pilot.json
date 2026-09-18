@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "intakeId": "fujitsu-pilot-context",
+  "revision": 1,
+  "request": "Which events are online?",
+  "product": {
+    "name": "SharePoint Lists Copilot",
+    "url": "https://microsoft.sharepoint-df.com/teams/ListsEval/Lists/Fujitsu%2020K%20V4/AllItems.aspx",
+    "context": "Historical three-prompt evaluation of built-in list Copilot chat against the Fujitsu event list. This intake does not authorize a new run.",
+    "users": null,
+    "tasks": "Find this week's events, completed events, and online events.",
+    "scope": "Read-only evaluation of chat responses; no list changes. Historical evidence only, not current authentication or source verification."
+  },
+  "materials": {
+    "prompts": [
+      "What events are happening this week?",
+      "Which events are already completed?",
+      "Which events are online?"
+    ],
+    "references": [
+      "reports/lists-pilot/pilot-report.md",
+      "evaluation-runbook.md"
+    ]
+  },
+  "sources": [
+    {
+      "id": "SRC-PILOT",
+      "ref": "reports/lists-pilot/pilot-report.md#scope-and-evidence",
+      "kind": "document",
+      "state": "available",
+      "scope": "Historical target, prompts and read-only workflow; not confirmation of response facts or intended users.",
+      "observedAt": "2026-09-18",
+      "supportedQuestionIds": [
+        "Q-SCOPE"
+      ]
+    },
+    {
+      "id": "SRC-RECORDS",
+      "ref": "https://microsoft.sharepoint-df.com/teams/ListsEval/Lists/Fujitsu%2020K%20V4/AllItems.aspx",
+      "kind": "authoritative_data",
+      "state": "unchecked",
+      "scope": "Source records needed to validate event facts and dates.",
+      "observedAt": null,
+      "limitation": "Source records were not verified by this intake; historical response counts are not ground truth.",
+      "supportedQuestionIds": []
+    }
+  ],
+  "questions": [
+    {
+      "id": "Q-SCOPE",
+      "question": "What workflow and historical prompts are under evaluation?",
+      "answer": "The three documented questions in separate fresh Lists Copilot chats, without modifying the list.",
+      "acceptedKinds": [
+        "document"
+      ],
+      "sourceIds": [
+        "SRC-PILOT"
+      ],
+      "nextAction": "Confirm a revised scope if a new run differs from the historical pilot."
+    },
+    {
+      "id": "Q-FACTS",
+      "question": "What source records establish the correct events and date values?",
+      "answer": null,
+      "acceptedKinds": [
+        "authoritative_data"
+      ],
+      "sourceIds": [
+        "SRC-RECORDS"
+      ],
+      "nextAction": "Inspect authorized source records and record their relevant version or observation time before claiming factual correctness."
+    },
+    {
+      "id": "Q-TIMEZONE",
+      "question": "What intended time zone and relative-date interpretation should apply?",
+      "answer": null,
+      "acceptedKinds": [
+        "user_statement",
+        "document"
+      ],
+      "sourceIds": [],
+      "nextAction": "Obtain the intended user time zone and approved date interpretation; do not infer them from the browser zone."
+    },
+    {
+      "id": "Q-USERS",
+      "question": "Who are the intended users and what outcome matters to them?",
+      "answer": null,
+      "acceptedKinds": [
+        "user_statement",
+        "document"
+      ],
+      "sourceIds": [],
+      "nextAction": "Obtain a short product-owner description of the target users and their desired outcome."
+    }
+  ]
+}

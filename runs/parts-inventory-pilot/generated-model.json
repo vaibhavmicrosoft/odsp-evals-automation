@@ -1,0 +1,455 @@
+{
+  "capturedAt": "2026-09-18T13:42:26.196Z",
+  "model": {
+    "data": {
+      "rows": [
+        {
+          "part": "Flat Washer M6",
+          "partId": "APR26-002",
+          "category": "Fasteners",
+          "status": "In Stock",
+          "stockQty": 1200,
+          "reorderLevel": 300,
+          "unitCost": 0.05,
+          "inventoryValue": 60,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-03"
+        },
+        {
+          "part": "Lock Nut M8",
+          "partId": "APR26-003",
+          "category": "Fasteners",
+          "status": "In Stock",
+          "stockQty": 410,
+          "reorderLevel": 120,
+          "unitCost": 0.22,
+          "inventoryValue": 90.2,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-05"
+        },
+        {
+          "part": "Ball Bearing 608ZZ",
+          "partId": "APR26-004",
+          "category": "Bearings",
+          "status": "In Stock",
+          "stockQty": 96,
+          "reorderLevel": 50,
+          "unitCost": 1.85,
+          "inventoryValue": 177.60000000000002,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-06"
+        },
+        {
+          "part": "Needle Bearing NK12",
+          "partId": "APR26-005",
+          "category": "Bearings",
+          "status": "Low Stock",
+          "stockQty": 28,
+          "reorderLevel": 30,
+          "unitCost": 3.95,
+          "inventoryValue": 110.60000000000001,
+          "reorderGapCost": 7.9,
+          "lastRestocked": "2026-04-06"
+        },
+        {
+          "part": "Timing Belt 5M-450",
+          "partId": "APR26-006",
+          "category": "Belts",
+          "status": "In Stock",
+          "stockQty": 18,
+          "reorderLevel": 10,
+          "unitCost": 12.4,
+          "inventoryValue": 223.20000000000002,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-07"
+        },
+        {
+          "part": "V-Belt A32",
+          "partId": "APR26-007",
+          "category": "Belts",
+          "status": "Low Stock",
+          "stockQty": 9,
+          "reorderLevel": 12,
+          "unitCost": 8.75,
+          "inventoryValue": 78.75,
+          "reorderGapCost": 26.25,
+          "lastRestocked": "2026-04-08"
+        },
+        {
+          "part": "O-Ring NBR 20mm",
+          "partId": "APR26-008",
+          "category": "Seals",
+          "status": "In Stock",
+          "stockQty": 650,
+          "reorderLevel": 200,
+          "unitCost": 0.35,
+          "inventoryValue": 227.49999999999997,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-09"
+        },
+        {
+          "part": "Oil Seal 25x40x7",
+          "partId": "APR26-009",
+          "category": "Seals",
+          "status": "In Stock",
+          "stockQty": 44,
+          "reorderLevel": 25,
+          "unitCost": 2.65,
+          "inventoryValue": 116.6,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-09"
+        },
+        {
+          "part": "Hydraulic Hose 1/2in",
+          "partId": "APR26-010",
+          "category": "Hydraulics",
+          "status": "In Stock",
+          "stockQty": 14,
+          "reorderLevel": 8,
+          "unitCost": 18.9,
+          "inventoryValue": 264.59999999999997,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-10"
+        },
+        {
+          "part": "Pneumatic Fitting 8mm",
+          "partId": "APR26-011",
+          "category": "Pneumatics",
+          "status": "In Stock",
+          "stockQty": 115,
+          "reorderLevel": 40,
+          "unitCost": 1.2,
+          "inventoryValue": 138,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-10"
+        },
+        {
+          "part": "Solenoid Valve 24V",
+          "partId": "APR26-012",
+          "category": "Electrical",
+          "status": "In Stock",
+          "stockQty": 7,
+          "reorderLevel": 5,
+          "unitCost": 32.5,
+          "inventoryValue": 227.5,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-11"
+        },
+        {
+          "part": "Limit Switch Roller Lever",
+          "partId": "APR26-013",
+          "category": "Electrical",
+          "status": "In Stock",
+          "stockQty": 21,
+          "reorderLevel": 10,
+          "unitCost": 14.8,
+          "inventoryValue": 310.8,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-11"
+        },
+        {
+          "part": "Fuse 5A Ceramic",
+          "partId": "APR26-014",
+          "category": "Electrical",
+          "status": "In Stock",
+          "stockQty": 88,
+          "reorderLevel": 50,
+          "unitCost": 0.75,
+          "inventoryValue": 66,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-12"
+        },
+        {
+          "part": "DIN Rail Terminal Block",
+          "partId": "APR26-015",
+          "category": "Electrical",
+          "status": "In Stock",
+          "stockQty": 205,
+          "reorderLevel": 80,
+          "unitCost": 1.1,
+          "inventoryValue": 225.50000000000003,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-12"
+        },
+        {
+          "part": "Proximity Sensor M12",
+          "partId": "APR26-016",
+          "category": "Sensors",
+          "status": "Low Stock",
+          "stockQty": 6,
+          "reorderLevel": 8,
+          "unitCost": 26,
+          "inventoryValue": 156,
+          "reorderGapCost": 52,
+          "lastRestocked": "2026-04-13"
+        },
+        {
+          "part": "Photoelectric Sensor",
+          "partId": "APR26-017",
+          "category": "Sensors",
+          "status": "Low Stock",
+          "stockQty": 4,
+          "reorderLevel": 5,
+          "unitCost": 38.25,
+          "inventoryValue": 153,
+          "reorderGapCost": 38.25,
+          "lastRestocked": "2026-04-13"
+        },
+        {
+          "part": "Thermocouple Type K",
+          "partId": "APR26-018",
+          "category": "Sensors",
+          "status": "In Stock",
+          "stockQty": 32,
+          "reorderLevel": 15,
+          "unitCost": 9.6,
+          "inventoryValue": 307.2,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-14"
+        },
+        {
+          "part": "Stepper Motor NEMA 17",
+          "partId": "APR26-019",
+          "category": "Motors",
+          "status": "In Stock",
+          "stockQty": 11,
+          "reorderLevel": 6,
+          "unitCost": 24.95,
+          "inventoryValue": 274.45,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-14"
+        },
+        {
+          "part": "DC Gear Motor 12V",
+          "partId": "APR26-020",
+          "category": "Motors",
+          "status": "In Stock",
+          "stockQty": 5,
+          "reorderLevel": 5,
+          "unitCost": 29.4,
+          "inventoryValue": 147,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-15"
+        },
+        {
+          "part": "Relay Module 4-Channel",
+          "partId": "APR26-021",
+          "category": "Controls",
+          "status": "In Stock",
+          "stockQty": 23,
+          "reorderLevel": 12,
+          "unitCost": 6.85,
+          "inventoryValue": 157.54999999999998,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-15"
+        },
+        {
+          "part": "PLC Input Module",
+          "partId": "APR26-022",
+          "category": "Controls",
+          "status": "Low Stock",
+          "stockQty": 3,
+          "reorderLevel": 4,
+          "unitCost": 84,
+          "inventoryValue": 252,
+          "reorderGapCost": 84,
+          "lastRestocked": "2026-04-16"
+        },
+        {
+          "part": "Emergency Stop Button",
+          "partId": "APR26-023",
+          "category": "Controls",
+          "status": "In Stock",
+          "stockQty": 16,
+          "reorderLevel": 8,
+          "unitCost": 11.75,
+          "inventoryValue": 188,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-16"
+        },
+        {
+          "part": "Panel Cooling Fan 120mm",
+          "partId": "APR26-024",
+          "category": "Cooling",
+          "status": "In Stock",
+          "stockQty": 12,
+          "reorderLevel": 6,
+          "unitCost": 17.3,
+          "inventoryValue": 207.60000000000002,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-17"
+        },
+        {
+          "part": "Heat Sink 50x50mm",
+          "partId": "APR26-025",
+          "category": "Cooling",
+          "status": "In Stock",
+          "stockQty": 37,
+          "reorderLevel": 20,
+          "unitCost": 4.4,
+          "inventoryValue": 162.8,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-17"
+        },
+        {
+          "part": "Cable Tie 200mm",
+          "partId": "APR26-026",
+          "category": "Consumables",
+          "status": "In Stock",
+          "stockQty": 2500,
+          "reorderLevel": 500,
+          "unitCost": 0.03,
+          "inventoryValue": 75,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-18"
+        },
+        {
+          "part": "Threadlocker Blue",
+          "partId": "APR26-027",
+          "category": "Consumables",
+          "status": "In Stock",
+          "stockQty": 19,
+          "reorderLevel": 10,
+          "unitCost": 7.25,
+          "inventoryValue": 137.75,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-18"
+        },
+        {
+          "part": "Grease Cartridge EP2",
+          "partId": "APR26-028",
+          "category": "Lubricants",
+          "status": "Low Stock",
+          "stockQty": 8,
+          "reorderLevel": 10,
+          "unitCost": 5.95,
+          "inventoryValue": 47.6,
+          "reorderGapCost": 11.9,
+          "lastRestocked": "2026-04-19"
+        },
+        {
+          "part": "Machine Oil ISO 68",
+          "partId": "APR26-029",
+          "category": "Lubricants",
+          "status": "In Stock",
+          "stockQty": 6,
+          "reorderLevel": 4,
+          "unitCost": 22,
+          "inventoryValue": 132,
+          "reorderGapCost": 0,
+          "lastRestocked": "2026-04-19"
+        },
+        {
+          "part": "Safety Guard Bracket",
+          "partId": "APR26-030",
+          "category": "Fabricated Parts",
+          "status": "Out of Stock",
+          "stockQty": 0,
+          "reorderLevel": 6,
+          "unitCost": 15.5,
+          "inventoryValue": 0,
+          "reorderGapCost": 93,
+          "lastRestocked": "2026-04-20"
+        }
+      ],
+      "dimensions": [
+        {
+          "field": "status",
+          "label": "Stock status"
+        },
+        {
+          "field": "category",
+          "label": "Category"
+        }
+      ],
+      "measures": [
+        {
+          "field": "inventoryValue",
+          "label": "Inventory value",
+          "agg": "sum",
+          "format": "currency"
+        },
+        {
+          "field": "stockQty",
+          "label": "Stock quantity",
+          "agg": "sum",
+          "format": "number"
+        },
+        {
+          "field": "reorderGapCost",
+          "label": "Replenishment gap cost",
+          "agg": "sum",
+          "format": "currency"
+        }
+      ],
+      "views": [
+        {
+          "title": "Stock status mix",
+          "type": "donut",
+          "groupBy": "status",
+          "measure": "stockQty",
+          "limit": 5
+        },
+        {
+          "title": "Inventory value by category",
+          "type": "bar",
+          "groupBy": "category",
+          "measure": "inventoryValue",
+          "limit": 20
+        },
+        {
+          "title": "Highest-value parts on hand",
+          "type": "table",
+          "groupBy": "part",
+          "measure": "inventoryValue",
+          "limit": 10
+        },
+        {
+          "title": "Replenishment cost by part",
+          "type": "table",
+          "groupBy": "part",
+          "measure": "reorderGapCost",
+          "limit": 10
+        }
+      ]
+    },
+    "kpis": [
+      {
+        "label": "Inventory value",
+        "value": 4714.8,
+        "format": "currency",
+        "subtitle": "Across 5,587 units"
+      },
+      {
+        "label": "In stock",
+        "value": 22,
+        "format": "number",
+        "subtitle": "75.9% of parts"
+      },
+      {
+        "label": "Needs attention",
+        "value": 7,
+        "format": "number",
+        "subtitle": "6 low stock · 1 out of stock"
+      },
+      {
+        "label": "Replenishment cost",
+        "value": 313.3,
+        "format": "currency",
+        "subtitle": "To restore items to reorder level"
+      }
+    ],
+    "accent": "#038387",
+    "palette": [
+      "#637CEF",
+      "#E3008C",
+      "#9373C0",
+      "#13A10E",
+      "#3A96DD",
+      "#CA5010",
+      "#57811B",
+      "#B146C2",
+      "#AE8C00"
+    ]
+  }
+}
